@@ -4,7 +4,13 @@ import {useEffect, useOptimistic, useRef, useState, useTransition} from 'react'
 import {saveSpaceColorAction} from '@/lib/server-actions'
 import {DEFAULT_SPACE_COLOR, SPACE_COLORS, type SpaceColorId} from '@/lib/theme'
 
-export function SpaceColorPicker({value}: {value?: string | null}) {
+export function SpaceColorPicker({
+  value,
+  onPreview,
+}: {
+  value?: string | null
+  onPreview?: (id: SpaceColorId) => void
+}) {
   const [open, setOpen] = useState(false)
   const [pending, start] = useTransition()
   const root = useRef<HTMLDivElement>(null)
@@ -24,7 +30,7 @@ export function SpaceColorPicker({value}: {value?: string | null}) {
   }, [open])
 
   function choose(id: SpaceColorId) {
-    setOpen(false)
+    onPreview?.(id)
     start(async () => {
       addOptimistic(id)
       await saveSpaceColorAction(id)
@@ -40,12 +46,16 @@ export function SpaceColorPicker({value}: {value?: string | null}) {
         aria-expanded={open}
         aria-haspopup="listbox"
         aria-label={`Space color: ${current.label}. Change your space.`}
-        disabled={pending}
+        aria-busy={pending}
         onClick={() => setOpen((next) => !next)}
       />
       {open ? (
         <div className="space-menu" role="listbox" aria-label="Space colors">
-          <p>Your space</p>
+          <div className="space-stage" aria-hidden="true">
+            <span className="space-orb space-orb-a" style={{background: current.hex}} />
+            <span className="space-orb space-orb-b" style={{background: current.hex}} />
+            <span className="space-orb space-orb-c" style={{background: current.hex}} />
+          </div>
           <ul>
             {SPACE_COLORS.map((item) => (
               <li key={item.id}>

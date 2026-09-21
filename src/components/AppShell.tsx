@@ -3,7 +3,7 @@ import Link from 'next/link'
 import {useEffect, useState} from 'react'
 import {usePathname} from 'next/navigation'
 import {SpaceColorPicker} from './SpaceColorPicker'
-import {SPACE_COLORS, spaceHex} from '@/lib/theme'
+import {SPACE_COLORS, spaceById, type SpaceColorId} from '@/lib/theme'
 
 const NAV = [
   {href: '/', label: 'Discover'},
@@ -25,6 +25,11 @@ export function AppShell({
 }) {
   const pathname = usePathname()
   const [showcaseIndex, setShowcaseIndex] = useState(0)
+  const [previewColor, setPreviewColor] = useState<string | null>(null)
+
+  useEffect(() => {
+    setPreviewColor(null)
+  }, [spaceColor])
 
   useEffect(() => {
     if (signedIn) return
@@ -37,17 +42,31 @@ export function AppShell({
     return () => window.clearInterval(timer)
   }, [signedIn])
 
-  const hex = signedIn ? spaceHex(spaceColor) : SPACE_COLORS[showcaseIndex].hex
+  const color = signedIn ? spaceById(previewColor ?? spaceColor) : SPACE_COLORS[showcaseIndex]
 
   useEffect(() => {
-    document.documentElement.style.setProperty('--space', hex)
+    const root = document.documentElement
+    root.style.setProperty('--space', color.hex)
+    root.style.setProperty('--space-from', color.from)
+    root.style.setProperty('--space-to', color.to)
     return () => {
-      document.documentElement.style.removeProperty('--space')
+      root.style.removeProperty('--space')
+      root.style.removeProperty('--space-from')
+      root.style.removeProperty('--space-to')
     }
-  }, [hex])
+  }, [color])
 
   return (
-    <div className="app-frame" style={{'--space': hex} as React.CSSProperties}>
+    <div
+      className="app-frame"
+      style={
+        {
+          '--space': color.hex,
+          '--space-from': color.from,
+          '--space-to': color.to,
+        } as React.CSSProperties
+      }
+    >
       <div className="color-wash" aria-hidden="true" />
       <header className="top-nav sticky top-3 z-30 mb-5 flex flex-wrap items-center gap-x-3 gap-y-2 px-3 py-2 sm:px-4 lg:top-4">
         <Link href="/" className="flex min-w-0 items-center gap-2.5 pl-1">
@@ -70,7 +89,12 @@ export function AppShell({
           })}
         </nav>
         <div className="ml-auto flex items-center gap-3 overflow-visible">
-          {signedIn ? <SpaceColorPicker value={spaceColor} /> : null}
+          {signedIn ? (
+            <SpaceColorPicker
+              value={spaceColor}
+              onPreview={(id: SpaceColorId) => setPreviewColor(id)}
+            />
+          ) : null}
           {auth}
         </div>
       </header>

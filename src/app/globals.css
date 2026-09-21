@@ -1,18 +1,38 @@
 @import "tailwindcss";
 
+@property --space {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #6aa6d4;
+}
+
+@property --space-from {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #a8d8f0;
+}
+
+@property --space-to {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #68c8d8;
+}
+
 :root {
   --canvas-1: #c9d4ee;
   --canvas-2: #aebce4;
-  --cream: #f4f6fb;
-  --paper: #ffffff;
+  --cream: #f6f1d8;
+  --paper: #f6f1d8;
   --ink: #1c1c22;
-  --muted: #6d6d78;
+  --muted: #5c5c66;
   --accent: #4f5f9a;
   --accent-soft: #d7dff3;
   --peach: #c5d2ef;
   --sage: #5c7a8a;
   --lilac: #b4bde4;
   --space: #6aa6d4;
+  --space-from: #a8d8f0;
+  --space-to: #68c8d8;
   --palette-cloud: #efeae4;
   --palette-blush: #e3b4c2;
   --palette-violet: #8a6b96;
@@ -29,6 +49,7 @@
   --radius-md: 20px;
   --radius-lg: 28px;
   --ease: 180ms cubic-bezier(0.22, 1, 0.36, 1);
+  --space-ease: 1s ease;
 }
 
 @theme inline {
@@ -46,8 +67,13 @@ html,
 body {
   min-height: 100%;
   color: var(--ink);
-  background-color: var(--space);
-  transition: background-color 1.4s ease;
+  background-color: var(--space-from);
+  background-image: linear-gradient(168deg, var(--space-from) 0%, var(--space) 46%, var(--space-to) 100%);
+  transition:
+    --space var(--space-ease),
+    --space-from var(--space-ease),
+    --space-to var(--space-ease),
+    background-color var(--space-ease);
 }
 
 body {
@@ -85,14 +111,13 @@ textarea {
   position: relative;
   isolation: isolate;
   min-height: 100vh;
-  padding: 16px 16px 32px;
-  background-color: var(--space);
-  transition: background-color 1.4s ease;
+  padding: 8px 16px 28px;
+  background: transparent;
 }
 
 @media (min-width: 1024px) {
   .app-frame {
-    padding: 18px 22px 40px;
+    padding: 10px 22px 36px;
   }
 }
 
@@ -101,31 +126,31 @@ textarea {
   position: fixed;
   inset: 0;
   z-index: 0;
-  background-color: var(--space);
+  background-color: var(--space-from);
   background-image:
-    radial-gradient(80vw 60vh at 12% -8%, color-mix(in srgb, white 28%, transparent), transparent 58%),
-    radial-gradient(70vw 55vh at 100% 108%, color-mix(in srgb, black 10%, transparent), transparent 55%);
-  transition: background-color 1.4s ease;
+    radial-gradient(90vw 70vh at 12% -10%, color-mix(in srgb, white 40%, transparent), transparent 58%),
+    radial-gradient(70vw 55vh at 100% 108%, color-mix(in srgb, black 8%, transparent), transparent 55%),
+    linear-gradient(168deg, var(--space-from) 0%, var(--space) 46%, var(--space-to) 100%);
+  transition:
+    --space var(--space-ease),
+    --space-from var(--space-ease),
+    --space-to var(--space-ease),
+    background-color var(--space-ease);
 }
 
 .top-nav {
   position: relative;
   z-index: 30;
   overflow: visible;
-  border: 1px solid color-mix(in srgb, white 70%, var(--line));
-  background: color-mix(in srgb, white 78%, var(--space));
-  backdrop-filter: blur(18px);
-  border-radius: 22px;
-  box-shadow:
-    inset 0 1px 0 white,
-    var(--shadow-soft);
-  transition: background-color 1.4s ease;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .main-panel {
   position: relative;
   z-index: 1;
-  min-height: calc(100vh - 148px);
+  min-height: calc(100vh - 132px);
   background: var(--paper);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
@@ -135,47 +160,120 @@ textarea {
   width: 28px;
   height: 28px;
   border-radius: 999px;
-  border: 2px solid white;
+  border: 2px solid color-mix(in srgb, white 80%, transparent);
   box-shadow: var(--shadow-soft);
 }
 
 .space-menu {
   position: absolute;
   right: 0;
-  top: calc(100% + 10px);
+  top: calc(100% + 12px);
   z-index: 80;
-  min-width: max-content;
-  padding: 12px;
-  background: white;
-  border-radius: 18px;
-  box-shadow: var(--shadow);
+  width: 248px;
+  padding: 14px 14px 16px;
+  background: #ececee;
+  border-radius: 22px;
+  box-shadow:
+    0 24px 50px color-mix(in srgb, var(--ink) 18%, transparent),
+    0 0 0 1px color-mix(in srgb, white 55%, transparent);
 }
 
-.space-menu p {
-  margin: 0 0 10px;
-  font-size: 12px;
-  color: var(--muted);
+.space-stage {
+  position: relative;
+  height: 168px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: #e4e4e6;
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--ink) 7%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--ink) 7%, transparent) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.space-orb {
+  position: absolute;
+  border-radius: 999px;
+  opacity: 0.92;
+  transition: background-color 0.8s ease;
+}
+
+.space-orb-a {
+  width: 58px;
+  height: 58px;
+  left: 38%;
+  top: 34%;
+  animation: orb-drift-a 9s ease-in-out infinite;
+}
+
+.space-orb-b {
+  width: 22px;
+  height: 22px;
+  left: 22%;
+  top: 18%;
+  animation: orb-drift-b 7.5s ease-in-out infinite;
+}
+
+.space-orb-c {
+  width: 16px;
+  height: 16px;
+  left: 64%;
+  top: 58%;
+  animation: orb-drift-c 8.2s ease-in-out infinite;
+}
+
+@keyframes orb-drift-a {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(22px, -16px);
+  }
+}
+
+@keyframes orb-drift-b {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-14px, 20px);
+  }
+}
+
+@keyframes orb-drift-c {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(16px, 12px);
+  }
 }
 
 .space-menu ul {
   display: grid;
-  grid-template-columns: repeat(9, 28px);
-  gap: 8px;
+  grid-template-columns: repeat(9, 18px);
+  justify-content: space-between;
+  gap: 0;
   margin: 0;
-  padding: 0;
+  padding: 0 2px;
   list-style: none;
 }
 
 .space-choice {
-  width: 28px;
-  height: 28px;
+  width: 18px;
+  height: 18px;
   border-radius: 999px;
-  border: 2px solid white;
-  box-shadow: inset 0 1px 0 white, 0 1px 4px color-mix(in srgb, var(--ink) 12%, transparent);
+  border: 0;
+  box-shadow: inset 0 1px 0 color-mix(in srgb, white 45%, transparent);
 }
 
 .space-choice.is-active {
-  box-shadow: 0 0 0 2px var(--ink);
+  box-shadow:
+    0 0 0 2px #ececee,
+    0 0 0 3.5px color-mix(in srgb, var(--ink) 45%, transparent);
 }
 
 .nav-item {
