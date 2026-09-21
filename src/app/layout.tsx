@@ -2,6 +2,8 @@ import type {Metadata} from 'next'
 import {ClerkProvider} from '@clerk/nextjs'
 import {Figtree, Fraunces} from 'next/font/google'
 import {AppShell} from '@/components/AppShell'
+import {AuthControl} from '@/components/AuthControl'
+import {getOptionalReader} from '@/lib/reader'
 import './globals.css'
 
 const display = Fraunces({
@@ -22,21 +24,21 @@ export const metadata: Metadata = {
   description: 'A home for everything you read.',
 }
 
-export default function RootLayout({children}: {children: React.ReactNode}) {
-  const content = (
+export default async function RootLayout({children}: {children: React.ReactNode}) {
+  const reader = await getOptionalReader()
+
+  return (
     <html lang="en">
       <body
         className={`${display.variable} ${sans.variable} antialiased`}
         style={{fontFamily: 'var(--font-figtree), ui-sans-serif, system-ui'}}
       >
-        <AppShell>{children}</AppShell>
+        <ClerkProvider>
+          <AppShell auth={<AuthControl />} signedIn={Boolean(reader)} spaceColor={reader?.spaceColor}>
+            {children}
+          </AppShell>
+        </ClerkProvider>
       </body>
     </html>
   )
-
-  if (!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY) {
-    return content
-  }
-
-  return <ClerkProvider>{content}</ClerkProvider>
 }

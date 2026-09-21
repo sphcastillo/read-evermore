@@ -6,11 +6,34 @@ A home for everything you read. Next.js App Router + Clerk + a private Sanity da
 
 - `pnpm dev` — Next.js at http://localhost:3000
 - `pnpm studio` — Studio at http://localhost:3333
-- `pnpm import:catalog` — Open Library import (requires `SANITY_API_WRITE_TOKEN`)
+- `/browse` — user-driven Open Library search; no API key or catalog import required
 
 Copy `.env.example` to `.env.local`. Keep the Sanity dataset **private**. Never commit tokens.
 
 Sanity project: `3h0o1unw`. Do not point this repo at other Sanity projects.
+
+## Book search
+
+Browse searches `https://openlibrary.org/search.json` from the server only after a
+submitted query or a pagination click. It supports all fields, title, author, and
+ISBN, plus relevance or publication-year sorting. Each request returns up to 20
+books with only the fields displayed. Results link to Open Library; saving external
+results to reader shelves is not part of this search flow. The legacy seed import
+is not used by search.
+
+Successful results are cached for one hour (up to 100 queries per server instance),
+matching concurrent requests are deduplicated, and new upstream requests are
+limited to one per second per instance. HTTP 429 responses honor `Retry-After`;
+there are no automatic retries or pagination prefetches. Covers load lazily from
+Open Library. Set `OPEN_LIBRARY_CONTACT_EMAIL` to a real contact address to identify
+the app. Cache and limiter state reset when an instance restarts; multiple instances
+need a shared limiter before increasing traffic. This is for low-volume discovery.
+
+Docs: [Search API](https://openlibrary.org/dev/docs/api/search),
+[usage guidelines](https://openlibrary.org/developers/api),
+[covers](https://openlibrary.org/dev/docs/api/covers).
+
+Run search tests with `node --import tsx --test tests/book-search.test.ts`.
 
 ## Credits
 

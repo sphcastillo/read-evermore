@@ -14,6 +14,25 @@ export const readingStatusSchema = z.enum(['wantToRead', 'currentlyReading', 'fi
 
 export const workflowStatusSchema = z.enum(['proposed', 'needsReview', 'approved', 'rejected'])
 
+export const spaceColorSchema = z.enum([
+  'cloud',
+  'blush',
+  'violet',
+  'clay',
+  'apricot',
+  'butter',
+  'mint',
+  'sky',
+  'navy',
+  'periwinkle',
+  'sage',
+  'peach',
+  'rose',
+  'lilac',
+  'sand',
+  'slate',
+])
+
 export const WORKFLOW_TRANSITIONS: Record<string, string[]> = {
   proposed: ['needsReview', 'rejected'],
   needsReview: ['approved', 'rejected'],

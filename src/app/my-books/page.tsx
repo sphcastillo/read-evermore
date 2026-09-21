@@ -26,7 +26,7 @@ export default async function MyBooksPage() {
         <div className="mt-10 space-y-12">
           {(data.shelves || []).map((shelf) => (
             <section key={shelf._id}>
-              <h2 className="font-[family-name:var(--font-display)] text-[2rem] tracking-[-0.03em]">{shelf.name}</h2>
+              <h2 className="font-display text-[2rem] tracking-[-0.03em]">{shelf.name}</h2>
               {shelf.entries?.length ? (
                 <div className="shelf-scroll -mx-1 mt-5 px-1">
                   {shelf.entries.map((entry, index) =>

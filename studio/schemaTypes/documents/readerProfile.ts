@@ -39,6 +39,26 @@ export const readerProfile = defineType({
         layout: 'radio',
       },
     }),
+    defineField({
+      name: 'spaceColor',
+      title: 'Space color',
+      type: 'string',
+      initialValue: 'sky',
+      options: {
+        list: [
+          {title: 'Cloud', value: 'cloud'},
+          {title: 'Blush', value: 'blush'},
+          {title: 'Violet', value: 'violet'},
+          {title: 'Clay', value: 'clay'},
+          {title: 'Apricot', value: 'apricot'},
+          {title: 'Butter', value: 'butter'},
+          {title: 'Mint', value: 'mint'},
+          {title: 'Sky', value: 'sky'},
+          {title: 'Navy', value: 'navy'},
+        ],
+        layout: 'radio',
+      },
+    }),
   ],
   preview: {
     select: {title: 'displayName', subtitle: 'clerkUserId'},

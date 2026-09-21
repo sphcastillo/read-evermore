@@ -6,6 +6,7 @@ import {
   canTransition,
   ratingValueSchema,
   readingStatusSchema,
+  spaceColorSchema,
   stableId,
   workflowStatusSchema,
 } from './validation'
@@ -349,4 +350,11 @@ export async function getClubExperience(clubId: string) {
     {clubId, readerId: reader?.readerId || ''},
     {cache: 'no-store'},
   )
+}
+
+export async function setSpaceColor(color: string) {
+  const reader = await requireReader()
+  const parsed = spaceColorSchema.parse(color)
+  await writeClient().patch(reader.readerId).set({spaceColor: parsed}).commit()
+  revalidatePath('/', 'layout')
 }

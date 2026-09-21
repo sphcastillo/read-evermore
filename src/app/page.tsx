@@ -28,9 +28,12 @@ export default async function DiscoverPage() {
       <PageHeader
         eyebrow="Discover"
         title={settings?.tagline || 'A home for everything you read'}
-        lede="Browse a small, verified catalog. Covers stay the focus; your shelves stay yours."
+        lede="Find your next read with Open Library search, or explore our curated shelves."
       />
       <div className="mt-7 flex flex-wrap gap-2">
+        <Link className="pill is-active px-4 py-2 text-sm" href="/browse">
+          Search books
+        </Link>
         <Link className="pill px-4 py-2 text-sm" href="/releases/this-week">
           This week
         </Link>
@@ -58,12 +61,12 @@ export default async function DiscoverPage() {
         ) : (
           <EmptyState
             title="The shelves are still being set"
-            body="No approved editorial collections are published yet. Import the catalog and approve a Discover collection to fill this page."
+            body="No editorial collections are published yet. Search books to find your next read."
           />
         )}
       </div>
-      <p className="mt-10 text-sm text-[var(--muted)]">{settings?.catalogDisclaimer}</p>
-      <p className="mt-2 text-sm text-[var(--muted)]">{settings?.openLibraryAttribution}</p>
+      <p className="mt-10 text-sm text-muted">{settings?.catalogDisclaimer}</p>
+      <p className="mt-2 text-sm ttext-muted">{settings?.openLibraryAttribution}</p>
     </div>
   )
 }

@@ -20,7 +20,7 @@ export function BookCover({
 }) {
   const src = coverSrc(cover || undefined)
   return (
-    <div className={`cover-frame relative overflow-hidden bg-[color-mix(in_srgb,var(--peach)_28%,white)] ${className}`}>
+    <div className={`cover-frame relative overflow-hidden bg-(--accent-soft) ${className}`}>
       {src ? (
         <Image
           src={src}
@@ -31,7 +31,7 @@ export function BookCover({
           priority={priority}
         />
       ) : (
-        <div className="flex h-full items-end p-3 text-sm text-[var(--muted)]">Cover not in our catalog yet</div>
+        <div className="flex h-full items-end p-3 text-sm text-muted">Cover not in our catalog yet</div>
       )}
     </div>
   )

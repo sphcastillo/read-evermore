@@ -7,9 +7,10 @@ export type ReaderSession = {
   readerId: string
   clerkUserId: string
   displayName: string
+  spaceColor?: string | null
 }
 
-const PROFILE_QUERY = `*[_type == "readerProfile" && clerkUserId == $clerkUserId][0]{_id, displayName, clerkUserId}`
+const PROFILE_QUERY = `*[_type == "readerProfile" && clerkUserId == $clerkUserId][0]{_id, displayName, clerkUserId, spaceColor}`
 
 async function ensureSystemShelves(readerId: string) {
   const client = writeClient()
@@ -54,16 +55,18 @@ export async function requireReader(): Promise<ReaderSession> {
 }
 
 async function getOrCreateReader(clerkUserId: string): Promise<ReaderSession> {
-  const existing = await privateClient.fetch<{_id: string; displayName?: string; clerkUserId: string} | null>(
-    PROFILE_QUERY,
-    {clerkUserId},
-    {cache: 'no-store'},
-  )
+  const existing = await privateClient.fetch<{
+    _id: string
+    displayName?: string
+    clerkUserId: string
+    spaceColor?: string | null
+  } | null>(PROFILE_QUERY, {clerkUserId}, {cache: 'no-store'})
   if (existing?._id) {
     return {
       readerId: existing._id,
       clerkUserId,
       displayName: existing.displayName || 'Reader',
+      spaceColor: existing.spaceColor,
     }
   }
 
