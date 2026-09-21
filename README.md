@@ -1,9 +1,24 @@
-# Sanity Clean Content Studio
+# Read Evermore
 
-Congratulations, you have now installed the Sanity Content Studio, an open-source real-time content editing environment connected to the Sanity backend.
+A home for everything you read. Next.js App Router + Clerk + a private Sanity dataset.
 
-Now you can do the following things:
+## Apps
 
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- [Join the Sanity community](https://www.sanity.io/community/join?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+- `pnpm dev` — Next.js at http://localhost:3000
+- `pnpm studio` — Studio at http://localhost:3333
+- `pnpm import:catalog` — Open Library import (requires `SANITY_API_WRITE_TOKEN`)
+
+Copy `.env.example` to `.env.local`. Keep the Sanity dataset **private**. Never commit tokens.
+
+Sanity project: `3h0o1unw`. Do not point this repo at other Sanity projects.
+
+## Credits
+
+- Sanity Studio, GROQ, and next-sanity
+- Open Library metadata and covers (displayed from `covers.openlibrary.org`)
+- Clerk authentication
+- Arc Browser inspired the warmth of the UI; the identity is original
+
+## Contest notes
+
+See `docs/BUILD_LOG.md`, `docs/CHECKLIST.md`, and `docs/SUBMISSION.md`.

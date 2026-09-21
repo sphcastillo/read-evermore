@@ -2,17 +2,26 @@ import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
+import {structure} from './structure'
+import {editorialReviewActions} from './actions/editorialReviewActions'
 
 export default defineConfig({
   name: 'default',
-  title: 'read evermore',
+  title: 'Read Evermore',
 
   projectId: '3h0o1unw',
   dataset: 'production',
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [
+    structureTool({structure}),
+    visionTool(),
+  ],
 
   schema: {
     types: schemaTypes,
+  },
+
+  document: {
+    actions: (prev, context) => editorialReviewActions(prev, context),
   },
 })

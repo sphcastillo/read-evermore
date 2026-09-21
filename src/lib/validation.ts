@@ -1,0 +1,38 @@
+import {z} from 'zod'
+
+export const HALF_STARS = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5] as const
+
+export const ratingValueSchema = z
+  .number()
+  .refine((value) => HALF_STARS.includes(value as (typeof HALF_STARS)[number]), {
+    message: 'Rating must be between 0.5 and 5 in half-star increments',
+  })
+
+export const shelfKindSchema = z.enum(['wantToRead', 'currentlyReading', 'finished', 'custom'])
+
+export const readingStatusSchema = z.enum(['wantToRead', 'currentlyReading', 'finished'])
+
+export const workflowStatusSchema = z.enum(['proposed', 'needsReview', 'approved', 'rejected'])
+
+export const WORKFLOW_TRANSITIONS: Record<string, string[]> = {
+  proposed: ['needsReview', 'rejected'],
+  needsReview: ['approved', 'rejected'],
+  approved: [],
+  rejected: ['needsReview'],
+}
+
+export function canTransition(from: string, to: string) {
+  return WORKFLOW_TRANSITIONS[from]?.includes(to) ?? false
+}
+
+export function slugify(value: string) {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '')
+    .slice(0, 96)
+}
+
+export function stableId(parts: string[]) {
+  return parts.join('-').replace(/[^a-zA-Z0-9._-]/g, '')
+}

@@ -1,3 +1,11 @@
-import studio from '@sanity/eslint-config-studio'
+import {FlatCompat} from '@eslint/eslintrc'
+import {dirname} from 'node:path'
+import {fileURLToPath} from 'node:url'
 
-export default [...studio]
+const compat = new FlatCompat({
+  baseDirectory: dirname(fileURLToPath(import.meta.url)),
+})
+
+const eslintConfig = [...compat.extends('next/core-web-vitals', 'next/typescript')]
+
+export default eslintConfig
