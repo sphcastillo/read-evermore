@@ -50,9 +50,9 @@ export default async function CollectionPage({params}: {params: Promise<{slug: s
       <PageHeader
         eyebrow={curated.curator?.name ? `Curated by ${curated.curator.name}` : 'Collection'}
         title={curated.title}
-        lede={curated.description}
+        lede={curated.description ?? undefined}
       />
-      <p className="mt-4 text-sm text-[var(--muted)]">{count} selections</p>
+      <p className="mt-4 text-sm text-muted">{count} selections</p>
       <div className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {entries.map((entry) => {
           const book = entry.book!
@@ -70,10 +70,10 @@ export default async function CollectionPage({params}: {params: Promise<{slug: s
                 <BookCover cover={{coverUrl: book.cover?.url}} title={book.title} className="aspect-[2/3] w-full" />
               </div>
               <p className="mt-3 font-medium leading-snug">{book.title}</p>
-              <p className="mt-0.5 text-sm text-[var(--muted)]">
+              <p className="mt-0.5 text-sm text-muted">
                 {book.authors?.filter(Boolean).join(', ') || 'Author unknown'}
               </p>
-              {year ? <p className="mt-1 text-xs text-[var(--muted)]">{year}</p> : null}
+              {year ? <p className="mt-1 text-xs text-muted">{year}</p> : null}
             </Link>
           )
         })}

@@ -1,4 +1,5 @@
-import {Show, SignInButton, SignUpButton, UserButton} from '@clerk/nextjs'
+import {Show, SignInButton, SignUpButton} from '@clerk/nextjs'
+import {AccountMenu} from './AccountMenu'
 
 export function AuthControl() {
   return (
@@ -12,7 +13,7 @@ export function AuthControl() {
         </SignUpButton>
       </Show>
       <Show when="signed-in">
-        <UserButton />
+        <AccountMenu />
       </Show>
     </div>
   )
