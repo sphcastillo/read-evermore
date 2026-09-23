@@ -1,12 +1,13 @@
 import Link from 'next/link'
 import {fetchCatalog} from '@/sanity/fetch'
-import {DISCOVER_COLLECTIONS_QUERY, SITE_SETTINGS_QUERY} from '@/sanity/queries'
+import {CURATED_COLLECTIONS_QUERY, DISCOVER_COLLECTIONS_QUERY, SITE_SETTINGS_QUERY} from '@/sanity/queries'
 import {CollectionRow} from '@/components/CollectionRow'
+import {CollectionCarousel, type CarouselCollection} from '@/components/CollectionCarousel'
 import {EmptyState} from '@/components/States'
 import {PageHeader} from '@/components/PageHeader'
 
 export default async function DiscoverPage() {
-  const [settings, collections] = await Promise.all([
+  const [settings, collections, curated] = await Promise.all([
     fetchCatalog<{
       tagline?: string
       catalogDisclaimer?: string
@@ -21,19 +22,19 @@ export default async function DiscoverPage() {
         works?: Parameters<typeof CollectionRow>[0]['works']
       }[]
     >(DISCOVER_COLLECTIONS_QUERY),
+    fetchCatalog<CarouselCollection[]>(CURATED_COLLECTIONS_QUERY),
   ])
+
+  const hasShelves = Boolean(curated?.length || collections?.length)
 
   return (
     <div>
-      <PageHeader
+      {/* <PageHeader
         eyebrow="Discover"
         title={settings?.tagline || 'A home for everything you read'}
-        lede="Find your next read with Open Library search, or explore our curated shelves."
-      />
-      <div className="mt-7 flex flex-wrap gap-2">
-        <Link className="pill is-active px-4 py-2 text-sm" href="/browse">
-          Search books
-        </Link>
+        lede="Explore curated shelves, or sign in to search for a book."
+      /> */}
+      {/* <div className="mt-7 flex flex-wrap gap-2">
         <Link className="pill px-4 py-2 text-sm" href="/releases/this-week">
           This week
         </Link>
@@ -46,27 +47,31 @@ export default async function DiscoverPage() {
         <Link className="pill px-4 py-2 text-sm" href="/browse/fantasy">
           Fantasy by year
         </Link>
-      </div>
-      <div className="mt-12">
-        {collections?.length ? (
-          collections.map((collection) => (
-            <CollectionRow
-              key={collection._id}
-              title={collection.title}
-              href={`/collections/${collection.slug}`}
-              description={collection.description}
-              works={collection.works || []}
-            />
-          ))
-        ) : (
+      </div> */}
+      <div className="mt-8 space-y-6">
+        {curated?.length
+          ? curated.map((collection) => <CollectionCarousel key={collection._id} collection={collection} />)
+          : null}
+        {collections?.length
+          ? collections.map((collection) => (
+              <CollectionRow
+                key={collection._id}
+                title={collection.title}
+                href={`/collections/${collection.slug}`}
+                description={collection.description}
+                works={collection.works || []}
+              />
+            ))
+          : null}
+        {!hasShelves ? (
           <EmptyState
             title="The shelves are still being set"
             body="No editorial collections are published yet. Search books to find your next read."
           />
-        )}
+        ) : null}
       </div>
       <p className="mt-10 text-sm text-muted">{settings?.catalogDisclaimer}</p>
-      <p className="mt-2 text-sm ttext-muted">{settings?.openLibraryAttribution}</p>
+      <p className="mt-2 text-sm text-muted">{settings?.openLibraryAttribution}</p>
     </div>
   )
 }

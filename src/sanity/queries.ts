@@ -40,6 +40,50 @@ export const DISCOVER_COLLECTIONS_QUERY = defineQuery(`
   }
 `)
 
+export const curatedBookFields = /* groq */ `
+  _id,
+  title,
+  authors,
+  "slug": slug.current,
+  googleBooksId,
+  publishedDate,
+  cover
+`
+
+export const CURATED_COLLECTIONS_QUERY = defineQuery(`
+  *[_type == "curatedCollection"] | order(lastSyncedAt desc){
+    _id,
+    title,
+    "slug": slug.current,
+    collectionType,
+    description,
+    curator,
+    source,
+    totalSelections,
+    "books": books | order(selectionNumber desc)[0...24]{
+      selectionNumber,
+      "book": book->{ ${curatedBookFields} }
+    }
+  }
+`)
+
+export const CURATED_COLLECTION_BY_SLUG_QUERY = defineQuery(`
+  *[_type == "curatedCollection" && slug.current == $slug][0]{
+    _id,
+    title,
+    "slug": slug.current,
+    collectionType,
+    description,
+    curator,
+    source,
+    totalSelections,
+    "books": books | order(selectionNumber desc){
+      selectionNumber,
+      "book": book->{ ${curatedBookFields} }
+    }
+  }
+`)
+
 export const COLLECTION_BY_SLUG_QUERY = defineQuery(`
   *[_type == "editorialCollection" && slug.current == $slug && workflowStatus == "approved"][0]{
     _id,

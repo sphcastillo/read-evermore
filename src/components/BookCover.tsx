@@ -29,6 +29,7 @@ export function BookCover({
           sizes="(max-width: 768px) 40vw, 180px"
           className="object-cover"
           priority={priority}
+          unoptimized={src.includes('books.google')}
         />
       ) : (
         <div className="flex h-full items-end p-3 text-sm text-muted">Cover not in our catalog yet</div>

@@ -1,0 +1,1880 @@
+{
+  "generatedAt": "2026-09-23T07:15:21.679Z",
+  "requestedSelections": 124,
+  "resolvedSelections": 124,
+  "needsReview": 0,
+  "results": [
+    {
+      "selectionNumber": 1,
+      "title": "The Deep End of the Ocean",
+      "requestedAuthors": [
+        "Jacquelyn Mitchard"
+      ],
+      "matchedTitle": "The Deep End of the Ocean",
+      "matchedAuthors": [
+        "Jacquelyn Mitchard"
+      ],
+      "googleBooksId": "nyNbAAAAMAAJ",
+      "score": 102,
+      "bookId": "book.google.bd7b76819494c98a",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 2,
+      "title": "Song of Solomon",
+      "requestedAuthors": [
+        "Toni Morrison"
+      ],
+      "matchedTitle": "Song of Solomon",
+      "matchedAuthors": [
+        "Toni Morrison"
+      ],
+      "googleBooksId": "RxkWfF2s7EUC",
+      "score": 107,
+      "bookId": "book.google.90b02f942989b0cf",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 3,
+      "title": "The Book of Ruth",
+      "requestedAuthors": [
+        "Jane Hamilton"
+      ],
+      "matchedTitle": "The Book of Ruth",
+      "matchedAuthors": [
+        ",VanLeon"
+      ],
+      "googleBooksId": "LrwuEAAAQBAJ",
+      "score": 82,
+      "bookId": "book.google.00c80006d05c5411",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 4,
+      "title": "She's Come Undone",
+      "requestedAuthors": [
+        "Wally Lamb"
+      ],
+      "matchedTitle": "She's Come Undone",
+      "matchedAuthors": [
+        "Wally Lamb"
+      ],
+      "googleBooksId": "o447RLwrcgIC",
+      "score": 107,
+      "bookId": "book.google.13596d56088e0d55",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 5,
+      "title": "Stones from the River",
+      "requestedAuthors": [
+        "Ursula Hegi"
+      ],
+      "matchedTitle": "Stones from the River",
+      "matchedAuthors": [
+        "Ursula Hegi"
+      ],
+      "googleBooksId": "oMx9k6wH5aMC",
+      "score": 107,
+      "bookId": "book.google.2f56607ac382c962",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 6,
+      "title": "The Rapture of Canaan",
+      "requestedAuthors": [
+        "Sheri Reynolds"
+      ],
+      "matchedTitle": "The Rapture of Canaan",
+      "matchedAuthors": [
+        "Putnam",
+        "Sheri Reynolds",
+        "Brenda Jackson",
+        "Ronald L McDonald"
+      ],
+      "googleBooksId": "gpMnAAAACAAJ",
+      "score": 102,
+      "bookId": "book.google.991e3e1e05ed4862",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 7,
+      "title": "Songs in Ordinary Time",
+      "requestedAuthors": [
+        "Mary McGarry Morris"
+      ],
+      "matchedTitle": "Songs in Ordinary Time",
+      "matchedAuthors": [
+        "Mary McGarry Morris"
+      ],
+      "googleBooksId": "n9bQeT9vAVcC",
+      "score": 106,
+      "bookId": "book.google.92794caf82991d2a",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 8,
+      "title": "The Heart of a Woman",
+      "requestedAuthors": [
+        "Maya Angelou"
+      ],
+      "matchedTitle": "The Heart of a Woman",
+      "matchedAuthors": [
+        "Maya Angelou"
+      ],
+      "googleBooksId": "l6ZnQgAACAAJ",
+      "score": 104,
+      "bookId": "book.google.9bb651f2a63d3bbe",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 9,
+      "title": "A Lesson Before Dying",
+      "requestedAuthors": [
+        "Ernest J. Gaines"
+      ],
+      "matchedTitle": "A Lesson Before Dying",
+      "matchedAuthors": [
+        "Ernest J. Gaines"
+      ],
+      "googleBooksId": "cV-gTPZVm8wC",
+      "score": 107,
+      "bookId": "book.google.ab768a3f6040b751",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 10,
+      "title": "Ellen Foster",
+      "requestedAuthors": [
+        "Kaye Gibbons"
+      ],
+      "matchedTitle": "Ellen Foster",
+      "matchedAuthors": [
+        "Kaye Gibbons"
+      ],
+      "googleBooksId": "Emo9UNB9j1kC",
+      "score": 107,
+      "bookId": "book.google.08eb3ec2d846a3e1",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 11,
+      "title": "A Virtuous Woman",
+      "requestedAuthors": [
+        "Kaye Gibbons"
+      ],
+      "matchedTitle": "A Virtuous Woman",
+      "matchedAuthors": [
+        "Kaye Gibbons"
+      ],
+      "googleBooksId": "CVqmrlAMQ7QC",
+      "score": 107,
+      "bookId": "book.google.bab0f0e0f1e1f782",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 12,
+      "title": "The Meanest Thing to Say",
+      "requestedAuthors": [
+        "Bill Cosby"
+      ],
+      "matchedTitle": "The Meanest Thing to Say",
+      "matchedAuthors": [
+        "Bill Cosby"
+      ],
+      "googleBooksId": "CvILPwAACAAJ",
+      "score": 106,
+      "bookId": "book.google.f862a6738e1810f6",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 13,
+      "title": "The Treasure Hunt",
+      "requestedAuthors": [
+        "Bill Cosby"
+      ],
+      "matchedTitle": "The Treasure Hunt",
+      "matchedAuthors": [
+        "Bill Cosby",
+        "Varnette P. Honeywood"
+      ],
+      "googleBooksId": "G1PFQgAACAAJ",
+      "score": 107,
+      "bookId": "book.google.4020dc0f2b0cd609",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 14,
+      "title": "The Best Way to Play",
+      "requestedAuthors": [
+        "Bill Cosby"
+      ],
+      "matchedTitle": "The Best Way to Play",
+      "matchedAuthors": [
+        "Bill Cosby"
+      ],
+      "googleBooksId": "owxHPgAACAAJ",
+      "score": 107,
+      "bookId": "book.google.42109741dfd7ee02",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 15,
+      "title": "Paradise",
+      "requestedAuthors": [
+        "Toni Morrison"
+      ],
+      "matchedTitle": "Paradise",
+      "matchedAuthors": [
+        "Toni Morrison"
+      ],
+      "googleBooksId": "kPaKDQAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.f5116c5d9a49a3f5",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 16,
+      "title": "Here on Earth",
+      "requestedAuthors": [
+        "Alice Hoffman"
+      ],
+      "matchedTitle": "Here on Earth",
+      "matchedAuthors": [
+        "Alice Hoffman"
+      ],
+      "googleBooksId": "0bnG2l8_YiMC",
+      "score": 107,
+      "bookId": "book.google.78264c7acde2d8e3",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 17,
+      "title": "Black and Blue",
+      "requestedAuthors": [
+        "Anna Quindlen"
+      ],
+      "matchedTitle": "Black and Blue",
+      "matchedAuthors": [
+        "Anna Quindlen"
+      ],
+      "googleBooksId": "2YmOFligrkYC",
+      "score": 107,
+      "bookId": "book.google.b2a65183abd19d49",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 18,
+      "title": "Breath, Eyes, Memory",
+      "requestedAuthors": [
+        "Edwidge Danticat"
+      ],
+      "matchedTitle": "Breath, Eyes, Memory",
+      "matchedAuthors": [
+        "Edwidge Danticat"
+      ],
+      "googleBooksId": "sMCJDQAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.3bd29249cb927155",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 19,
+      "title": "I Know This Much Is True",
+      "requestedAuthors": [
+        "Wally Lamb"
+      ],
+      "matchedTitle": "I Know This Much Is True",
+      "matchedAuthors": [
+        "Wally Lamb"
+      ],
+      "googleBooksId": "gXk5wYNESPsC",
+      "score": 107,
+      "bookId": "book.google.81949b6cc5bdf177",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 20,
+      "title": "What Looks Like Crazy on an Ordinary Day",
+      "requestedAuthors": [
+        "Pearl Cleage"
+      ],
+      "matchedTitle": "What Looks Like Crazy on an Ordinary Day",
+      "matchedAuthors": [
+        "Pearl Cleage"
+      ],
+      "googleBooksId": "D7XsU8tEVNkC",
+      "score": 106,
+      "bookId": "book.google.d6efb22b9e52ea33",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 21,
+      "title": "Midwives",
+      "requestedAuthors": [
+        "Chris Bohjalian"
+      ],
+      "matchedTitle": "Midwives",
+      "matchedAuthors": [
+        "Chris Bohjalian"
+      ],
+      "googleBooksId": "JTyAcjYXi_cC",
+      "score": 107,
+      "bookId": "book.google.779f626cfab4e7e2",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 22,
+      "title": "Where the Heart Is",
+      "requestedAuthors": [
+        "Billie Letts"
+      ],
+      "matchedTitle": "Where the Heart Is",
+      "matchedAuthors": [
+        "Billie Letts"
+      ],
+      "googleBooksId": "Iq05nE7V2rkC",
+      "score": 107,
+      "bookId": "book.google.6f0f33ca6e8150e3",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 23,
+      "title": "Jewel",
+      "requestedAuthors": [
+        "Bret Lott"
+      ],
+      "matchedTitle": "Jewel",
+      "matchedAuthors": [
+        "Bret Lott"
+      ],
+      "googleBooksId": "cnBvPwAACAAJ",
+      "score": 105,
+      "bookId": "book.google.432c2c33dcebdc39",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 24,
+      "title": "The Reader",
+      "requestedAuthors": [
+        "Bernhard Schlink"
+      ],
+      "matchedTitle": "The Reader",
+      "matchedAuthors": [
+        "Bernhard Schlink"
+      ],
+      "googleBooksId": "2JYJicwT84cC",
+      "score": 107,
+      "bookId": "book.google.ff47bbb141bd2622",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 25,
+      "title": "The Pilot's Wife",
+      "requestedAuthors": [
+        "Anita Shreve"
+      ],
+      "matchedTitle": "The Pilot's Wife",
+      "matchedAuthors": [
+        "Anita Shreve"
+      ],
+      "googleBooksId": "NwzJ-MVP4MgC",
+      "score": 107,
+      "bookId": "book.google.9d613eff96c7931b",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 26,
+      "title": "White Oleander",
+      "requestedAuthors": [
+        "Janet Fitch"
+      ],
+      "matchedTitle": "White Oleander",
+      "matchedAuthors": [
+        "Janet Fitch"
+      ],
+      "googleBooksId": "J72o-ferqtQC",
+      "score": 107,
+      "bookId": "book.google.6032b3a58d78801f",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 27,
+      "title": "Mother of Pearl",
+      "requestedAuthors": [
+        "Melinda Haynes"
+      ],
+      "matchedTitle": "Mother of Pearl",
+      "matchedAuthors": [
+        "Melinda Haynes"
+      ],
+      "googleBooksId": "SmHRsgEACAAJ",
+      "score": 107,
+      "bookId": "book.google.bec64a2c6dedf381",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 28,
+      "title": "Tara Road",
+      "requestedAuthors": [
+        "Maeve Binchy"
+      ],
+      "matchedTitle": "Tara Road",
+      "matchedAuthors": [
+        "Maeve Binchy"
+      ],
+      "googleBooksId": "2tU5AgAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.21d5546a5d3f5471",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 29,
+      "title": "River, Cross My Heart",
+      "requestedAuthors": [
+        "Breena Clarke"
+      ],
+      "matchedTitle": "River, Cross My Heart",
+      "matchedAuthors": [
+        "Breena Clarke"
+      ],
+      "googleBooksId": "JWSzcrYG1o8C",
+      "score": 106,
+      "bookId": "book.google.5766b90eef675a08",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 30,
+      "title": "Vinegar Hill",
+      "requestedAuthors": [
+        "A. Manette Ansay"
+      ],
+      "matchedTitle": "Vinegar Hill",
+      "matchedAuthors": [
+        "A. Manette Ansay"
+      ],
+      "googleBooksId": "XWa9R8plRGYC",
+      "score": 106,
+      "bookId": "book.google.a07e5f3de0b6696d",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 31,
+      "title": "A Map of the World",
+      "requestedAuthors": [
+        "Jane Hamilton"
+      ],
+      "matchedTitle": "A Map of the World",
+      "matchedAuthors": [
+        "Jane Hamilton"
+      ],
+      "googleBooksId": "6UiMDQAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.872579a578342082",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 32,
+      "title": "Gap Creek",
+      "requestedAuthors": [
+        "Robert Morgan"
+      ],
+      "matchedTitle": "Gap Creek",
+      "matchedAuthors": [
+        "Robert Morgan"
+      ],
+      "googleBooksId": "NUyJBHKcONgC",
+      "score": 107,
+      "bookId": "book.google.cbcf39fbaef297d7",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 33,
+      "title": "Daughter of Fortune",
+      "requestedAuthors": [
+        "Isabel Allende"
+      ],
+      "matchedTitle": "Daughter of Fortune",
+      "matchedAuthors": [
+        "Isabel Allende"
+      ],
+      "googleBooksId": "SVQRo4yH_bYC",
+      "score": 107,
+      "bookId": "book.google.acbea719bb1aa1a3",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 34,
+      "title": "Back Roads",
+      "requestedAuthors": [
+        "Tawni O'Dell"
+      ],
+      "matchedTitle": "Back Roads",
+      "matchedAuthors": [
+        "Tawni O'Dell"
+      ],
+      "googleBooksId": "4rjEcjaNRi8C",
+      "score": 107,
+      "bookId": "book.google.0489fa68a08618b2",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 35,
+      "title": "The Bluest Eye",
+      "requestedAuthors": [
+        "Toni Morrison"
+      ],
+      "matchedTitle": "The Bluest Eye",
+      "matchedAuthors": [
+        "Toni Morrison"
+      ],
+      "googleBooksId": "y8g1EAAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.9dc6c0c200b038cc",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 36,
+      "title": "While I Was Gone",
+      "requestedAuthors": [
+        "Sue Miller"
+      ],
+      "matchedTitle": "While I Was Gone",
+      "matchedAuthors": [
+        "Sue Miller"
+      ],
+      "googleBooksId": "syDpisFWOIsC",
+      "score": 107,
+      "bookId": "book.google.561429cb491adf01",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 37,
+      "title": "The Poisonwood Bible",
+      "requestedAuthors": [
+        "Barbara Kingsolver"
+      ],
+      "matchedTitle": "The Poisonwood Bible",
+      "matchedAuthors": [
+        "Barbara Kingsolver"
+      ],
+      "googleBooksId": "Q69PhJN-TbwC",
+      "score": 107,
+      "bookId": "book.google.0cc58e2506133fdd",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 38,
+      "title": "Open House",
+      "requestedAuthors": [
+        "Elizabeth Berg"
+      ],
+      "matchedTitle": "Open House",
+      "matchedAuthors": [
+        "Elizabeth Berg"
+      ],
+      "googleBooksId": "3hHAHZW730cC",
+      "score": 107,
+      "bookId": "book.google.6e8dce73ac8393d0",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 39,
+      "title": "Drowning Ruth",
+      "requestedAuthors": [
+        "Christina Schwarz"
+      ],
+      "matchedTitle": "Drowning Ruth",
+      "matchedAuthors": [
+        "Christina Schwarz"
+      ],
+      "googleBooksId": "Hdn0sVWOPhwC",
+      "score": 107,
+      "bookId": "book.google.a419b5c130cd4c50",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 40,
+      "title": "House of Sand and Fog",
+      "requestedAuthors": [
+        "Andre Dubus III"
+      ],
+      "matchedTitle": "House of Sand and Fog",
+      "matchedAuthors": [
+        "Andre Dubus"
+      ],
+      "googleBooksId": "TOTBRDOkhpkC",
+      "score": 107,
+      "bookId": "book.google.e689e125b5100c30",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 41,
+      "title": "We Were the Mulvaneys",
+      "requestedAuthors": [
+        "Joyce Carol Oates"
+      ],
+      "matchedTitle": "We Were the Mulvaneys",
+      "matchedAuthors": [
+        "Joyce Carol Oates"
+      ],
+      "googleBooksId": "6dLMDwAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.45182a7d254da44d",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 42,
+      "title": "Icy Sparks",
+      "requestedAuthors": [
+        "Gwyn Hyman Rubio"
+      ],
+      "matchedTitle": "Icy Sparks",
+      "matchedAuthors": [
+        "Gwyn Hyman Rubio"
+      ],
+      "googleBooksId": "RoxPEAAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.a545a51611ebd9ec",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 43,
+      "title": "Stolen Lives",
+      "requestedAuthors": [
+        "Malika Oufkir",
+        "Michèle Fitoussi"
+      ],
+      "matchedTitle": "Stolen Lives",
+      "matchedAuthors": [
+        "Malika Oufkir",
+        "Michele Fitoussi"
+      ],
+      "googleBooksId": "Q7K-AAAACAAJ",
+      "score": 104,
+      "bookId": "book.google.fcf0cedffa6cbc96",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 44,
+      "title": "Cane River",
+      "requestedAuthors": [
+        "Lalita Tademy"
+      ],
+      "matchedTitle": "Cane River",
+      "matchedAuthors": [
+        "Lalita Tademy"
+      ],
+      "googleBooksId": "YF_-1nX8zl0C",
+      "score": 107,
+      "bookId": "book.google.fe3316a29d5a8d7d",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 45,
+      "title": "The Corrections",
+      "requestedAuthors": [
+        "Jonathan Franzen"
+      ],
+      "matchedTitle": "The Corrections",
+      "matchedAuthors": [
+        "Jonathan Franzen"
+      ],
+      "googleBooksId": "FodGfz5li5wC",
+      "score": 107,
+      "bookId": "book.google.a8a23cab4051c595",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 46,
+      "title": "A Fine Balance",
+      "requestedAuthors": [
+        "Rohinton Mistry"
+      ],
+      "matchedTitle": "A Fine Balance",
+      "matchedAuthors": [
+        "Rohinton Mistry"
+      ],
+      "googleBooksId": "2kuoQJmZ_jkC",
+      "score": 107,
+      "bookId": "book.google.b2c51cb7542d977a",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 47,
+      "title": "Fall on Your Knees",
+      "requestedAuthors": [
+        "Ann-Marie MacDonald"
+      ],
+      "matchedTitle": "Fall on Your Knees",
+      "matchedAuthors": [
+        "Ann-Marie MacDonald"
+      ],
+      "googleBooksId": "VYqOPRlgpUEC",
+      "score": 107,
+      "bookId": "book.google.70f5e47134985516",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 48,
+      "title": "Sula",
+      "requestedAuthors": [
+        "Toni Morrison"
+      ],
+      "matchedTitle": "Sula",
+      "matchedAuthors": [
+        "Toni Morrison"
+      ],
+      "googleBooksId": "b8FhBAAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.b6df77f79da29bf3",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 49,
+      "title": "East of Eden",
+      "requestedAuthors": [
+        "John Steinbeck"
+      ],
+      "matchedTitle": "East of Eden",
+      "matchedAuthors": [
+        "John Steinbeck"
+      ],
+      "googleBooksId": "1qdPEAAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.bee08c23a71c0d07",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 50,
+      "title": "Cry, the Beloved Country",
+      "requestedAuthors": [
+        "Alan Paton"
+      ],
+      "matchedTitle": "Cry, the Beloved Country",
+      "matchedAuthors": [
+        "Alan Paton"
+      ],
+      "googleBooksId": "0JU_EQAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.24ee5290dc6b7f32",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 51,
+      "title": "One Hundred Years of Solitude",
+      "requestedAuthors": [
+        "Gabriel García Márquez"
+      ],
+      "matchedTitle": "One Hundred Years of Solitude",
+      "matchedAuthors": [
+        "Gabriel García Márquez"
+      ],
+      "googleBooksId": "w0-zUL-87uAC",
+      "score": 107,
+      "bookId": "book.google.b101b90caef5c247",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 52,
+      "title": "The Heart Is a Lonely Hunter",
+      "requestedAuthors": [
+        "Carson McCullers"
+      ],
+      "matchedTitle": "The Heart is a Lonely Hunter",
+      "matchedAuthors": [
+        "Carson McCullers"
+      ],
+      "googleBooksId": "z_Pvxz9iRJ0C",
+      "score": 107,
+      "bookId": "book.google.2e6cf14e85b1c800",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 53,
+      "title": "Anna Karenina",
+      "requestedAuthors": [
+        "Leo Tolstoy"
+      ],
+      "matchedTitle": "Anna Karenina",
+      "matchedAuthors": [
+        "Leo Tolstoy"
+      ],
+      "googleBooksId": "GwBdEQAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.b9c34d17da1a9c9a",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 54,
+      "title": "The Good Earth",
+      "requestedAuthors": [
+        "Pearl S. Buck"
+      ],
+      "matchedTitle": "The Good Earth",
+      "matchedAuthors": [
+        "Pearl S. Buck"
+      ],
+      "googleBooksId": "xsYpDwAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.8e9307c52d62c88c",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 55,
+      "title": "As I Lay Dying",
+      "requestedAuthors": [
+        "William Faulkner"
+      ],
+      "matchedTitle": "As I Lay Dying",
+      "matchedAuthors": [
+        "William Faulkner",
+        "Sparknotes"
+      ],
+      "googleBooksId": "TOFXUPmkKogC",
+      "score": 107,
+      "bookId": "book.google.ed994b818bc3c88d",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 56,
+      "title": "The Sound and the Fury",
+      "requestedAuthors": [
+        "William Faulkner"
+      ],
+      "matchedTitle": "The Sound and the Fury",
+      "matchedAuthors": [
+        "William Faulkner"
+      ],
+      "googleBooksId": "-d9dEQAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.2b21c5226d44e031",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 57,
+      "title": "Light in August",
+      "requestedAuthors": [
+        "William Faulkner"
+      ],
+      "matchedTitle": "Light in August",
+      "matchedAuthors": [
+        "William Faulkner"
+      ],
+      "googleBooksId": "LFH-uwPLB8wC",
+      "score": 107,
+      "bookId": "book.google.1559ecdc565ccc6c",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 58,
+      "title": "A Million Little Pieces",
+      "requestedAuthors": [
+        "James Frey"
+      ],
+      "matchedTitle": "A Million Little Pieces",
+      "matchedAuthors": [
+        "JAMES. FREY"
+      ],
+      "googleBooksId": "9ojfyAEACAAJ",
+      "score": 107,
+      "bookId": "book.google.aa8efebfd83076a1",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 59,
+      "title": "Night",
+      "requestedAuthors": [
+        "Elie Wiesel"
+      ],
+      "matchedTitle": "Night",
+      "matchedAuthors": [
+        "Elie Wiesel"
+      ],
+      "googleBooksId": "ELbHiPmYSM4C",
+      "score": 107,
+      "bookId": "book.google.fbc13ddf180c4d3f",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 60,
+      "title": "The Measure of a Man",
+      "requestedAuthors": [
+        "Sidney Poitier"
+      ],
+      "matchedTitle": "The Measure of a Man",
+      "matchedAuthors": [
+        "Sidney Poitier"
+      ],
+      "googleBooksId": "o0HoPSehLTQC",
+      "score": 107,
+      "bookId": "book.google.0a198297fcf3d527",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 61,
+      "title": "The Road",
+      "requestedAuthors": [
+        "Cormac McCarthy"
+      ],
+      "matchedTitle": "The Road",
+      "matchedAuthors": [
+        "Cormac McCarthy"
+      ],
+      "googleBooksId": "hoTU7NliHCwC",
+      "score": 107,
+      "bookId": "book.google.075e1853f5e0913d",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 62,
+      "title": "Middlesex",
+      "requestedAuthors": [
+        "Jeffrey Eugenides"
+      ],
+      "matchedTitle": "Middlesex",
+      "matchedAuthors": [
+        "Jeffrey Eugenides"
+      ],
+      "googleBooksId": "h7utqa_hWoIC",
+      "score": 107,
+      "bookId": "book.google.e2bf670048cb920e",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 63,
+      "title": "Love in the Time of Cholera",
+      "requestedAuthors": [
+        "Gabriel García Márquez"
+      ],
+      "matchedTitle": "Love in the Time of Cholera",
+      "matchedAuthors": [
+        "Gabriel García Márquez"
+      ],
+      "googleBooksId": "iNuEDwAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.5535877231e3a1cf",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 64,
+      "title": "The Pillars of the Earth",
+      "requestedAuthors": [
+        "Ken Follett"
+      ],
+      "matchedTitle": "The Pillars of the Earth",
+      "matchedAuthors": [
+        "Ken Follett"
+      ],
+      "googleBooksId": "QYYQDAAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.92a61d54455e7bd3",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 65,
+      "title": "A New Earth",
+      "requestedAuthors": [
+        "Eckhart Tolle"
+      ],
+      "matchedTitle": "A New Earth",
+      "matchedAuthors": [
+        "Eckhart Tolle"
+      ],
+      "googleBooksId": "46vZCwAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.9971b086cd24d343",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 66,
+      "title": "The Story of Edgar Sawtelle",
+      "requestedAuthors": [
+        "David Wroblewski"
+      ],
+      "matchedTitle": "The Story of Edgar Sawtelle",
+      "matchedAuthors": [
+        "David Wroblewski"
+      ],
+      "googleBooksId": "IihAoooP_ToC",
+      "score": 107,
+      "bookId": "book.google.4d5ad978e0772036",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 67,
+      "title": "Say You're One of Them",
+      "requestedAuthors": [
+        "Uwem Akpan"
+      ],
+      "matchedTitle": "Say You're One of Them",
+      "matchedAuthors": [
+        "Uwem Akpan"
+      ],
+      "googleBooksId": "ZW04WgBbvisC",
+      "score": 107,
+      "bookId": "book.google.267ff784c3e3541e",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 68,
+      "title": "Freedom",
+      "requestedAuthors": [
+        "Jonathan Franzen"
+      ],
+      "matchedTitle": "Freedom",
+      "matchedAuthors": [
+        "Jonathan Franzen"
+      ],
+      "googleBooksId": "cWQJJIgJNtUC",
+      "score": 107,
+      "bookId": "book.google.301ef8140e7358ea",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 69,
+      "title": "Great Expectations",
+      "requestedAuthors": [
+        "Charles Dickens"
+      ],
+      "matchedTitle": "Great Expectations",
+      "matchedAuthors": [
+        "Charles Dickens"
+      ],
+      "googleBooksId": "IBspDwAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.00b406747afa426e",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 70,
+      "title": "A Tale of Two Cities",
+      "requestedAuthors": [
+        "Charles Dickens"
+      ],
+      "matchedTitle": "A Tale of Two Cities",
+      "matchedAuthors": [
+        "Charles Dickens"
+      ],
+      "googleBooksId": "ajXWxAn8NhUC",
+      "score": 107,
+      "bookId": "book.google.b47453aaf8e9fabc",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 71,
+      "title": "Wild",
+      "requestedAuthors": [
+        "Cheryl Strayed"
+      ],
+      "matchedTitle": "Wild",
+      "matchedAuthors": [
+        "Cheryl Strayed"
+      ],
+      "googleBooksId": "hPE5mwEACAAJ",
+      "score": 107,
+      "bookId": "book.google.fead854a3992c389",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 72,
+      "title": "The Twelve Tribes of Hattie",
+      "requestedAuthors": [
+        "Ayana Mathis"
+      ],
+      "matchedTitle": "The Twelve Tribes of Hattie",
+      "matchedAuthors": [
+        "Ayana Mathis"
+      ],
+      "googleBooksId": "DwJVdWgKscwC",
+      "score": 107,
+      "bookId": "book.google.7946cbfd1f78c906",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 73,
+      "title": "The Invention of Wings",
+      "requestedAuthors": [
+        "Sue Monk Kidd"
+      ],
+      "matchedTitle": "The Invention of Wings",
+      "matchedAuthors": [
+        "Sue Monk Kidd"
+      ],
+      "googleBooksId": "PyRRAgAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.8609160b51a4a9c2",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 74,
+      "title": "Ruby",
+      "requestedAuthors": [
+        "Cynthia Bond"
+      ],
+      "matchedTitle": "Ruby",
+      "matchedAuthors": [
+        "Cynthia Bond"
+      ],
+      "googleBooksId": "OVHoBgAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.6ba0ad7a1c3487e5",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 75,
+      "title": "The Underground Railroad",
+      "requestedAuthors": [
+        "Colson Whitehead"
+      ],
+      "matchedTitle": "The Underground Railroad",
+      "matchedAuthors": [
+        "Colson Whitehead"
+      ],
+      "googleBooksId": "xYtIDwAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.3fc6e1fc0cea7ba2",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 76,
+      "title": "Love Warrior",
+      "requestedAuthors": [
+        "Glennon Doyle"
+      ],
+      "matchedTitle": "Love Warrior",
+      "matchedAuthors": [
+        "Glennon Doyle",
+        "Glennon Doyle Melton"
+      ],
+      "googleBooksId": "Scj_DAAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.740c7d732ee22eb0",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 77,
+      "title": "Behold the Dreamers",
+      "requestedAuthors": [
+        "Imbolo Mbue"
+      ],
+      "matchedTitle": "Behold the Dreamers",
+      "matchedAuthors": [
+        "Imbolo Mbue"
+      ],
+      "googleBooksId": "nEcsDwAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.dca6bacad9b91e4d",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 78,
+      "title": "An American Marriage",
+      "requestedAuthors": [
+        "Tayari Jones"
+      ],
+      "matchedTitle": "An American Marriage",
+      "matchedAuthors": [
+        "Tayari Jones"
+      ],
+      "googleBooksId": "tdLbvwEACAAJ",
+      "score": 107,
+      "bookId": "book.google.8ff88ec08db4b6cc",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 79,
+      "title": "The Sun Does Shine",
+      "requestedAuthors": [
+        "Anthony Ray Hinton"
+      ],
+      "matchedTitle": "The Sun Does Shine",
+      "matchedAuthors": [
+        "Anthony Ray Hinton",
+        "Lara Love Hardin"
+      ],
+      "googleBooksId": "S1JTDwAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.3c157eb4e27e5b62",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 80,
+      "title": "Becoming",
+      "requestedAuthors": [
+        "Michelle Obama"
+      ],
+      "matchedTitle": "Becoming",
+      "matchedAuthors": [
+        "Michelle Obama"
+      ],
+      "googleBooksId": "V-8kEAAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.149aaedf1dfc59e1",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 81,
+      "title": "The Water Dancer",
+      "requestedAuthors": [
+        "Ta-Nehisi Coates"
+      ],
+      "matchedTitle": "The Water Dancer",
+      "matchedAuthors": [
+        "Ta-Nehisi Coates"
+      ],
+      "googleBooksId": "kDqzDwAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.f979e42744ac18b1",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 82,
+      "title": "Olive, Again",
+      "requestedAuthors": [
+        "Elizabeth Strout"
+      ],
+      "matchedTitle": "Olive, Again",
+      "matchedAuthors": [
+        "Elizabeth Strout"
+      ],
+      "googleBooksId": "4kSwDwAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.fb6e698acf584b09",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 83,
+      "title": "American Dirt",
+      "requestedAuthors": [
+        "Jeanine Cummins"
+      ],
+      "matchedTitle": "American Dirt",
+      "matchedAuthors": [
+        "Jeanine Cummins"
+      ],
+      "googleBooksId": "mcJeywEACAAJ",
+      "score": 106,
+      "bookId": "book.google.29e80fc268d42574",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 84,
+      "title": "Hidden Valley Road: Inside the Mind of an American Family",
+      "requestedAuthors": [
+        "Robert Kolker"
+      ],
+      "matchedTitle": "Hidden Valley Road",
+      "matchedAuthors": [
+        "Robert Kolker"
+      ],
+      "googleBooksId": "bxahDwAAQBAJ",
+      "score": 82,
+      "bookId": "book.google.23c71ee5f8e2ab1b",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 85,
+      "title": "Deacon King Kong",
+      "requestedAuthors": [
+        "James McBride"
+      ],
+      "matchedTitle": "Deacon King Kong",
+      "matchedAuthors": [
+        "James McBride",
+        "François Happe"
+      ],
+      "googleBooksId": "HiE8EQAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.86a37b6099213b4f",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 86,
+      "title": "Caste: The Origins of Our Discontents",
+      "requestedAuthors": [
+        "Isabel Wilkerson"
+      ],
+      "matchedTitle": "Caste",
+      "matchedAuthors": [
+        "Isabel Wilkerson"
+      ],
+      "googleBooksId": "_er2DwAAQBAJ",
+      "score": 82,
+      "bookId": "book.google.a7209320b024a5c9",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 87,
+      "title": "Jack",
+      "requestedAuthors": [
+        "Marilynne Robinson"
+      ],
+      "matchedTitle": "Jack",
+      "matchedAuthors": [
+        "Marilynne Robinson"
+      ],
+      "googleBooksId": "_adbzQEACAAJ",
+      "score": 107,
+      "bookId": "book.google.0ebfedb3723f5ac5",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 88,
+      "title": "Lila",
+      "requestedAuthors": [
+        "Marilynne Robinson"
+      ],
+      "matchedTitle": "Lila",
+      "matchedAuthors": [
+        "Marilynne Robinson"
+      ],
+      "googleBooksId": "K_nsDwAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.297f6f04f7c219b1",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 89,
+      "title": "Home",
+      "requestedAuthors": [
+        "Marilynne Robinson"
+      ],
+      "matchedTitle": "Home",
+      "matchedAuthors": [
+        "Marilynne Robinson"
+      ],
+      "googleBooksId": "LVcC5DIkgA8C",
+      "score": 107,
+      "bookId": "book.google.3366fc7f58faf61e",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 90,
+      "title": "Gilead",
+      "requestedAuthors": [
+        "Marilynne Robinson"
+      ],
+      "matchedTitle": "Gilead",
+      "matchedAuthors": [
+        "Marilynne Robinson"
+      ],
+      "googleBooksId": "6S1ehUwm2qAC",
+      "score": 107,
+      "bookId": "book.google.85046410307af3e7",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 91,
+      "title": "The Sweetness of Water",
+      "requestedAuthors": [
+        "Nathan Harris"
+      ],
+      "matchedTitle": "The Sweetness of Water",
+      "matchedAuthors": [
+        "Nathan Harris"
+      ],
+      "googleBooksId": "1-GJzgEACAAJ",
+      "score": 106,
+      "bookId": "book.google.338743c8ef66355d",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 92,
+      "title": "The Love Songs of W.E.B. Du Bois",
+      "requestedAuthors": [
+        "Honorée Fanonne Jeffers"
+      ],
+      "matchedTitle": "The Love Songs of W.E.B. Du Bois",
+      "matchedAuthors": [
+        "Honorée Fanonne Jeffers"
+      ],
+      "googleBooksId": "pXI4EAAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.cb8c9bc6a6a5eafa",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 93,
+      "title": "Bewilderment",
+      "requestedAuthors": [
+        "Richard Powers"
+      ],
+      "matchedTitle": "Bewilderment",
+      "matchedAuthors": [
+        "Richard Powers"
+      ],
+      "googleBooksId": "LfkQEAAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.3336f596385b7e57",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 94,
+      "title": "The Way of Integrity",
+      "requestedAuthors": [
+        "Martha Beck"
+      ],
+      "matchedTitle": "The Way of Integrity",
+      "matchedAuthors": [
+        "Martha Beck"
+      ],
+      "googleBooksId": "y7n8DwAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.45fab25f02960dd7",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 95,
+      "title": "Finding Me",
+      "requestedAuthors": [
+        "Viola Davis"
+      ],
+      "matchedTitle": "Finding Me",
+      "matchedAuthors": [
+        "Viola Davis"
+      ],
+      "googleBooksId": "gl05EAAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.06f59ebcef05ca69",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 96,
+      "title": "Nightcrawling",
+      "requestedAuthors": [
+        "Leila Mottley"
+      ],
+      "matchedTitle": "Nightcrawling",
+      "matchedAuthors": [
+        "Leila Mottley"
+      ],
+      "googleBooksId": "D5BzEAAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.3a88ec2b2e847f10",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 97,
+      "title": "That Bird Has My Wings",
+      "requestedAuthors": [
+        "Jarvis Jay Masters"
+      ],
+      "matchedTitle": "That Bird Has My Wings",
+      "matchedAuthors": [
+        "Jarvis Jay Masters"
+      ],
+      "googleBooksId": "NqQ-Q9RbEOQC",
+      "score": 107,
+      "bookId": "book.google.377019f300286094",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 98,
+      "title": "Demon Copperhead",
+      "requestedAuthors": [
+        "Barbara Kingsolver"
+      ],
+      "matchedTitle": "Demon Copperhead",
+      "matchedAuthors": [
+        "Barbara Kingsolver"
+      ],
+      "googleBooksId": "bMxZEAAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.9b29f68447c57165",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 99,
+      "title": "Bittersweet",
+      "requestedAuthors": [
+        "Susan Cain"
+      ],
+      "matchedTitle": "Bittersweet",
+      "matchedAuthors": [
+        "Susan Cain"
+      ],
+      "googleBooksId": "XxExEAAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.5e4ef79966a5e4ff",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 100,
+      "title": "Hello Beautiful",
+      "requestedAuthors": [
+        "Ann Napolitano"
+      ],
+      "matchedTitle": "Hello Beautiful",
+      "matchedAuthors": [
+        "Ann Napolitano"
+      ],
+      "googleBooksId": "jwCVEAAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.f67a3f18514beed8",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 101,
+      "title": "The Covenant of Water",
+      "requestedAuthors": [
+        "Abraham Verghese"
+      ],
+      "matchedTitle": "The Covenant of Water (Oprah's Book Club)",
+      "matchedAuthors": [
+        "Abraham Verghese"
+      ],
+      "googleBooksId": "_MO5EAAAQBAJ",
+      "score": 82,
+      "bookId": "book.google.3dbc9d3d952d28cf",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 102,
+      "title": "Wellness",
+      "requestedAuthors": [
+        "Nathan Hill"
+      ],
+      "matchedTitle": "Wellness",
+      "matchedAuthors": [
+        "Nathan Hill"
+      ],
+      "googleBooksId": "BTekEAAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.fba202f98a40f7a6",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 103,
+      "title": "Let Us Descend",
+      "requestedAuthors": [
+        "Jesmyn Ward"
+      ],
+      "matchedTitle": "Let Us Descend",
+      "matchedAuthors": [
+        "Jesmyn Ward"
+      ],
+      "googleBooksId": "EW3ZEAAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.621447a2e8f9dc08",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 104,
+      "title": "The Many Lives of Mama Love",
+      "requestedAuthors": [
+        "Lara Love Hardin"
+      ],
+      "matchedTitle": "The Many Lives of Mama Love",
+      "matchedAuthors": [
+        "Lara Love Hardin"
+      ],
+      "googleBooksId": "N5nJzwEACAAJ",
+      "score": 104,
+      "bookId": "book.google.299583f97941d003",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 105,
+      "title": "Long Island",
+      "requestedAuthors": [
+        "Colm Tóibín"
+      ],
+      "matchedTitle": "Long Island",
+      "matchedAuthors": [
+        "Colm Tóibín"
+      ],
+      "googleBooksId": "xd3iEAAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.e0995ef7e315d7f6",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 106,
+      "title": "Familiaris",
+      "requestedAuthors": [
+        "David Wroblewski"
+      ],
+      "matchedTitle": "Familiaris",
+      "matchedAuthors": [
+        "David Wroblewski"
+      ],
+      "googleBooksId": "_4RbEQAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.4d7877084b7adac1",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 107,
+      "title": "Tell Me Everything",
+      "requestedAuthors": [
+        "Elizabeth Strout"
+      ],
+      "matchedTitle": "Tell Me Everything",
+      "matchedAuthors": [
+        "Elizabeth Strout"
+      ],
+      "googleBooksId": "sQqHEAAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.12d5f9a3c2e992c3",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 108,
+      "title": "From Here to the Great Unknown",
+      "requestedAuthors": [
+        "Lisa Marie Presley",
+        "Riley Keough"
+      ],
+      "matchedTitle": "From here to the great unknown",
+      "matchedAuthors": [
+        "Lisa Marie Presley",
+        "Riley Keough"
+      ],
+      "googleBooksId": "NzsoEQAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.534fa67c91d27a57",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 109,
+      "title": "Small Things Like These",
+      "requestedAuthors": [
+        "Claire Keegan"
+      ],
+      "matchedTitle": "Small Things Like These",
+      "matchedAuthors": [
+        "Claire Keegan"
+      ],
+      "googleBooksId": "bheY0AEACAAJ",
+      "score": 105,
+      "bookId": "book.google.0b629ef3ac182d5b",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 110,
+      "title": "A New Earth",
+      "requestedAuthors": [
+        "Eckhart Tolle"
+      ],
+      "matchedTitle": "A New Earth",
+      "matchedAuthors": [
+        "Eckhart Tolle"
+      ],
+      "googleBooksId": "46vZCwAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.9971b086cd24d343",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 111,
+      "title": "Dream State",
+      "requestedAuthors": [
+        "Eric Puchner"
+      ],
+      "matchedTitle": "Dream State",
+      "matchedAuthors": [
+        "Eric Puchner"
+      ],
+      "googleBooksId": "YA8UEQAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.592c49a75ecb4e3f",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 112,
+      "title": "The Tell",
+      "requestedAuthors": [
+        "Amy Griffin"
+      ],
+      "matchedTitle": "The Tell",
+      "matchedAuthors": [
+        "Amy Griffin"
+      ],
+      "googleBooksId": "g4IOEQAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.30065702bc536cd2",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 113,
+      "title": "Matriarch",
+      "requestedAuthors": [
+        "Tina Knowles"
+      ],
+      "matchedTitle": "Matriarch",
+      "matchedAuthors": [
+        "Tina Knowles"
+      ],
+      "googleBooksId": "ZpBYEQAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.ae6b255dbed39877",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 114,
+      "title": "The Emperor of Gladness",
+      "requestedAuthors": [
+        "Ocean Vuong"
+      ],
+      "matchedTitle": "The Emperor of Gladness",
+      "matchedAuthors": [
+        "Ocean Vuong"
+      ],
+      "googleBooksId": "jUf30AEACAAJ",
+      "score": 104,
+      "bookId": "book.google.6e880b4d2e224be8",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 115,
+      "title": "The River Is Waiting",
+      "requestedAuthors": [
+        "Wally Lamb"
+      ],
+      "matchedTitle": "The River Is Waiting",
+      "matchedAuthors": [
+        "Wally Lamb"
+      ],
+      "googleBooksId": "E3UW0gEACAAJ",
+      "score": 105,
+      "bookId": "book.google.d6a3f3e1926b9ea2",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 116,
+      "title": "Culpability",
+      "requestedAuthors": [
+        "Bruce Holsinger"
+      ],
+      "matchedTitle": "Culpability",
+      "matchedAuthors": [
+        "Bruce Holsinger"
+      ],
+      "googleBooksId": "NiZ40QEACAAJ",
+      "score": 106,
+      "bookId": "book.google.8dbf381d94dba181",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 117,
+      "title": "Bridge of Sighs",
+      "requestedAuthors": [
+        "Richard Russo"
+      ],
+      "matchedTitle": "Bridge of Sighs: Oprah's Book Club",
+      "matchedAuthors": [
+        "Richard Russo"
+      ],
+      "googleBooksId": "OiNGhdlc0CIC",
+      "score": 82,
+      "bookId": "book.google.91390e9544f9398d",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 118,
+      "title": "All the Way to the River",
+      "requestedAuthors": [
+        "Elizabeth Gilbert"
+      ],
+      "matchedTitle": "All the Way to the River",
+      "matchedAuthors": [
+        "Elizabeth Gilbert"
+      ],
+      "googleBooksId": "uWOFEQAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.d0b1290859cea705",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 119,
+      "title": "A Guardian and a Thief",
+      "requestedAuthors": [
+        "Megha Majumdar"
+      ],
+      "matchedTitle": "A Guardian and a Thief",
+      "matchedAuthors": [
+        "Megha Majumdar"
+      ],
+      "googleBooksId": "ccZaEQAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.de1fd514fd8fc463",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 120,
+      "title": "Some Bright Nowhere",
+      "requestedAuthors": [
+        "Ann Packer"
+      ],
+      "matchedTitle": "Some Bright Nowhere",
+      "matchedAuthors": [
+        "Ann Packer"
+      ],
+      "googleBooksId": "rddVEQAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.9c4f4886f336a95a",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 121,
+      "title": "Kin",
+      "requestedAuthors": [
+        "Tayari Jones"
+      ],
+      "matchedTitle": "Kin",
+      "matchedAuthors": [
+        "Tayari Jones"
+      ],
+      "googleBooksId": "V0iKEQAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.cf1d1588857ba596",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 122,
+      "title": "Go Gentle",
+      "requestedAuthors": [
+        "Maria Semple"
+      ],
+      "matchedTitle": "Go Gentle",
+      "matchedAuthors": [
+        "Maria Semple"
+      ],
+      "googleBooksId": "Per90QEACAAJ",
+      "score": 104,
+      "bookId": "book.google.a47b62d46de3209c",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 123,
+      "title": "John of John",
+      "requestedAuthors": [
+        "Douglas Stuart"
+      ],
+      "matchedTitle": "John of John",
+      "matchedAuthors": [
+        "Douglas Stuart"
+      ],
+      "googleBooksId": "VVFgEQAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.3a303f30b31de8d3",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 124,
+      "title": "Little Wonder",
+      "requestedAuthors": [
+        "Sophie Chen Keller"
+      ],
+      "matchedTitle": "Little Wonder",
+      "matchedAuthors": [
+        "Sophie Chen Keller"
+      ],
+      "googleBooksId": "wfjHEQAAQBAJ",
+      "score": 107,
+      "bookId": "book.google.189d571411e74ea2",
+      "status": "created"
+    }
+  ]
+}

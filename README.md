@@ -12,6 +12,15 @@ Copy `.env.example` to `.env.local`. Keep the Sanity dataset **private**. Never 
 
 Sanity project: `3h0o1unw`. Do not point this repo at other Sanity projects.
 
+If `localhost:3333` opens another project's Studio, check for another dev server
+with `lsof -nP -iTCP:3333 -sTCP:LISTEN`. Two servers can use port 3333 on different
+loopback addresses (`127.0.0.1` and `::1`). Open the address Evermore is listening
+on, or stop the other Studio and restart `pnpm studio`.
+
+Studio automatically extracts `studio/schema.json` for TypeGen during dev and
+build. To regenerate the schema and frontend types manually, run
+`pnpm --dir studio typegen`.
+
 ## Clerk reader profiles
 
 Clerk accounts link to Sanity `readerProfile` documents through `clerkUserId`.

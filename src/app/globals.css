@@ -445,6 +445,33 @@ a.surface:hover {
   -webkit-text-fill-color: transparent;
 }
 
+.collection-feature {
+  padding: 28px 24px 24px;
+  background:
+    linear-gradient(165deg, color-mix(in srgb, var(--accent-soft) 42%, white), transparent 42%),
+    color-mix(in srgb, var(--paper) 94%, white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, white 80%, transparent),
+    var(--shadow-soft);
+}
+
+@media (min-width: 1024px) {
+  .collection-feature {
+    padding: 32px 32px 28px;
+  }
+}
+
+.collection-rail {
+  scrollbar-width: none;
+  scroll-padding-inline: 8px;
+}
+
+.collection-rail::-webkit-scrollbar {
+  display: none;
+}
+
 .shelf-scroll {
   display: flex;
   gap: 1.25rem;

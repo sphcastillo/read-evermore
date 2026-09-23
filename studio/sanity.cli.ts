@@ -8,6 +8,10 @@ export default defineCliConfig({
   deployment: {
     autoUpdates: true,
   },
+  schemaExtraction: {
+    enabled: true,
+    enforceRequiredFields: true,
+  },
   typegen: {
     enabled: true,
     path: '../src/**/*.{ts,tsx}',
