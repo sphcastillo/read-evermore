@@ -71,7 +71,7 @@ export function AppShell({
       <header className="top-nav sticky top-3 z-30 mb-5 flex flex-wrap items-center gap-x-3 gap-y-2 px-3 py-2 sm:px-4 lg:top-4">
         <Link href="/" className="flex min-w-0 items-center gap-2.5 pl-1">
           <span className="truncate font-display text-lg leading-none tracking-tight sm:text-xl">
-            Read Evermore
+            Everlogue
           </span>
         </Link>
         <nav className="top-nav-links order-3 w-full sm:order-0 sm:w-auto sm:flex-1 sm:justify-center">

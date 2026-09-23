@@ -1,43 +1,63 @@
 import {NextRequest, NextResponse} from 'next/server'
-import {Webhook} from 'svix'
+import {clerkClient} from '@clerk/nextjs/server'
+import {verifyWebhook} from '@clerk/nextjs/webhooks'
 import {writeClient} from '@/sanity/client'
+import {identityGuardId, syncReaderProfile} from '@/lib/reader-profile'
 
 export async function POST(req: NextRequest) {
-  const secret = process.env.CLERK_WEBHOOK_SECRET
-  if (!secret) {
-    return NextResponse.json({error: 'CLERK_WEBHOOK_SECRET is not configured'}, {status: 501})
+  const signingSecret = process.env.CLERK_WEBHOOK_SIGNING_SECRET || process.env.CLERK_WEBHOOK_SECRET
+  if (!signingSecret) {
+    return NextResponse.json({error: 'CLERK_WEBHOOK_SIGNING_SECRET is not configured'}, {status: 503})
   }
 
-  const payload = await req.text()
-  const headers = {
-    'svix-id': req.headers.get('svix-id') || '',
-    'svix-timestamp': req.headers.get('svix-timestamp') || '',
-    'svix-signature': req.headers.get('svix-signature') || '',
+  let event
+  try {
+    event = await verifyWebhook(req, {signingSecret})
+  } catch {
+    return NextResponse.json({error: 'Invalid webhook signature'}, {status: 400})
   }
 
   try {
-    const wh = new Webhook(secret)
-    const event = wh.verify(payload, headers) as {type?: string; data?: {id?: string}}
-    if (event.type === 'user.deleted' && event.data?.id) {
+    if (event.type === 'user.created' || event.type === 'user.updated') {
+      // Read current identity so a delayed event cannot restore outdated names.
+      const clerk = await clerkClient()
+      let user
+      try {
+        user = await clerk.users.getUser(event.data.id)
+      } catch (error) {
+        if (error && typeof error === 'object' && 'status' in error && error.status === 404) {
+          return NextResponse.json({ok: true}) // Account was deleted before delivery.
+        }
+        throw error
+      }
+      await syncReaderProfile(writeClient(), user)
+    }
+    if (event.type === 'user.deleted' && event.data.id) {
       const clerkUserId = event.data.id
       const client = writeClient()
-      const profile = await client.fetch<{_id: string} | null>(
-        `*[_type == "readerProfile" && clerkUserId == $clerkUserId][0]{_id}`,
+      const profiles = await client.fetch<{_id: string}[]>(
+        `*[_type == "readerProfile" && clerkUserId == $clerkUserId]{_id}`,
         {clerkUserId},
+        {cache: 'no-store'},
       )
-      if (profile?._id) {
+      // Delete related documents together so references between shelves and
+      // entries cannot cause a partially completed account deletion.
+      const transaction = client.transaction()
+      for (const profile of profiles) {
         const related = await client.fetch<{_id: string}[]>(
           `*[references($id) && _type in ["rating","review","shelf","shelfEntry","readingProgress","clubMembership","vote","discussionPost"]]{_id}`,
           {id: profile._id},
+          {cache: 'no-store'},
         )
-        for (const doc of related) {
-          await client.delete(doc._id)
-        }
-        await client.delete(profile._id)
+        for (const doc of related) transaction.delete(doc._id)
+        transaction.delete(profile._id)
       }
+      transaction.delete(identityGuardId(clerkUserId))
+      await transaction.commit()
     }
     return NextResponse.json({ok: true})
-  } catch {
-    return NextResponse.json({error: 'Invalid webhook signature'}, {status: 400})
+  } catch (error) {
+    console.error('Clerk reader profile sync failed:', error)
+    return NextResponse.json({error: 'Reader profile sync failed'}, {status: 500})
   }
 }
