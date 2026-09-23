@@ -13,6 +13,8 @@ export const work = defineType({
   type: 'document',
   icon: BookIcon,
   fields: [
+    defineField({name: 'goodreadsBookId', title: 'Goodreads book ID', type: 'string', readOnly: true}),
+    defineField({name: 'importKey', type: 'string', readOnly: true, hidden: true}),
     defineField({
       name: 'title',
       type: 'string',

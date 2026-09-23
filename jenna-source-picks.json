@@ -1,0 +1,794 @@
+[
+  {
+    "title": "The Last Romantics",
+    "authors": [
+      "Tara Conklin"
+    ],
+    "selectionDate": "March 2019",
+    "isbn": "0062358200",
+    "selectionNumber": 1
+  },
+  {
+    "title": "The Unwinding of the Miracle: A Memoir of Life, Death, and Everything That Comes After",
+    "authors": [
+      "Julie Yip-Williams"
+    ],
+    "selectionDate": "April 2019",
+    "isbn": "0525511377",
+    "selectionNumber": 2
+  },
+  {
+    "title": "A Woman Is No Man",
+    "authors": [
+      "Etaf Rum"
+    ],
+    "selectionDate": "May 2019",
+    "isbn": "0062699768",
+    "selectionNumber": 3
+  },
+  {
+    "title": "Searching for Sylvie Lee",
+    "authors": [
+      "Jean Kwok"
+    ],
+    "selectionDate": "June 2019",
+    "isbn": "0062834304",
+    "selectionNumber": 4
+  },
+  {
+    "title": "Evvie Drake Starts Over",
+    "authors": [
+      "Linda Holmes"
+    ],
+    "selectionDate": "July 2019",
+    "isbn": "0525619240",
+    "selectionNumber": 5
+  },
+  {
+    "title": "Patsy",
+    "authors": [
+      "Nicole Dennis-Benn"
+    ],
+    "selectionDate": "August 2019",
+    "isbn": "1631495631",
+    "selectionNumber": 6
+  },
+  {
+    "title": "The Dearly Beloved",
+    "authors": [
+      "Cara Wall"
+    ],
+    "selectionDate": "September 2019",
+    "isbn": "198210452X",
+    "selectionNumber": 7
+  },
+  {
+    "title": "The Dutch House",
+    "authors": [
+      "Ann Patchett"
+    ],
+    "selectionDate": "October 2019",
+    "isbn": "0062963678",
+    "selectionNumber": 8
+  },
+  {
+    "title": "Nothing to See Here",
+    "authors": [
+      "Kevin Wilson"
+    ],
+    "selectionDate": "November 2019",
+    "isbn": "0062913468",
+    "selectionNumber": 9
+  },
+  {
+    "title": "Late Migrations",
+    "authors": [
+      "Margaret Renkl"
+    ],
+    "selectionDate": "December 2019",
+    "isbn": "1571313788",
+    "selectionNumber": 10
+  },
+  {
+    "title": "Dear Edward",
+    "authors": [
+      "Ann Napolitano"
+    ],
+    "selectionDate": "January 2020",
+    "isbn": "198485478X",
+    "selectionNumber": 11
+  },
+  {
+    "title": "The Girl with the Louding Voice",
+    "authors": [
+      "Abi Daré"
+    ],
+    "selectionDate": "February 2020",
+    "isbn": "1524746029",
+    "selectionNumber": 12
+  },
+  {
+    "title": "Writers & Lovers",
+    "authors": [
+      "Lily King"
+    ],
+    "selectionDate": "March 2020",
+    "isbn": "0802148530",
+    "selectionNumber": 13
+  },
+  {
+    "title": "Valentine",
+    "authors": [
+      "Elizabeth Wetmore"
+    ],
+    "selectionDate": "April 2020",
+    "isbn": "0062913263",
+    "selectionNumber": 14
+  },
+  {
+    "title": "All Adults Here",
+    "authors": [
+      "Emma Staub"
+    ],
+    "selectionDate": "May 2020",
+    "selectionNumber": 15
+  },
+  {
+    "title": "A Burning",
+    "authors": [
+      "Megha Majumdar"
+    ],
+    "selectionDate": "June 2020",
+    "isbn": "0525658696",
+    "selectionNumber": 16
+  },
+  {
+    "title": "Friends and Strangers",
+    "authors": [
+      "J. Courtney Sullivan"
+    ],
+    "selectionDate": "July 2020",
+    "isbn": "0525520597",
+    "selectionNumber": 17
+  },
+  {
+    "title": "The Comeback",
+    "authors": [
+      "Ella Berman"
+    ],
+    "selectionDate": "August 2020",
+    "isbn": "0593099516",
+    "selectionNumber": 18
+  },
+  {
+    "title": "Here for It",
+    "authors": [
+      "R. Eric Thomas"
+    ],
+    "selectionDate": "August 2020",
+    "isbn": "0525621032",
+    "selectionNumber": 19
+  },
+  {
+    "title": "Transcendent Kingdom",
+    "authors": [
+      "Yaa Gyasi"
+    ],
+    "selectionDate": "September 2020",
+    "isbn": "0525658181",
+    "selectionNumber": 20
+  },
+  {
+    "title": "Leave the World Behind",
+    "authors": [
+      "Rumaan Alam"
+    ],
+    "selectionDate": "October 2020",
+    "isbn": "0062667637",
+    "selectionNumber": 21
+  },
+  {
+    "title": "White Ivy",
+    "authors": [
+      "Susie Yang"
+    ],
+    "selectionDate": "November 2020",
+    "isbn": "1982100591",
+    "selectionNumber": 22
+  },
+  {
+    "title": "The Bluest Eye",
+    "authors": [
+      "Toni Morrison"
+    ],
+    "selectionDate": "December 2020",
+    "isbn": "0307278441",
+    "selectionNumber": 23
+  },
+  {
+    "title": "Black Buck",
+    "authors": [
+      "Mateo Askaripour"
+    ],
+    "selectionDate": "January 2021",
+    "isbn": "035838088X",
+    "selectionNumber": 24
+  },
+  {
+    "title": "The Four Winds",
+    "authors": [],
+    "selectionDate": "February 2021",
+    "isbn": "1250178606",
+    "selectionNumber": 25
+  },
+  {
+    "title": "Send for Me",
+    "authors": [],
+    "selectionDate": "February 2021",
+    "isbn": "1101947802",
+    "selectionNumber": 26
+  },
+  {
+    "title": "What's Mine and Yours",
+    "authors": [],
+    "selectionDate": "March 2021",
+    "isbn": "1538702347",
+    "selectionNumber": 27
+  },
+  {
+    "title": "Good Company",
+    "authors": [],
+    "selectionDate": "April 2021",
+    "isbn": "0062876007",
+    "selectionNumber": 28
+  },
+  {
+    "title": "Great Circle",
+    "authors": [],
+    "selectionDate": "May 2021",
+    "isbn": "0525656979",
+    "selectionNumber": 29
+  },
+  {
+    "title": "Malibu Rising",
+    "authors": [
+      "Taylor Jenkins Reid"
+    ],
+    "selectionDate": "June 2021",
+    "isbn": "1524798657",
+    "selectionNumber": 30
+  },
+  {
+    "title": "Hell of a Book",
+    "authors": [],
+    "selectionDate": "July 2021",
+    "isbn": "059333096X",
+    "selectionNumber": 31
+  },
+  {
+    "title": "The Turnout",
+    "authors": [
+      "Megan Abbott"
+    ],
+    "selectionDate": "August 2021",
+    "isbn": "059308490X",
+    "selectionNumber": 32
+  },
+  {
+    "title": "Beautiful Country",
+    "authors": [],
+    "selectionDate": "September 2021",
+    "isbn": "0385547218",
+    "selectionNumber": 33
+  },
+  {
+    "title": "The Lincoln Highway",
+    "authors": [],
+    "selectionDate": "October 2021",
+    "isbn": "0735222355",
+    "selectionNumber": 34
+  },
+  {
+    "title": "The Family",
+    "authors": [],
+    "selectionDate": "November 2021",
+    "isbn": "0525541993",
+    "selectionNumber": 35
+  },
+  {
+    "title": "Bright Burning Things",
+    "authors": [],
+    "selectionDate": "December 2021",
+    "isbn": "152662446X",
+    "selectionNumber": 36
+  },
+  {
+    "title": "The School for Good Mothers",
+    "authors": [],
+    "selectionDate": "January 2022",
+    "isbn": "1982156120",
+    "selectionNumber": 37
+  },
+  {
+    "title": "Black Cake",
+    "authors": [],
+    "selectionDate": "February 2022",
+    "isbn": "0593358333",
+    "selectionNumber": 38
+  },
+  {
+    "title": "Groundskeeping",
+    "authors": [],
+    "selectionDate": "March 2022",
+    "isbn": "0593320506",
+    "selectionNumber": 39
+  },
+  {
+    "title": "Memphis",
+    "authors": [],
+    "selectionDate": "April 2022",
+    "isbn": "0593230485",
+    "selectionNumber": 40
+  },
+  {
+    "title": "Remarkably Bright Creatures",
+    "authors": [],
+    "selectionDate": "May 2022",
+    "isbn": "0063242400",
+    "selectionNumber": 41
+  },
+  {
+    "title": "These Impossible Things",
+    "authors": [],
+    "selectionDate": "June 2022",
+    "isbn": "1538709309",
+    "selectionNumber": 42
+  },
+  {
+    "title": "The Measure",
+    "authors": [],
+    "selectionDate": "July 2022",
+    "isbn": "0063204207",
+    "selectionNumber": 43
+  },
+  {
+    "title": "The Many Daughters of Afong Moy",
+    "authors": [],
+    "selectionDate": "August 2022",
+    "isbn": "1982158212",
+    "selectionNumber": 44
+  },
+  {
+    "title": "Solito",
+    "authors": [],
+    "selectionDate": "September 2022",
+    "isbn": "0593498062",
+    "selectionNumber": 45
+  },
+  {
+    "title": "The Whalebone Theatre",
+    "authors": [],
+    "selectionDate": "October 2022",
+    "isbn": "0593321707",
+    "selectionNumber": 46
+  },
+  {
+    "title": "The Cloisters",
+    "authors": [
+      "Katy Hays"
+    ],
+    "selectionDate": "November 2022",
+    "isbn": "1668004402",
+    "selectionNumber": 47
+  },
+  {
+    "title": "The Secret History",
+    "authors": [],
+    "selectionDate": "December 2022",
+    "isbn": "1400031702",
+    "selectionNumber": 48
+  },
+  {
+    "title": "Sam",
+    "authors": [],
+    "selectionDate": "January 2023",
+    "isbn": "0593447816",
+    "selectionNumber": 49
+  },
+  {
+    "title": "Maame",
+    "authors": [],
+    "selectionDate": "February 2023",
+    "isbn": "1250282527",
+    "selectionNumber": 50
+  },
+  {
+    "title": "Black Candle Women",
+    "authors": [
+      "Diane Marie Brown"
+    ],
+    "selectionDate": "March 2023",
+    "isbn": "1525899910",
+    "selectionNumber": 51
+  },
+  {
+    "title": "Camp Zero",
+    "authors": [
+      "Michelle Min Sterling"
+    ],
+    "selectionDate": "April 2023",
+    "isbn": "1668007568",
+    "selectionNumber": 52
+  },
+  {
+    "title": "Chain-Gang All Stars",
+    "authors": [],
+    "selectionDate": "May 2023",
+    "isbn": "0593317335",
+    "selectionNumber": 53
+  },
+  {
+    "title": "The Celebrants",
+    "authors": [],
+    "selectionDate": "June 2023",
+    "isbn": "0593540425",
+    "selectionNumber": 54
+  },
+  {
+    "title": "Banyan Moon",
+    "authors": [],
+    "selectionDate": "July 2023",
+    "isbn": "0063267101",
+    "selectionNumber": 55
+  },
+  {
+    "title": "Summer Sisters",
+    "authors": [
+      "Judy Blume"
+    ],
+    "selectionDate": "August 2023",
+    "isbn": "0385337663",
+    "selectionNumber": 56
+  },
+  {
+    "title": "Amazing Grace Adams",
+    "authors": [
+      "Fran Littlewood"
+    ],
+    "selectionDate": "September 2023",
+    "isbn": "1250334152",
+    "selectionNumber": 57
+  },
+  {
+    "title": "How to Say Babylon",
+    "authors": [
+      "Safiya Sinclair"
+    ],
+    "selectionDate": "October 2023",
+    "isbn": "1982132337",
+    "selectionNumber": 58
+  },
+  {
+    "title": "The Sun Sets in Singapore",
+    "authors": [
+      "Kehinde Fadipe"
+    ],
+    "selectionDate": "November 2023",
+    "isbn": "1538741490",
+    "selectionNumber": 59
+  },
+  {
+    "title": "We Must Not Think of Ourselves",
+    "authors": [
+      "Lauren Grodstein"
+    ],
+    "selectionDate": "December 2023",
+    "isbn": "1643752340",
+    "selectionNumber": 60
+  },
+  {
+    "title": "The Waters",
+    "authors": [
+      "Bonnie Jo Campbell"
+    ],
+    "selectionDate": "January 2024",
+    "isbn": "0393248437",
+    "selectionNumber": 61
+  },
+  {
+    "title": "Good Material",
+    "authors": [
+      "Dolly Alderton"
+    ],
+    "selectionDate": "February 2024",
+    "isbn": "0241523672",
+    "selectionNumber": 62
+  },
+  {
+    "title": "The House on Mango Street",
+    "authors": [
+      "Sandra Cisneros"
+    ],
+    "selectionDate": "March 2024",
+    "isbn": "0679734775",
+    "selectionNumber": 63
+  },
+  {
+    "title": "The Great Divide",
+    "authors": [
+      "Cristina Henriquez"
+    ],
+    "selectionDate": "March 2024",
+    "isbn": "0063291320",
+    "selectionNumber": 64
+  },
+  {
+    "title": "The Husbands",
+    "authors": [
+      "Holly Gramazio"
+    ],
+    "selectionDate": "April 2024",
+    "isbn": "0385550618",
+    "selectionNumber": 65
+  },
+  {
+    "title": "Real Americans",
+    "authors": [
+      "Rachel Khong"
+    ],
+    "selectionDate": "May 2024",
+    "isbn": "0593537254",
+    "selectionNumber": 66
+  },
+  {
+    "title": "Swift River",
+    "authors": [
+      "Essie Chambers"
+    ],
+    "selectionDate": "June 2024",
+    "isbn": "1668027917",
+    "selectionNumber": 67
+  },
+  {
+    "title": "All the Colors of the Dark",
+    "authors": [
+      "Chris Whitaker"
+    ],
+    "selectionDate": "July 2024",
+    "isbn": "0593798872",
+    "selectionNumber": 68
+  },
+  {
+    "title": "The Wedding People",
+    "authors": [
+      "Alison Espach"
+    ],
+    "selectionDate": "August 2024",
+    "isbn": "1250899575",
+    "selectionNumber": 69
+  },
+  {
+    "title": "Blue Sisters",
+    "authors": [
+      "Coco Mellors"
+    ],
+    "selectionDate": "September 2024",
+    "isbn": "0593723767",
+    "selectionNumber": 70
+  },
+  {
+    "title": "The Mighty Red",
+    "authors": [
+      "Louise Erdrich"
+    ],
+    "selectionDate": "October 2024",
+    "isbn": "0063277050",
+    "selectionNumber": 71
+  },
+  {
+    "title": "This Motherless Land",
+    "authors": [
+      "Nikki May"
+    ],
+    "selectionDate": "November 2024",
+    "isbn": "0063084295",
+    "selectionNumber": 72
+  },
+  {
+    "title": "Devotions",
+    "authors": [
+      "Mary Oliver"
+    ],
+    "selectionDate": "December 2024",
+    "isbn": "0399563245",
+    "selectionNumber": 73
+  },
+  {
+    "title": "The Life Cycle of the Common Octopus",
+    "authors": [
+      "Emma Knight"
+    ],
+    "selectionDate": "January 2025",
+    "isbn": "0593830458",
+    "selectionNumber": 74
+  },
+  {
+    "title": "This Is a Love Story",
+    "authors": [
+      "Jessica Soffer"
+    ],
+    "selectionDate": "February 2025",
+    "isbn": "0593851269",
+    "selectionNumber": 75
+  },
+  {
+    "title": "The Dream Hotel",
+    "authors": [
+      "Laila Lalami"
+    ],
+    "selectionDate": "March 2025",
+    "isbn": "0593317602",
+    "selectionNumber": 76
+  },
+  {
+    "title": "Heartwood",
+    "authors": [
+      "Amity Gaige"
+    ],
+    "selectionDate": "April 2025",
+    "isbn": "1668063603",
+    "selectionNumber": 77
+  },
+  {
+    "title": "The Names",
+    "authors": [
+      "Florence Knapp"
+    ],
+    "selectionDate": "May 2025",
+    "isbn": "0593833902",
+    "selectionNumber": 78
+  },
+  {
+    "title": "A Family Matter",
+    "authors": [
+      "Claire Lynch"
+    ],
+    "selectionDate": "June 2025",
+    "isbn": "1668078899",
+    "selectionNumber": 79
+  },
+  {
+    "title": "Happy Wife",
+    "authors": [
+      "Meredith Lavender",
+      "Kendall Shores"
+    ],
+    "selectionDate": "July 2025",
+    "isbn": "0593974379",
+    "selectionNumber": 80
+  },
+  {
+    "title": "My Other Heart",
+    "authors": [
+      "Emma Nanami Strenner"
+    ],
+    "selectionDate": "August 2025",
+    "isbn": "0593831012",
+    "selectionNumber": 81
+  },
+  {
+    "title": "Buckeye",
+    "authors": [
+      "Patrick Ryan"
+    ],
+    "selectionDate": "September 2025",
+    "isbn": "0593595033",
+    "selectionNumber": 82
+  },
+  {
+    "title": "The Irish Goodbye",
+    "authors": [
+      "Heather Aimee O'Neill"
+    ],
+    "selectionDate": "October 2025",
+    "isbn": "1250408156",
+    "selectionNumber": 83
+  },
+  {
+    "title": "Cursed Daughters",
+    "authors": [
+      "Oyinkan Braithwaite"
+    ],
+    "selectionDate": "November 2025",
+    "isbn": "0385551479",
+    "selectionNumber": 84
+  },
+  {
+    "title": "Pride and Prejudice",
+    "authors": [
+      "Jane Austen"
+    ],
+    "selectionDate": "December 2025",
+    "isbn": "0307386864",
+    "selectionNumber": 85
+  },
+  {
+    "title": "Homeschooled",
+    "authors": [
+      "Stefan Merrill Block"
+    ],
+    "selectionDate": "January 2026",
+    "isbn": "1335000984",
+    "selectionNumber": 86
+  },
+  {
+    "title": "One & Only",
+    "authors": [
+      "Maurene Goo"
+    ],
+    "selectionDate": "February 2026",
+    "selectionNumber": 87
+  },
+  {
+    "title": "Wait for Me",
+    "authors": [
+      "Amy Jo Burns"
+    ],
+    "selectionDate": "March 2026",
+    "isbn": "1250399300",
+    "selectionNumber": 88
+  },
+  {
+    "title": "Upward Bound",
+    "authors": [
+      "Woody Brown"
+    ],
+    "selectionDate": "April 2026",
+    "isbn": "0593979974",
+    "selectionNumber": 89
+  },
+  {
+    "title": "Caller Unknown",
+    "authors": [
+      "Gillian McAllister"
+    ],
+    "selectionDate": "May 2026",
+    "isbn": "0063338475",
+    "selectionNumber": 90
+  },
+  {
+    "title": "The Children",
+    "authors": [
+      "Melissa Albert"
+    ],
+    "selectionDate": "June 2026",
+    "isbn": "0063487438",
+    "selectionNumber": 91
+  },
+  {
+    "title": "The Shampoo Effect",
+    "authors": [
+      "Jenny Jackson"
+    ],
+    "selectionDate": "July 2026",
+    "selectionNumber": 92
+  },
+  {
+    "title": "Sunlight Finds You",
+    "authors": [
+      "Laura Moriarty"
+    ],
+    "selectionDate": "August 2026",
+    "isbn": "1594487170",
+    "selectionNumber": 93
+  },
+  {
+    "title": "The Witches of Cambridge",
+    "authors": [
+      "Alice Hoffman"
+    ],
+    "selectionDate": "September 2026",
+    "isbn": "1668074648",
+    "selectionNumber": 94
+  }
+]

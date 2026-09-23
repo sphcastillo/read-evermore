@@ -1,6 +1,7 @@
 'use client'
 
 import {useClerk, useUser} from '@clerk/nextjs'
+import Link from 'next/link'
 import {useEffect, useId, useRef, useState, type KeyboardEvent} from 'react'
 
 export function AccountMenu() {
@@ -20,7 +21,7 @@ export function AccountMenu() {
 
   useEffect(() => {
     if (!open) return
-    const items = menu.current?.querySelectorAll<HTMLButtonElement>('[role="menuitem"]')
+    const items = menu.current?.querySelectorAll<HTMLElement>('[role="menuitem"]')
     items?.[initialFocus.current === -1 ? items.length - 1 : 0]?.focus()
     function dismiss(event: PointerEvent) {
       if (!root.current?.contains(event.target as Node)) setOpen(false)
@@ -43,8 +44,8 @@ export function AccountMenu() {
     }
     if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return
     event.preventDefault()
-    const items = Array.from(menu.current?.querySelectorAll<HTMLButtonElement>('[role="menuitem"]') || [])
-    const current = items.indexOf(document.activeElement as HTMLButtonElement)
+    const items = Array.from(menu.current?.querySelectorAll<HTMLElement>('[role="menuitem"]') || [])
+    const current = items.indexOf(document.activeElement as HTMLElement)
     const next = event.key === 'Home' ? 0 : event.key === 'End' ? items.length - 1 :
       (current + (event.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length
     items[next]?.focus()
@@ -97,7 +98,7 @@ export function AccountMenu() {
           </div>
           <div ref={menu} id={menuId} role="menu" aria-label="Account" onKeyDown={navigate} className="pt-1">
             <button type="button" role="menuitem" tabIndex={-1} className="account-menu-item" onClick={() => { close(); openUserProfile({__experimental_startPath: '/'}) }}>Profile</button>
-            <button type="button" role="menuitem" tabIndex={-1} className="account-menu-item" onClick={() => { close(); openUserProfile({__experimental_startPath: '/security'}) }}>Settings</button>
+            <Link href="/settings" role="menuitem" tabIndex={-1} className="account-menu-item" onClick={close}>Settings</Link>
             <div role="separator" className="my-1 border-t" />
             <button type="button" role="menuitem" tabIndex={-1} className="account-menu-item" aria-disabled={pending} onClick={handleSignOut}>
               {pending ? 'Signing out…' : 'Sign out'}

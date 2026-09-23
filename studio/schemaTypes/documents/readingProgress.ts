@@ -43,5 +43,7 @@ export const readingProgress = defineType({
     }),
     defineField({name: 'startedAt', type: 'date'}),
     defineField({name: 'finishedAt', type: 'date'}),
+    defineField({name: 'readCount', type: 'number', validation: (rule) => rule.integer().min(0)}),
+    defineField({name: 'importSource', type: 'string', readOnly: true}),
   ],
 })

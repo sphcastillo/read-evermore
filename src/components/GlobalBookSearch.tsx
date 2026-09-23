@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import {useEffect, useId, useRef, useState} from 'react'
+import {BookCover} from './BookCover'
 import {bookTitle, coverSrc, type GoogleBook, type GoogleSearchResponse} from '@/lib/google-books'
 
 export function GlobalBookSearch() {
@@ -133,15 +134,7 @@ export function GlobalBookSearch() {
                           setOpen(false)
                         }}
                       >
-                        <div className="relative h-16 w-11 shrink-0 overflow-hidden rounded-md bg-[var(--accent-soft)]">
-                          {cover ? (
-                            // Google Books hosts covers on rotating hostnames; skip next/image here.
-                            // eslint-disable-next-line @next/next/no-img-element
-                            <img src={cover} alt="" className="h-full w-full object-cover" />
-                          ) : (
-                            <span className="sr-only">Cover unavailable</span>
-                          )}
-                        </div>
+                        <BookCover cover={{coverUrl: cover, isbn13: book.volumeInfo?.industryIdentifiers?.find((id) => id.type === 'ISBN_13')?.identifier, isbn10: book.volumeInfo?.industryIdentifiers?.find((id) => id.type === 'ISBN_10')?.identifier}} title={title} className="h-16 w-11 shrink-0 rounded-md" />
                         <div className="min-w-0">
                           <p className="truncate font-medium leading-snug">{title}</p>
                           <p className="mt-0.5 truncate text-sm text-[var(--muted)]">{authors || 'Author unknown'}</p>

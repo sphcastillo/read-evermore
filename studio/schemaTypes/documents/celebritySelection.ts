@@ -7,6 +7,7 @@ export const celebritySelection = defineType({
   type: 'document',
   icon: CalendarIcon,
   fields: [
+    defineField({name: 'featuredEditions', title: 'Featured editions', type: 'array', of: [defineArrayMember({type: 'reference', to: [{type: 'edition'}]})], description: 'Choose the specific editions featured in this collection. Their covers take priority over the default work cover.'}),
     defineField({
       name: 'club',
       type: 'reference',

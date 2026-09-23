@@ -6,15 +6,23 @@ import {PageHeader} from '@/components/PageHeader'
 export const dynamic = 'force-dynamic'
 
 export default async function MyBooksPage() {
-  try {
-    const data = (await getMyBooks()) as {
+  const data = await getMyBooks().catch(() => null) as {
       shelves?: {
         _id: string
         name: string
         kind: string
         entries?: {work?: WorkCardData | null}[]
       }[]
-    }
+    } | null
+
+  if (!data) {
+    return (
+      <EmptyState
+        title="Sign in to open your shelves"
+        body="My Books is private. Clerk authentication and a server Sanity write token are required to persist ratings and shelves."
+      />
+    )
+  }
 
     return (
       <div>
@@ -36,6 +44,7 @@ export default async function MyBooksPage() {
                       <BookCard
                         key={entry.work._id || index}
                         work={entry.work}
+                        resolveMissingCover
                         large={shelf.kind === 'currentlyReading'}
                       />
                     ) : null,
@@ -51,12 +60,5 @@ export default async function MyBooksPage() {
         </div>
       </div>
     )
-  } catch {
-    return (
-      <EmptyState
-        title="Sign in to open your shelves"
-        body="My Books is private. Clerk authentication and a server Sanity write token are required to persist ratings and shelves."
-      />
-    )
-  }
+
 }

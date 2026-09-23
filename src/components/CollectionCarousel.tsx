@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import {useRef} from 'react'
-import {BookCover} from './BookCover'
+import {BookCover, type CoverSource} from './BookCover'
 import {clubSelectionLabel} from '@/lib/club-selection-dates'
 import {collectionTypeLabel} from '@/lib/collection-type'
 
@@ -12,6 +12,10 @@ export type CarouselBook = {
   authors?: string[] | null
   googleBooksId?: string | null
   publishedDate?: string | null
+  isbn10?: string | null
+  isbn13?: string | null
+  edition?: CoverSource | null
+  coverOverride?: CoverSource['coverOverride']
   cover?: {url?: string | null} | null
 }
 
@@ -129,7 +133,7 @@ export function CollectionCarousel({collection}: {collection: CarouselCollection
                       </span>
                     ) : null}
                     <BookCover
-                      cover={{coverUrl: book.cover?.url}}
+                      cover={book.edition || {...book, coverUrl: book.cover?.url}}
                       title={book.title}
                       className="aspect-[2/3] w-full"
                     />

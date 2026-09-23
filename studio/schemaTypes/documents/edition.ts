@@ -7,6 +7,17 @@ export const edition = defineType({
   type: 'document',
   icon: DocumentIcon,
   fields: [
+    defineField({name: 'importKey', type: 'string', hidden: true, readOnly: true}),
+    defineField({name: 'googleBooksId', type: 'string', readOnly: true}),
+    defineField({name: 'coverCheckedAt', type: 'datetime', readOnly: true}),
+    defineField({name: 'publicationDate', type: 'string', description: 'Provider date, preserving year-only or year-month precision.'}),
+    defineField({
+      name: 'cover', type: 'object', fields: [
+        defineField({name: 'url', type: 'url', validation: (rule) => rule.uri({scheme: ['https']})}),
+        defineField({name: 'source', type: 'string', options: {list: ['google', 'openLibrary', 'manual']}}),
+      ],
+    }),
+    defineField({name: 'needsCover', type: 'boolean', initialValue: true, description: 'No provider cover was verified. Add a manual override for this edition.'}),
     defineField({
       name: 'title',
       type: 'string',
@@ -78,7 +89,7 @@ export const edition = defineType({
     defineField({
       name: 'coverUrl',
       type: 'url',
-      description: 'Direct Open Library covers URL when available.',
+      description: 'Legacy provider cover URL. New imports use cover.url and cover.source.',
       validation: (rule) => rule.uri({scheme: ['https']}),
     }),
     defineField({

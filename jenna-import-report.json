@@ -1,0 +1,1456 @@
+{
+  "generatedAt": "2026-09-23T17:55:28.555Z",
+  "source": "https://www.today.com/shop/read-jenna-book-club-list-today-s-jenna-bush-hager-t164652",
+  "requestedSelections": 94,
+  "resolvedSelections": 93,
+  "needsReview": 1,
+  "results": [
+    {
+      "selectionNumber": 1,
+      "title": "The Last Romantics",
+      "requestedAuthors": [
+        "Tara Conklin"
+      ],
+      "selectionDate": "March 2019",
+      "matchedTitle": "The Last Romantics",
+      "matchedAuthors": [
+        "Tara Conklin"
+      ],
+      "googleBooksId": "JSVBuQEACAAJ",
+      "score": 211,
+      "bookId": "book.google.8e5bb65d2c10686ba7cdca2b",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 2,
+      "title": "The Unwinding of the Miracle: A Memoir of Life, Death, and Everything That Comes After",
+      "requestedAuthors": [
+        "Julie Yip-Williams"
+      ],
+      "selectionDate": "April 2019",
+      "matchedTitle": "The Unwinding of the Miracle",
+      "matchedAuthors": [
+        "Julie Yip-Williams"
+      ],
+      "googleBooksId": "lrXPDwAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.944e42373f1716e87638f24e",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 3,
+      "title": "A Woman Is No Man",
+      "requestedAuthors": [
+        "Etaf Rum"
+      ],
+      "selectionDate": "May 2019",
+      "matchedTitle": "A Woman Is No Man",
+      "matchedAuthors": [
+        "Etaf Rum"
+      ],
+      "googleBooksId": "L044uAEACAAJ",
+      "score": 211,
+      "bookId": "book.google.29460ff42039bb9a3822d87c",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 4,
+      "title": "Searching for Sylvie Lee",
+      "requestedAuthors": [
+        "Jean Kwok"
+      ],
+      "selectionDate": "June 2019",
+      "matchedTitle": "Searching for Sylvie Lee",
+      "matchedAuthors": [
+        "Jean Kwok"
+      ],
+      "googleBooksId": "T-WTuwEACAAJ",
+      "score": 211,
+      "bookId": "book.google.2c65622f6d4869deede667e6",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 5,
+      "title": "Evvie Drake Starts Over",
+      "requestedAuthors": [
+        "Linda Holmes"
+      ],
+      "selectionDate": "July 2019",
+      "matchedTitle": "Evvie Drake Starts Over: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Linda Holmes"
+      ],
+      "googleBooksId": "AJaaDwAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.b6896d97ed8cc57836da0af7",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 6,
+      "title": "Patsy",
+      "requestedAuthors": [
+        "Nicole Dennis-Benn"
+      ],
+      "selectionDate": "August 2019",
+      "matchedTitle": "Patsy",
+      "matchedAuthors": [
+        "Nicole Dennis-Benn"
+      ],
+      "googleBooksId": "AYiQEAAAQBAJ",
+      "score": 209,
+      "bookId": "book.google.173c7e3164ad8e19f1cfede6",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 7,
+      "title": "The Dearly Beloved",
+      "requestedAuthors": [
+        "Cara Wall"
+      ],
+      "selectionDate": "September 2019",
+      "matchedTitle": "The Dearly Beloved",
+      "matchedAuthors": [
+        "Cara Wall"
+      ],
+      "googleBooksId": "EeuiDwAAQBAJ",
+      "score": 211,
+      "bookId": "book.google.59f253b5d8dba8af494f4ede",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 8,
+      "title": "The Dutch House",
+      "requestedAuthors": [
+        "Ann Patchett"
+      ],
+      "selectionDate": "October 2019",
+      "matchedTitle": "The Dutch House",
+      "matchedAuthors": [
+        "Ann Patchett"
+      ],
+      "googleBooksId": "45B7wwEACAAJ",
+      "score": 211,
+      "bookId": "book.google.a5d5f1e4823b1328d2f2fc3d",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 9,
+      "title": "Nothing to See Here",
+      "requestedAuthors": [
+        "Kevin Wilson"
+      ],
+      "selectionDate": "November 2019",
+      "matchedTitle": "Nothing to See Here",
+      "matchedAuthors": [
+        "Kevin Wilson"
+      ],
+      "googleBooksId": "EbjawQEACAAJ",
+      "score": 211,
+      "bookId": "book.google.f0a9ddad5cf7b9d2844f9966",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 10,
+      "title": "Late Migrations",
+      "requestedAuthors": [
+        "Margaret Renkl"
+      ],
+      "selectionDate": "December 2019",
+      "matchedTitle": "Late Migrations",
+      "matchedAuthors": [
+        "Margaret Renkl"
+      ],
+      "googleBooksId": "SDn0uwEACAAJ",
+      "score": 209,
+      "bookId": "book.google.173d2697ce1fc8688bd06def",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 11,
+      "title": "Dear Edward",
+      "requestedAuthors": [
+        "Ann Napolitano"
+      ],
+      "selectionDate": "January 2020",
+      "matchedTitle": "Dear Edward: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Ann Napolitano"
+      ],
+      "googleBooksId": "TTHJDwAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.44c4c1054ca060e0a351df65",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 12,
+      "title": "The Girl with the Louding Voice",
+      "requestedAuthors": [
+        "Abi Daré"
+      ],
+      "selectionDate": "February 2020",
+      "matchedTitle": "The Girl with the Louding Voice",
+      "matchedAuthors": [
+        "Abi Daré"
+      ],
+      "googleBooksId": "JTHJDwAAQBAJ",
+      "score": 211,
+      "bookId": "book.google.ce354c8353ef78a905d28f53",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 13,
+      "title": "Writers & Lovers",
+      "requestedAuthors": [
+        "Lily King"
+      ],
+      "selectionDate": "March 2020",
+      "matchedTitle": "Writers & Lovers",
+      "matchedAuthors": [
+        "Lily King"
+      ],
+      "googleBooksId": "0QnYxAEACAAJ",
+      "score": 209,
+      "bookId": "book.google.baf921d3da8d626ff3930b92",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 14,
+      "title": "Valentine",
+      "requestedAuthors": [
+        "Elizabeth Wetmore"
+      ],
+      "selectionDate": "April 2020",
+      "matchedTitle": "Valentine",
+      "matchedAuthors": [
+        "Elizabeth Wetmore"
+      ],
+      "googleBooksId": "a_arxgEACAAJ",
+      "score": 211,
+      "bookId": "book.google.8b85e621905281d353638e04",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 15,
+      "title": "All Adults Here",
+      "requestedAuthors": [
+        "Emma Staub"
+      ],
+      "selectionDate": "May 2020",
+      "status": "needs-review"
+    },
+    {
+      "selectionNumber": 16,
+      "title": "A Burning",
+      "requestedAuthors": [
+        "Megha Majumdar"
+      ],
+      "selectionDate": "June 2020",
+      "matchedTitle": "A Burning",
+      "matchedAuthors": [
+        "Megha Majumdar"
+      ],
+      "googleBooksId": "QmKTEAAAQBAJ",
+      "score": 209,
+      "bookId": "book.google.46b0ed9db91a89eca12d0ca3",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 17,
+      "title": "Friends and Strangers",
+      "requestedAuthors": [
+        "J. Courtney Sullivan"
+      ],
+      "selectionDate": "July 2020",
+      "matchedTitle": "Friends and Strangers",
+      "matchedAuthors": [
+        "J. Courtney Sullivan"
+      ],
+      "googleBooksId": "UvroDwAAQBAJ",
+      "score": 211,
+      "bookId": "book.google.e6611c744e8bb29d5a29c3ce",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 18,
+      "title": "The Comeback",
+      "requestedAuthors": [
+        "Ella Berman"
+      ],
+      "selectionDate": "August 2020",
+      "matchedTitle": "The Comeback",
+      "matchedAuthors": [
+        "Ella Berman"
+      ],
+      "googleBooksId": "MebvDwAAQBAJ",
+      "score": 211,
+      "bookId": "book.google.7d8eae17cdb049000e4eff47",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 19,
+      "title": "Here for It",
+      "requestedAuthors": [
+        "R. Eric Thomas"
+      ],
+      "selectionDate": "August 2020",
+      "matchedTitle": "Here for it",
+      "matchedAuthors": [
+        "R. Eric Thomas"
+      ],
+      "googleBooksId": "25jLDwAAQBAJ",
+      "score": 209,
+      "bookId": "book.google.fd28698ea8ebca42370a04fb",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 20,
+      "title": "Transcendent Kingdom",
+      "requestedAuthors": [
+        "Yaa Gyasi"
+      ],
+      "selectionDate": "September 2020",
+      "matchedTitle": "Transcendent Kingdom",
+      "matchedAuthors": [
+        "Yaa Gyasi"
+      ],
+      "googleBooksId": "MvaNEAAAQBAJ",
+      "score": 209,
+      "bookId": "book.google.135fb51b272350604e0eca41",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 21,
+      "title": "Leave the World Behind",
+      "requestedAuthors": [
+        "Rumaan Alam"
+      ],
+      "selectionDate": "October 2020",
+      "matchedTitle": "Leave the World Behind",
+      "matchedAuthors": [
+        "Rumaan Alam"
+      ],
+      "googleBooksId": "f6EvzQEACAAJ",
+      "score": 211,
+      "bookId": "book.google.90310dda9c1af5d4fe6dcfa7",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 22,
+      "title": "White Ivy",
+      "requestedAuthors": [
+        "Susie Yang"
+      ],
+      "selectionDate": "November 2020",
+      "matchedTitle": "White Ivy",
+      "matchedAuthors": [
+        "Susie Yang"
+      ],
+      "googleBooksId": "aKMGEAAAQBAJ",
+      "score": 211,
+      "bookId": "book.google.3dd48eb51420fe3faf9e5f04",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 23,
+      "title": "The Bluest Eye",
+      "requestedAuthors": [
+        "Toni Morrison"
+      ],
+      "selectionDate": "December 2020",
+      "matchedTitle": "The Bluest Eye",
+      "matchedAuthors": [
+        "Toni Morrison"
+      ],
+      "googleBooksId": "ANKODQAAQBAJ",
+      "score": 211,
+      "bookId": "book.google.9dc6c0c200b038cc",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 24,
+      "title": "Black Buck",
+      "requestedAuthors": [
+        "Mateo Askaripour"
+      ],
+      "selectionDate": "January 2021",
+      "matchedTitle": "Black Buck",
+      "matchedAuthors": [
+        "Mateo Askaripour"
+      ],
+      "googleBooksId": "y0PcDwAAQBAJ",
+      "score": 211,
+      "bookId": "book.google.0ce5a74484d08374a04c81d3",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 25,
+      "title": "The Four Winds",
+      "requestedAuthors": [],
+      "selectionDate": "February 2021",
+      "matchedTitle": "The Four Winds",
+      "matchedAuthors": [
+        "Kristin Hannah"
+      ],
+      "googleBooksId": "FRh_zQEACAAJ",
+      "score": 186,
+      "bookId": "book.google.34209060529bf97600df59b8",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 26,
+      "title": "Send for Me",
+      "requestedAuthors": [],
+      "selectionDate": "February 2021",
+      "matchedTitle": "Send for Me",
+      "matchedAuthors": [
+        "Lauren Fox"
+      ],
+      "googleBooksId": "ahkSEAAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.17a45b3d4b436df37ff18fe7",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 27,
+      "title": "What's Mine and Yours",
+      "requestedAuthors": [],
+      "selectionDate": "March 2021",
+      "matchedTitle": "What's Mine and Yours",
+      "matchedAuthors": [
+        "Naima Coster"
+      ],
+      "googleBooksId": "1OitzQEACAAJ",
+      "score": 184,
+      "bookId": "book.google.50dfc6cdfeab07b66e8beca7",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 28,
+      "title": "Good Company",
+      "requestedAuthors": [],
+      "selectionDate": "April 2021",
+      "matchedTitle": "Good Company",
+      "matchedAuthors": [
+        "Cynthia D'Aprix Sweeney"
+      ],
+      "googleBooksId": "UZ2_zQEACAAJ",
+      "score": 186,
+      "bookId": "book.google.47fdfe2fd3f11108fb638cbf",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 29,
+      "title": "Great Circle",
+      "requestedAuthors": [],
+      "selectionDate": "May 2021",
+      "matchedTitle": "Great Circle",
+      "matchedAuthors": [
+        "Maggie Shipstead"
+      ],
+      "googleBooksId": "yHInEAAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.6d281f5a6453dc5826d8f776",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 30,
+      "title": "Malibu Rising",
+      "requestedAuthors": [
+        "Taylor Jenkins Reid"
+      ],
+      "selectionDate": "June 2021",
+      "matchedTitle": "Malibu Rising: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Taylor Jenkins Reid"
+      ],
+      "googleBooksId": "5piTEAAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.41e70d5289af1a2c14b3be37",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 31,
+      "title": "Hell of a Book",
+      "requestedAuthors": [],
+      "selectionDate": "July 2021",
+      "matchedTitle": "Hell of a Book: National Book Award Winner",
+      "matchedAuthors": [
+        "Jason Mott"
+      ],
+      "googleBooksId": "iNgwEAAAQBAJ",
+      "score": 161,
+      "bookId": "book.google.84442803bb9522ae2f99890d",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 32,
+      "title": "The Turnout",
+      "requestedAuthors": [
+        "Megan Abbott"
+      ],
+      "selectionDate": "August 2021",
+      "matchedTitle": "The Turnout",
+      "matchedAuthors": [
+        "Megan Abbott"
+      ],
+      "googleBooksId": "COs2EAAAQBAJ",
+      "score": 211,
+      "bookId": "book.google.f17f500140899858aeecdda6",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 33,
+      "title": "Beautiful Country",
+      "requestedAuthors": [],
+      "selectionDate": "September 2021",
+      "matchedTitle": "Beautiful Country",
+      "matchedAuthors": [
+        "Qian Julie Wang"
+      ],
+      "googleBooksId": "7EGNEAAAQBAJ",
+      "score": 184,
+      "bookId": "book.google.b8d86c5f15d20856b80d6c51",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 34,
+      "title": "The Lincoln Highway",
+      "requestedAuthors": [],
+      "selectionDate": "October 2021",
+      "matchedTitle": "The Lincoln Highway: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Amor Towles"
+      ],
+      "googleBooksId": "B2tBEAAAQBAJ",
+      "score": 161,
+      "bookId": "book.google.5399b436512ea85636ee6ee8",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 35,
+      "title": "The Family",
+      "requestedAuthors": [],
+      "selectionDate": "November 2021",
+      "matchedTitle": "The Family",
+      "matchedAuthors": [
+        "Naomi Krupitsky"
+      ],
+      "googleBooksId": "Py9GEAAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.c05c902bbb227935fd09e8c1",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 36,
+      "title": "Bright Burning Things",
+      "requestedAuthors": [],
+      "selectionDate": "December 2021",
+      "matchedTitle": "Bright Burning Things",
+      "matchedAuthors": [
+        "Lisa Harding"
+      ],
+      "googleBooksId": "DxFbEAAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.ed5e34fd4908da877b10fa18",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 37,
+      "title": "The School for Good Mothers",
+      "requestedAuthors": [],
+      "selectionDate": "January 2022",
+      "matchedTitle": "The School for Good Mothers",
+      "matchedAuthors": [
+        "Jessamine Chan"
+      ],
+      "googleBooksId": "t4RTEAAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.7014ae3fdd0db3a39ea6134e",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 38,
+      "title": "Black Cake",
+      "requestedAuthors": [],
+      "selectionDate": "February 2022",
+      "matchedTitle": "Black Cake: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Charmaine Wilkerson"
+      ],
+      "googleBooksId": "5WxcEAAAQBAJ",
+      "score": 161,
+      "bookId": "book.google.26065ed4cc9bc26a929bd354",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 39,
+      "title": "Groundskeeping",
+      "requestedAuthors": [],
+      "selectionDate": "March 2022",
+      "matchedTitle": "Groundskeeping",
+      "matchedAuthors": [
+        "Lee Cole"
+      ],
+      "googleBooksId": "ZzpcEAAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.67135ce4650498882700b1d6",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 40,
+      "title": "Memphis",
+      "requestedAuthors": [],
+      "selectionDate": "April 2022",
+      "matchedTitle": "Memphis: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Tara M. Stringfellow"
+      ],
+      "googleBooksId": "arhPEAAAQBAJ",
+      "score": 161,
+      "bookId": "book.google.0d7d0025a927c6d16c190036",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 41,
+      "title": "Remarkably Bright Creatures",
+      "requestedAuthors": [],
+      "selectionDate": "May 2022",
+      "matchedTitle": "Remarkably Bright Creatures",
+      "matchedAuthors": [
+        "Shelby Van Pelt"
+      ],
+      "googleBooksId": "xQ-kzgEACAAJ",
+      "score": 186,
+      "bookId": "book.google.2f580fc8b1c5f1bd85dad990",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 42,
+      "title": "These Impossible Things",
+      "requestedAuthors": [],
+      "selectionDate": "June 2022",
+      "matchedTitle": "These Impossible Things",
+      "matchedAuthors": [
+        "Salma El-Wardany"
+      ],
+      "googleBooksId": "feSwzgEACAAJ",
+      "score": 184,
+      "bookId": "book.google.e29c6b1d4b02d8d3b58fc9d2",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 43,
+      "title": "The Measure",
+      "requestedAuthors": [],
+      "selectionDate": "July 2022",
+      "matchedTitle": "The Measure",
+      "matchedAuthors": [
+        "Nikki Erlick"
+      ],
+      "googleBooksId": "8seazgEACAAJ",
+      "score": 182,
+      "bookId": "book.google.7ed9822ab1c1c37228700ad5",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 44,
+      "title": "The Many Daughters of Afong Moy",
+      "requestedAuthors": [],
+      "selectionDate": "August 2022",
+      "matchedTitle": "The Many Daughters of Afong Moy",
+      "matchedAuthors": [
+        "Jamie Ford"
+      ],
+      "googleBooksId": "ral-EAAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.eccdc7494996299ff2b19d96",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 45,
+      "title": "Solito",
+      "requestedAuthors": [],
+      "selectionDate": "September 2022",
+      "matchedTitle": "Solito: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Javier Zamora"
+      ],
+      "googleBooksId": "wgBcEAAAQBAJ",
+      "score": 161,
+      "bookId": "book.google.52016e322ca3b45ec6c8cf75",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 46,
+      "title": "The Whalebone Theatre",
+      "requestedAuthors": [],
+      "selectionDate": "October 2022",
+      "matchedTitle": "The Whalebone Theatre: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Joanna Quinn"
+      ],
+      "googleBooksId": "hkiHEAAAQBAJ",
+      "score": 161,
+      "bookId": "book.google.a735640351de618fac45aca5",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 47,
+      "title": "The Cloisters",
+      "requestedAuthors": [
+        "Katy Hays"
+      ],
+      "selectionDate": "November 2022",
+      "matchedTitle": "The Cloisters",
+      "matchedAuthors": [
+        "Katy Hays"
+      ],
+      "googleBooksId": "6dyYEAAAQBAJ",
+      "score": 211,
+      "bookId": "book.google.2a8402a3f4ef402da6c47eac",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 48,
+      "title": "The Secret History",
+      "requestedAuthors": [],
+      "selectionDate": "December 2022",
+      "matchedTitle": "The Secret History: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Donna Tartt"
+      ],
+      "googleBooksId": "3w0YEAAAQBAJ",
+      "score": 161,
+      "bookId": "book.google.08413b945ebdc33a365646a8",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 49,
+      "title": "Sam",
+      "requestedAuthors": [],
+      "selectionDate": "January 2023",
+      "matchedTitle": "Sam",
+      "matchedAuthors": [
+        "Allegra Goodman"
+      ],
+      "googleBooksId": "lVtqEAAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.966d6cccc0cebc5b1c4d8922",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 50,
+      "title": "Maame",
+      "requestedAuthors": [],
+      "selectionDate": "February 2023",
+      "matchedTitle": "Maame",
+      "matchedAuthors": [
+        "Jessica George"
+      ],
+      "googleBooksId": "9q5uEAAAQBAJ",
+      "score": 184,
+      "bookId": "book.google.c27eca476bda39d276d142c9",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 51,
+      "title": "Black Candle Women",
+      "requestedAuthors": [
+        "Diane Marie Brown"
+      ],
+      "selectionDate": "March 2023",
+      "matchedTitle": "Black Candle Women",
+      "matchedAuthors": [
+        "Diane Marie Brown"
+      ],
+      "googleBooksId": "B2MuzwEACAAJ",
+      "score": 209,
+      "bookId": "book.google.c16dab8130f7ab57e5e299e3",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 52,
+      "title": "Camp Zero",
+      "requestedAuthors": [
+        "Michelle Min Sterling"
+      ],
+      "selectionDate": "April 2023",
+      "matchedTitle": "Camp Zero",
+      "matchedAuthors": [
+        "Michelle Min Sterling"
+      ],
+      "googleBooksId": "y2S2EAAAQBAJ",
+      "score": 211,
+      "bookId": "book.google.03fc9aaeaf86f9d13541a0ef",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 53,
+      "title": "Chain-Gang All Stars",
+      "requestedAuthors": [],
+      "selectionDate": "May 2023",
+      "matchedTitle": "Chain Gang All Stars",
+      "matchedAuthors": [
+        "Nana Kwame Adjei-Brenyah"
+      ],
+      "googleBooksId": "1TOOEAAAQBAJ",
+      "score": 184,
+      "bookId": "book.google.09e3945a0bd9b0cc8d070daf",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 54,
+      "title": "The Celebrants",
+      "requestedAuthors": [],
+      "selectionDate": "June 2023",
+      "matchedTitle": "The Celebrants: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Steven Rowley"
+      ],
+      "googleBooksId": "6eSBEAAAQBAJ",
+      "score": 161,
+      "bookId": "book.google.60b6cd98467edce44870d629",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 55,
+      "title": "Banyan Moon",
+      "requestedAuthors": [],
+      "selectionDate": "July 2023",
+      "matchedTitle": "Banyan Moon",
+      "matchedAuthors": [
+        "Thao Thai"
+      ],
+      "googleBooksId": "OeJrzwEACAAJ",
+      "score": 184,
+      "bookId": "book.google.8ebc49c8e57fb99fe4fe51c8",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 56,
+      "title": "Summer Sisters",
+      "requestedAuthors": [
+        "Judy Blume"
+      ],
+      "selectionDate": "August 2023",
+      "matchedTitle": "Summer Sisters: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Judy Blume"
+      ],
+      "googleBooksId": "lMyMDQAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.348b2ed3df8b879d5d509a35",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 57,
+      "title": "Amazing Grace Adams",
+      "requestedAuthors": [
+        "Fran Littlewood"
+      ],
+      "selectionDate": "September 2023",
+      "matchedTitle": "Amazing Grace Adams",
+      "matchedAuthors": [
+        "Fran Littlewood"
+      ],
+      "googleBooksId": "5R68EAAAQBAJ",
+      "score": 209,
+      "bookId": "book.google.ef143b73cd75ec5aa81891d5",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 58,
+      "title": "How to Say Babylon",
+      "requestedAuthors": [
+        "Safiya Sinclair"
+      ],
+      "selectionDate": "October 2023",
+      "matchedTitle": "How to Say Babylon",
+      "matchedAuthors": [
+        "Safiya Sinclair"
+      ],
+      "googleBooksId": "1TvaEAAAQBAJ",
+      "score": 211,
+      "bookId": "book.google.c465e7328f4b65377e93a90c",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 59,
+      "title": "The Sun Sets in Singapore",
+      "requestedAuthors": [
+        "Kehinde Fadipe"
+      ],
+      "selectionDate": "November 2023",
+      "matchedTitle": "The Sun Sets in Singapore",
+      "matchedAuthors": [
+        "Kehinde Fadipe"
+      ],
+      "googleBooksId": "63zWzwEACAAJ",
+      "score": 207,
+      "bookId": "book.google.8a29ed17c7d05730cbe8c017",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 60,
+      "title": "We Must Not Think of Ourselves",
+      "requestedAuthors": [
+        "Lauren Grodstein"
+      ],
+      "selectionDate": "December 2023",
+      "matchedTitle": "We Must Not Think of Ourselves",
+      "matchedAuthors": [
+        "Lauren Grodstein"
+      ],
+      "googleBooksId": "oBiKzwEACAAJ",
+      "score": 209,
+      "bookId": "book.google.88e1cd51f8e4e15d8819391f",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 61,
+      "title": "The Waters",
+      "requestedAuthors": [
+        "Bonnie Jo Campbell"
+      ],
+      "selectionDate": "January 2024",
+      "matchedTitle": "The Waters",
+      "matchedAuthors": [
+        "Bonnie Jo Campbell"
+      ],
+      "googleBooksId": "mjKczwEACAAJ",
+      "score": 209,
+      "bookId": "book.google.9060e80c0018960de6478f33",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 62,
+      "title": "Good Material",
+      "requestedAuthors": [
+        "Dolly Alderton"
+      ],
+      "selectionDate": "February 2024",
+      "matchedTitle": "Good Material",
+      "matchedAuthors": [
+        "Dolly Alderton"
+      ],
+      "googleBooksId": "ptaezwEACAAJ",
+      "score": 209,
+      "bookId": "book.google.1685eddb5b11b3ba94f182ca",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 63,
+      "title": "The House on Mango Street",
+      "requestedAuthors": [
+        "Sandra Cisneros"
+      ],
+      "selectionDate": "March 2024",
+      "matchedTitle": "The House on Mango Street",
+      "matchedAuthors": [
+        "Sandra Cisneros"
+      ],
+      "googleBooksId": "PFxyAAAAMAAJ",
+      "score": 103,
+      "bookId": "book.google.acb376106f52aa80bdd9eb2d",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 64,
+      "title": "The Great Divide",
+      "requestedAuthors": [
+        "Cristina Henriquez"
+      ],
+      "selectionDate": "March 2024",
+      "matchedTitle": "The Great Divide",
+      "matchedAuthors": [
+        "Cristina Henriquez"
+      ],
+      "googleBooksId": "newE0AEACAAJ",
+      "score": 209,
+      "bookId": "book.google.54b4f1b509f9a8e874a1c082",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 65,
+      "title": "The Husbands",
+      "requestedAuthors": [
+        "Holly Gramazio"
+      ],
+      "selectionDate": "April 2024",
+      "matchedTitle": "The Husbands",
+      "matchedAuthors": [
+        "Holly Gramazio"
+      ],
+      "googleBooksId": "9KEN0AEACAAJ",
+      "score": 209,
+      "bookId": "book.google.6c87d590e5db15a1985b762e",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 66,
+      "title": "Real Americans",
+      "requestedAuthors": [
+        "Rachel Khong"
+      ],
+      "selectionDate": "May 2024",
+      "matchedTitle": "Real Americans: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Rachel Khong"
+      ],
+      "googleBooksId": "lAnOEAAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.e769ac72e728e77d39dcd5ba",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 67,
+      "title": "Swift River",
+      "requestedAuthors": [
+        "Essie Chambers"
+      ],
+      "selectionDate": "June 2024",
+      "matchedTitle": "Swift River",
+      "matchedAuthors": [
+        "Essie Chambers"
+      ],
+      "googleBooksId": "guEKEQAAQBAJ",
+      "score": 211,
+      "bookId": "book.google.0697323968ddd435701689e1",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 68,
+      "title": "All the Colors of the Dark",
+      "requestedAuthors": [
+        "Chris Whitaker"
+      ],
+      "selectionDate": "July 2024",
+      "matchedTitle": "All the Colors of the Dark: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Chris Whitaker"
+      ],
+      "googleBooksId": "QdDmEAAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.18e603fb72e067a9540da22b",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 69,
+      "title": "The Wedding People",
+      "requestedAuthors": [
+        "Alison Espach"
+      ],
+      "selectionDate": "August 2024",
+      "matchedTitle": "The Wedding People",
+      "matchedAuthors": [
+        "Alison Espach"
+      ],
+      "googleBooksId": "7tzYEAAAQBAJ",
+      "score": 209,
+      "bookId": "book.google.35393b95fe222f830fe1d157",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 70,
+      "title": "Blue Sisters",
+      "requestedAuthors": [
+        "Coco Mellors"
+      ],
+      "selectionDate": "September 2024",
+      "matchedTitle": "Blue Sisters: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Coco Mellors"
+      ],
+      "googleBooksId": "nYrvEAAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.b98532a3ccdbecd2c0a409bd",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 71,
+      "title": "The Mighty Red",
+      "requestedAuthors": [
+        "Louise Erdrich"
+      ],
+      "selectionDate": "October 2024",
+      "matchedTitle": "The Mighty Red",
+      "matchedAuthors": [
+        "Louise Erdrich"
+      ],
+      "googleBooksId": "q-E-0AEACAAJ",
+      "score": 209,
+      "bookId": "book.google.f65b1073932f5f9a352f92f4",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 72,
+      "title": "This Motherless Land",
+      "requestedAuthors": [
+        "Nikki May"
+      ],
+      "selectionDate": "November 2024",
+      "matchedTitle": "This Motherless Land",
+      "matchedAuthors": [
+        "Nikki May"
+      ],
+      "googleBooksId": "Qhw70AEACAAJ",
+      "score": 209,
+      "bookId": "book.google.9cb71e6c170af584435b721c",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 73,
+      "title": "Devotions",
+      "requestedAuthors": [
+        "Mary Oliver"
+      ],
+      "selectionDate": "December 2024",
+      "matchedTitle": "Devotions",
+      "matchedAuthors": [
+        "Mary Oliver"
+      ],
+      "googleBooksId": "QzA7DwAAQBAJ",
+      "score": 211,
+      "bookId": "book.google.1880ba40ce60bb2340fc9876",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 74,
+      "title": "The Life Cycle of the Common Octopus",
+      "requestedAuthors": [
+        "Emma Knight"
+      ],
+      "selectionDate": "January 2025",
+      "matchedTitle": "The Life Cycle of the Common Octopus: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Emma Knight"
+      ],
+      "googleBooksId": "oTcXEQAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.654529095e174c4334bacd85",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 75,
+      "title": "This Is a Love Story",
+      "requestedAuthors": [
+        "Jessica Soffer"
+      ],
+      "selectionDate": "February 2025",
+      "matchedTitle": "This Is a Love Story: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Jessica Soffer"
+      ],
+      "googleBooksId": "e-oTEQAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.e12b1538a6866707a6babc0c",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 76,
+      "title": "The Dream Hotel",
+      "requestedAuthors": [
+        "Laila Lalami"
+      ],
+      "selectionDate": "March 2025",
+      "matchedTitle": "The Dream Hotel: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Laila Lalami"
+      ],
+      "googleBooksId": "bKUkEQAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.36cfaf0ba4adba339e488eb9",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 77,
+      "title": "Heartwood",
+      "requestedAuthors": [
+        "Amity Gaige"
+      ],
+      "selectionDate": "April 2025",
+      "matchedTitle": "Heartwood (A Read with Jenna Pick)",
+      "matchedAuthors": [
+        "Amity Gaige"
+      ],
+      "googleBooksId": "qG5REQAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.161ded7a50e8894ea667be9f",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 78,
+      "title": "The Names",
+      "requestedAuthors": [
+        "Florence Knapp"
+      ],
+      "selectionDate": "May 2025",
+      "matchedTitle": "The Names: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Florence Knapp"
+      ],
+      "googleBooksId": "eVEZEQAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.02f13815e5bd08f0c49e099d",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 79,
+      "title": "A Family Matter",
+      "requestedAuthors": [
+        "Claire Lynch"
+      ],
+      "selectionDate": "June 2025",
+      "matchedTitle": "A Family Matter",
+      "matchedAuthors": [
+        "Claire Lynch"
+      ],
+      "googleBooksId": "evFiEQAAQBAJ",
+      "score": 211,
+      "bookId": "book.google.3ce18601e665fc47ef92df50",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 80,
+      "title": "Happy Wife",
+      "requestedAuthors": [
+        "Meredith Lavender",
+        "Kendall Shores"
+      ],
+      "selectionDate": "July 2025",
+      "matchedTitle": "Happy Wife: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Meredith Lavender",
+        "Kendall Shores"
+      ],
+      "googleBooksId": "PsopEQAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.82fb79147d3121c26bc9b039",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 81,
+      "title": "My Other Heart",
+      "requestedAuthors": [
+        "Emma Nanami Strenner"
+      ],
+      "selectionDate": "August 2025",
+      "matchedTitle": "My Other Heart: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Emma Nanami Strenner"
+      ],
+      "googleBooksId": "MaA3EQAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.8c648bb6efcabcdcc3ac59bf",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 82,
+      "title": "Buckeye",
+      "requestedAuthors": [
+        "Patrick Ryan"
+      ],
+      "selectionDate": "September 2025",
+      "matchedTitle": "Buckeye: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Patrick Ryan"
+      ],
+      "googleBooksId": "m7AyEQAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.3623073b39fa08164f98af85",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 83,
+      "title": "The Irish Goodbye",
+      "requestedAuthors": [
+        "Heather Aimee O'Neill"
+      ],
+      "selectionDate": "October 2025",
+      "matchedTitle": "The Irish Goodbye",
+      "matchedAuthors": [
+        "Heather Aimee O'Neill"
+      ],
+      "googleBooksId": "FUhDEQAAQBAJ",
+      "score": 209,
+      "bookId": "book.google.d3df3b81c3f61a5cdfdee64a",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 84,
+      "title": "Cursed Daughters",
+      "requestedAuthors": [
+        "Oyinkan Braithwaite"
+      ],
+      "selectionDate": "November 2025",
+      "matchedTitle": "Cursed Daughters: a Read with Jenna Pick",
+      "matchedAuthors": [
+        "Oyinkan Braithwaite"
+      ],
+      "googleBooksId": "8pQb0QEACAAJ",
+      "score": 184,
+      "bookId": "book.google.16787e21830aa36d1f1de4d1",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 85,
+      "title": "Pride and Prejudice",
+      "requestedAuthors": [
+        "Jane Austen"
+      ],
+      "selectionDate": "December 2025",
+      "matchedTitle": "Pride and Prejudice (A Read with Jenna Book Club Pick)",
+      "matchedAuthors": [
+        "Jane Austen"
+      ],
+      "googleBooksId": "NNuEDwAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.1edc034fc1de996b9e94f0ed",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 86,
+      "title": "Homeschooled",
+      "requestedAuthors": [
+        "Stefan Merrill Block"
+      ],
+      "selectionDate": "January 2026",
+      "matchedTitle": "Homeschooled",
+      "matchedAuthors": [
+        "Stefan Merrill Block"
+      ],
+      "googleBooksId": "vd9e0QEACAAJ",
+      "score": 207,
+      "bookId": "book.google.35b6640d7d4b51bce57c87b7",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 87,
+      "title": "One & Only",
+      "requestedAuthors": [
+        "Maurene Goo"
+      ],
+      "selectionDate": "February 2026",
+      "matchedTitle": "One & Only",
+      "matchedAuthors": [
+        "Maurene Goo"
+      ],
+      "googleBooksId": "stZzEQAAQBAJ",
+      "score": 111,
+      "bookId": "book.google.64018898cee156fc934706c0",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 88,
+      "title": "Wait for Me",
+      "requestedAuthors": [
+        "Amy Jo Burns"
+      ],
+      "selectionDate": "March 2026",
+      "matchedTitle": "Wait for Me",
+      "matchedAuthors": [
+        "Amy Jo Burns"
+      ],
+      "googleBooksId": "LAJgEQAAQBAJ",
+      "score": 207,
+      "bookId": "book.google.16901a76385c719c642f3629",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 89,
+      "title": "Upward Bound",
+      "requestedAuthors": [
+        "Woody Brown"
+      ],
+      "selectionDate": "April 2026",
+      "matchedTitle": "Upward Bound: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Woody Brown"
+      ],
+      "googleBooksId": "FDB1EQAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.257ba8b44778dd92721a317d",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 90,
+      "title": "Caller Unknown",
+      "requestedAuthors": [
+        "Gillian McAllister"
+      ],
+      "selectionDate": "May 2026",
+      "matchedTitle": "Caller Unknown",
+      "matchedAuthors": [
+        "Gillian McAllister"
+      ],
+      "googleBooksId": "k0dk0QEACAAJ",
+      "score": 209,
+      "bookId": "book.google.5a868f866413593366775837",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 91,
+      "title": "The Children",
+      "requestedAuthors": [
+        "Melissa Albert"
+      ],
+      "selectionDate": "June 2026",
+      "matchedTitle": "The Children",
+      "matchedAuthors": [
+        "Melissa Albert"
+      ],
+      "googleBooksId": "dsaX0QEACAAJ",
+      "score": 209,
+      "bookId": "book.google.d3dd23cf859873f56d6549bb",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 92,
+      "title": "The Shampoo Effect",
+      "requestedAuthors": [
+        "Jenny Jackson"
+      ],
+      "selectionDate": "July 2026",
+      "matchedTitle": "The Shampoo Effect",
+      "matchedAuthors": [
+        "Jenny Jackson"
+      ],
+      "googleBooksId": "8AKCEQAAQBAJ",
+      "score": 111,
+      "bookId": "book.google.d10cf4a3b01eff0554bee815",
+      "status": "existing"
+    },
+    {
+      "selectionNumber": 93,
+      "title": "Sunlight Finds You",
+      "requestedAuthors": [
+        "Laura Moriarty"
+      ],
+      "selectionDate": "August 2026",
+      "matchedTitle": "Sunlight Finds You: A Read with Jenna Pick",
+      "matchedAuthors": [
+        "Laura Moriarty"
+      ],
+      "googleBooksId": "ca-eEQAAQBAJ",
+      "score": 186,
+      "bookId": "book.google.ff08c565f010b95e27c8bd35",
+      "status": "created"
+    },
+    {
+      "selectionNumber": 94,
+      "title": "The Witches of Cambridge",
+      "requestedAuthors": [
+        "Alice Hoffman"
+      ],
+      "selectionDate": "September 2026",
+      "matchedTitle": "The Witches of Cambridge",
+      "matchedAuthors": [
+        "Alice Hoffman"
+      ],
+      "googleBooksId": "iSWm0QEACAAJ",
+      "score": 209,
+      "bookId": "book.google.abec761ad77f8f581d4050e8",
+      "status": "existing"
+    }
+  ]
+}

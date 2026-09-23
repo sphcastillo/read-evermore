@@ -1,4 +1,5 @@
 import {author} from './documents/author'
+import {catalogImportIdentity} from './documents/catalogImportIdentity'
 import {bestsellerSource} from './documents/bestsellerSource'
 import {celebrityClub} from './documents/celebrityClub'
 import {celebritySelection} from './documents/celebritySelection'
@@ -24,6 +25,7 @@ import {ratingStats} from './objects/ratingStats'
 import {sourceProvenance} from './objects/sourceProvenance'
 
 export const schemaTypes = [
+  catalogImportIdentity,
   sourceProvenance,
   ratingStats,
   work,

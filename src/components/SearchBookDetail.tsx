@@ -6,6 +6,7 @@ import {
   type GoogleBook,
 } from '@/lib/google-books'
 import {LogSelectedBook} from './LogSelectedBook'
+import {BookCover} from './BookCover'
 
 function Fact({label, value}: {label: string; value?: string | number | boolean | null}) {
   if (value == null || value === '') return null
@@ -33,15 +34,7 @@ export function SearchBookDetail({book}: {book: GoogleBook}) {
     <article className="grid gap-10 lg:grid-cols-[240px_1fr]">
       <LogSelectedBook book={book} source="landing page" />
       <div className="group max-w-[240px]">
-        <div className="cover-frame relative aspect-[2/3] overflow-hidden bg-[var(--accent-soft)]">
-          {cover ? (
-            // Google Books hosts covers on rotating hostnames; skip next/image here.
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={cover} alt={`Cover of ${title}`} className="h-full w-full object-cover" />
-          ) : (
-            <div className="flex h-full items-end p-4 text-sm text-[var(--muted)]">Cover unavailable</div>
-          )}
-        </div>
+        <BookCover cover={{coverUrl: cover, isbn13: identifiers.find((id) => id.type === 'ISBN_13')?.identifier, isbn10: identifiers.find((id) => id.type === 'ISBN_10')?.identifier}} title={title} className="aspect-[2/3] w-full" />
       </div>
       <div>
         <p className="text-sm text-[var(--muted)]">{authors || 'Author unknown'}</p>

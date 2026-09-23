@@ -1,5 +1,10 @@
 import {defineQuery} from 'next-sanity'
 
+export const editionCoverFields = /* groq */ `
+  _id, isbn10, isbn13, cover, coverUrl, coverOpenLibraryId, needsCover,
+  coverOverride{asset->{_id, url}, alt, hotspot, crop}
+`
+
 export const workCardFields = /* groq */ `
   _id,
   title,
@@ -9,15 +14,13 @@ export const workCardFields = /* groq */ `
   ratingStats,
   "authors": authors[]->{ _id, name, "slug": slug.current },
   "genres": genres[]->{ _id, title, "slug": slug.current, "parentSlug": parent->slug.current },
-  "cover": *[_type == "edition" && work._ref == ^._id] | order(firstPublicationOfWork desc, onSaleDate desc)[0]{
-    coverUrl,
-    coverOpenLibraryId,
-    coverOverride{ asset->{_id, url}, alt, hotspot, crop },
+  "cover": coalesce((^.featuredEditions[]->)[work._ref == ^._id][0]{${editionCoverFields}}, *[_type == "edition" && work._ref == ^._id] | order(defined(coverOverride.asset) desc, defined(cover.url) desc, defined(coverUrl) desc, onSaleDate desc, firstPublicationOfWork desc)[0]{
+    ${editionCoverFields},
     isReprint,
     firstPublicationOfWork,
     onSaleDate,
     market
-  }
+  })
 `
 
 export const SITE_SETTINGS_QUERY = defineQuery(`
@@ -47,6 +50,8 @@ export const curatedBookFields = /* groq */ `
   "slug": slug.current,
   googleBooksId,
   publishedDate,
+  isbn10, isbn13, coverOverride{asset->{_id, url}, alt, hotspot, crop},
+  "edition": edition->{${editionCoverFields}},
   cover
 `
 
@@ -119,8 +124,7 @@ export const WORK_BY_SLUG_QUERY = defineQuery(`
       onSaleDate,
       isReprint,
       firstPublicationOfWork,
-      coverUrl,
-      coverOpenLibraryId
+      ${editionCoverFields}
     }
   }
 `)

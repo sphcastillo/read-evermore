@@ -1,5 +1,5 @@
 import {fetchCatalog} from '@/sanity/fetch'
-import {SITE_SETTINGS_QUERY, workCardFields} from '@/sanity/queries'
+import {SITE_SETTINGS_QUERY, workCardFields, editionCoverFields} from '@/sanity/queries'
 import {BookCard, type WorkCardData} from '@/components/BookCard'
 import {EmptyState} from '@/components/States'
 import {PageHeader} from '@/components/PageHeader'
@@ -44,7 +44,7 @@ export default async function ReleasesPage({params}: {params: Promise<{window: s
   >(
     `*[_type == "edition" && defined(onSaleDate) && onSaleDate >= $from && onSaleDate <= $to] | order(onSaleDate desc){
       _id, onSaleDate, isReprint, firstPublicationOfWork, market,
-      "work": work->{ ${workCardFields} }
+      "work": work->{ ${workCardFields}, "cover": ^{${editionCoverFields}} }
     }`,
     {from, to},
   )

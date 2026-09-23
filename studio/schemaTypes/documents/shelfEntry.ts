@@ -7,6 +7,7 @@ export const shelfEntry = defineType({
   type: 'document',
   icon: DocumentIcon,
   fields: [
+    defineField({name: 'edition', type: 'reference', to: [{type: 'edition'}]}),
     defineField({
       name: 'shelf',
       type: 'reference',

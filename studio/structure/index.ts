@@ -32,6 +32,10 @@ export const structure: StructureResolver = (S) =>
             .items([
               S.documentTypeListItem('work').title('Works').icon(BookIcon),
               S.documentTypeListItem('edition').title('Editions'),
+              S.listItem().title('Editions needing covers').child(
+                S.documentTypeList('edition').title('Editions needing covers')
+                  .filter('_type == "edition" && needsCover == true && !defined(coverOverride.asset)'),
+              ),
               S.documentTypeListItem('author').title('Authors').icon(UserIcon),
               S.documentTypeListItem('genre').title('Genres').icon(TagIcon),
             ]),

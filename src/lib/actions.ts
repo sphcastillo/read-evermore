@@ -1,6 +1,7 @@
 import 'server-only'
 import {revalidatePath} from 'next/cache'
 import {privateClient, writeClient} from '@/sanity/client'
+import {editionCoverFields} from '@/sanity/queries'
 import {getOptionalReader, requireReader} from './reader'
 import {
   canTransition,
@@ -60,6 +61,9 @@ export async function setReadingStatus(workId: string, status: string | null) {
   const client = writeClient()
   const progressId = stableId(['progress', reader.readerId, workId])
   const kinds = ['wantToRead', 'currentlyReading', 'finished'] as const
+  const edition = await privateClient.fetch<{_type: 'reference'; _ref: string} | null>(
+    `*[_id == $progressId][0].edition`, {progressId}, {cache: 'no-store'},
+  )
 
   const shelves = await privateClient.fetch<{_id: string; kind: string}[]>(
     `*[_type == "shelf" && owner._ref == $readerId && kind in $kinds]{_id, kind}`,
@@ -76,6 +80,7 @@ export async function setReadingStatus(workId: string, status: string | null) {
         shelf: {_type: 'reference', _ref: shelf._id},
         work: {_type: 'reference', _ref: workId},
         addedAt: new Date().toISOString(),
+        ...(edition ? {edition} : {}),
       })
     } else {
       await client.delete(entryId).catch(() => undefined)
@@ -92,6 +97,7 @@ export async function setReadingStatus(workId: string, status: string | null) {
       reader: {_type: 'reference', _ref: reader.readerId},
       work: {_type: 'reference', _ref: workId},
       status: parsed,
+      ...(edition ? {edition} : {}),
       startedAt: parsed === 'currentlyReading' ? new Date().toISOString().slice(0, 10) : undefined,
       finishedAt: parsed === 'finished' ? new Date().toISOString().slice(0, 10) : undefined,
     })
@@ -137,7 +143,10 @@ export async function getMyBooks() {
             "slug": slug.current,
             firstPublicationYear,
             "authors": authors[]->{name},
-            "cover": *[_type == "edition" && work._ref == ^._id] | order(firstPublicationOfWork desc)[0]{ coverUrl, coverOpenLibraryId }
+            "cover": coalesce(
+              ^.edition->{${editionCoverFields}},
+              *[_type == "edition" && work._ref == ^._id] | order(defined(coverOverride.asset) desc, defined(cover.url) desc, defined(coverUrl) desc, onSaleDate desc)[0]{${editionCoverFields}}
+            )
           }
         }
       },
