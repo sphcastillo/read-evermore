@@ -32,7 +32,7 @@ export const shelf = defineType({
         list: [
           {title: 'Want to Read', value: 'wantToRead'},
           {title: 'Currently Reading', value: 'currentlyReading'},
-          {title: 'Finished', value: 'finished'},
+          {title: 'Read', value: 'finished'},
           {title: 'Custom', value: 'custom'},
         ],
       },

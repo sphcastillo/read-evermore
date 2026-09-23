@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import {useRef} from 'react'
 import {BookCover} from './BookCover'
+import {clubSelectionLabel} from '@/lib/club-selection-dates'
 import {collectionTypeLabel} from '@/lib/collection-type'
 
 export type CarouselBook = {
@@ -23,7 +24,13 @@ export type CarouselCollection = {
   curator?: {name?: string | null} | null
   source?: {name?: string | null; url?: string | null} | null
   totalSelections?: number | null
-  books: {selectionNumber?: number | null; book?: CarouselBook | null}[]
+  books: {
+    selectionNumber?: number | null
+    month?: string | number | null
+    year?: number | null
+    selectionDate?: string | null
+    book?: CarouselBook | null
+  }[]
 }
 
 function bookHref(book: CarouselBook) {
@@ -108,6 +115,7 @@ export function CollectionCarousel({collection}: {collection: CarouselCollection
             {entries.map((entry) => {
               const book = entry.book!
               const year = book.publishedDate?.slice(0, 4)
+              const selected = clubSelectionLabel(collection, entry)
               return (
                 <Link
                   key={`${collection._id}-${entry.selectionNumber}-${book._id}`}
@@ -115,9 +123,9 @@ export function CollectionCarousel({collection}: {collection: CarouselCollection
                   className="group w-[138px] shrink-0 snap-start sm:w-[156px]"
                 >
                   <div className="relative">
-                    {entry.selectionNumber ? (
-                      <span className="absolute left-2 top-2 z-10 rounded-full bg-[var(--ink)] px-2 py-0.5 text-[11px] font-medium text-[var(--paper)]">
-                        #{entry.selectionNumber}
+                    {selected ? (
+                      <span className="absolute left-2 top-2 z-10 whitespace-nowrap rounded-full bg-[var(--ink)] px-2 py-0.5 text-[11px] font-medium text-[var(--paper)]">
+                        {selected}
                       </span>
                     ) : null}
                     <BookCover

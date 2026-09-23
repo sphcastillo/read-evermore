@@ -25,6 +25,8 @@ export default async function DiscoverPage() {
     fetchCatalog<CarouselCollection[]>(CURATED_COLLECTIONS_QUERY),
   ])
 
+  const reesesBookClub = curated?.find((collection) => collection.slug === 'reeses-book-club')
+  const otherCuratedCollections = curated?.filter((collection) => collection._id !== reesesBookClub?._id)
   const hasShelves = Boolean(curated?.length || collections?.length)
 
   return (
@@ -49,10 +51,11 @@ export default async function DiscoverPage() {
         </Link>
       </div> */}
       <div className="mt-8 space-y-6">
-        {curated?.length
-          ? curated.map((collection) => <CollectionCarousel key={collection._id} collection={collection} />)
+        {reesesBookClub ? <CollectionCarousel collection={reesesBookClub} /> : null}
+        {otherCuratedCollections?.length
+          ? otherCuratedCollections.map((collection) => <CollectionCarousel key={collection._id} collection={collection} />)
           : null}
-        {collections?.length
+        {/* {collections?.length
           ? collections.map((collection) => (
               <CollectionRow
                 key={collection._id}
@@ -62,7 +65,7 @@ export default async function DiscoverPage() {
                 works={collection.works || []}
               />
             ))
-          : null}
+          : null} */}
         {!hasShelves ? (
           <EmptyState
             title="The shelves are still being set"
@@ -70,8 +73,8 @@ export default async function DiscoverPage() {
           />
         ) : null}
       </div>
-      <p className="mt-10 text-sm text-muted">{settings?.catalogDisclaimer}</p>
-      <p className="mt-2 text-sm text-muted">{settings?.openLibraryAttribution}</p>
+      {/* <p className="mt-10 text-sm text-muted">{settings?.catalogDisclaimer}</p> */}
+      {/* <p className="mt-2 text-sm text-muted">{settings?.openLibraryAttribution}</p> */}
     </div>
   )
 }

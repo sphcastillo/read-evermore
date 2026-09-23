@@ -5,6 +5,7 @@ import {COLLECTION_BY_SLUG_QUERY, CURATED_COLLECTION_BY_SLUG_QUERY} from '@/sani
 import {BookCard, type WorkCardData} from '@/components/BookCard'
 import {BookCover} from '@/components/BookCover'
 import {PageHeader} from '@/components/PageHeader'
+import {clubSelectionLabel} from '@/lib/club-selection-dates'
 import {collectionTypeLabel} from '@/lib/collection-type'
 import type {CarouselCollection} from '@/components/CollectionCarousel'
 
@@ -57,12 +58,13 @@ export default async function CollectionPage({params}: {params: Promise<{slug: s
           const book = entry.book!
           const href = book.googleBooksId ? `/search/${book.googleBooksId}` : '#'
           const year = book.publishedDate?.slice(0, 4)
+          const selected = clubSelectionLabel(curated, entry)
           return (
             <Link key={`${entry.selectionNumber}-${book._id}`} href={href} className="group block">
               <div className="relative">
-                {entry.selectionNumber ? (
-                  <span className="absolute left-2 top-2 z-10 rounded-full bg-[var(--ink)] px-2 py-0.5 text-[11px] font-medium text-[var(--paper)]">
-                    #{entry.selectionNumber}
+                {selected ? (
+                  <span className="absolute left-2 top-2 z-10 whitespace-nowrap rounded-full bg-[var(--ink)] px-2 py-0.5 text-[11px] font-medium text-[var(--paper)]">
+                    {selected}
                   </span>
                 ) : null}
                 <BookCover cover={{coverUrl: book.cover?.url}} title={book.title} className="aspect-[2/3] w-full" />

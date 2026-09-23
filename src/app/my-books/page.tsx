@@ -21,12 +21,14 @@ export default async function MyBooksPage() {
         <PageHeader
           eyebrow="My Books"
           title="Your reading home"
-          lede="Current reads, finished books, and private shelves. This space belongs to you."
+          lede="Current reads, books you've read, and private shelves. This space belongs to you."
         />
         <div className="mt-10 space-y-12">
           {(data.shelves || []).map((shelf) => (
             <section key={shelf._id}>
-              <h2 className="font-display text-[2rem] tracking-[-0.03em]">{shelf.name}</h2>
+              <h2 className="font-display text-[2rem] tracking-[-0.03em]">
+                {shelf.kind === 'finished' ? 'Read' : shelf.name}
+              </h2>
               {shelf.entries?.length ? (
                 <div className="shelf-scroll -mx-1 mt-5 px-1">
                   {shelf.entries.map((entry, index) =>

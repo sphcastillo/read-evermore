@@ -6,7 +6,7 @@ import {saveStatusAction} from '@/lib/server-actions'
 const OPTIONS = [
   {value: 'wantToRead', label: 'Want to Read'},
   {value: 'currentlyReading', label: 'Currently Reading'},
-  {value: 'finished', label: 'Finished'},
+  {value: 'finished', label: 'Read'},
 ] as const
 
 export function ShelfButtons({

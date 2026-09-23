@@ -18,6 +18,7 @@ import {createClient} from '@sanity/client'
 import {createHash} from 'node:crypto'
 import {writeFile} from 'node:fs/promises'
 import * as cheerio from 'cheerio'
+import {monthName} from '../src/lib/club-selection-dates'
 
 // ---------------------------------------------------------
 // Configuration
@@ -186,6 +187,24 @@ function cleanText(value: string) {
   return value.replace(/\s+/g, ' ').trim()
 }
 
+function splitAuthors(value: string) {
+  return value
+    .split(/\s+and\s+|\s*&\s+/i)
+    .map((author) => cleanText(author))
+    .filter(Boolean)
+}
+
+function monthYearFromSelectionDate(value?: string) {
+  if (!value) return {}
+  const parsed = Date.parse(value)
+  if (Number.isNaN(parsed)) return {}
+  const date = new Date(parsed)
+  return {
+    month: monthName(date.getMonth() + 1),
+    year: date.getFullYear(),
+  }
+}
+
 function isbnOf(
   book: GoogleBook,
   type: 'ISBN_10' | 'ISBN_13',
@@ -263,141 +282,29 @@ async function scrapeReesePicks(): Promise<ReesePick[]> {
     const html = await fetchHtml(pageUrl)
     const $ = cheerio.load(html)
 
-    /**
-     * The book links on Reese's Complete List point to /book/... pages.
-     *
-     * Instead of depending heavily on CSS classes that Reese may rename,
-     * we identify those links and inspect the surrounding content.
-     */
-    const seenOnPage = new Set<string>()
+    $('li.wp-block-post').each((_, element) => {
+      const card = $(element)
+      const titleLink = card.find('.wp-block-post-title a').first()
+      const title = cleanText(titleLink.text() || card.find('.wp-block-post-title').first().text())
+      const href = titleLink.attr('href')
 
-    $('a[href*="/book/"]').each((_, element) => {
-      const anchor = $(element)
-
-      const title = cleanText(anchor.text())
-
-      if (!title) {
+      if (!title || !href) {
         return
       }
 
-      const href = anchor.attr('href')
-
-      if (!href) {
-        return
-      }
-
-      const absoluteUrl = new URL(
-        href,
-        REESE_SOURCE_URL,
-      ).toString()
-
-      // Avoid duplicates caused by cover + title links.
-      if (seenOnPage.has(absoluteUrl)) {
-        return
-      }
-
-      const container =
-        anchor.closest('article').length > 0
-          ? anchor.closest('article')
-          : anchor.parent().parent()
-
-      const containerText = cleanText(container.text())
-
-      /**
-       * Reese renders entries essentially as:
-       *
-       * DATE
-       * TITLE
-       * by
-       * AUTHOR
-       *
-       * Try structured headings / siblings first.
-       */
-      let author = ''
-
-      const possibleAuthor =
-        anchor
-          .parent()
-          .find('h1, h2, h3, h4, h5, h6, p')
-          .filter((_, item) => {
-            const text = cleanText($(item).text())
-
-            return (
-              text !== title &&
-              text.toLowerCase() !== 'by' &&
-              text.length > 1
-            )
-          })
-          .first()
-          .text()
-
-      if (possibleAuthor) {
-        author = cleanText(possibleAuthor)
-      }
-
-      /**
-       * Fallback: find "by AUTHOR" within the surrounding card.
-       */
-      if (
-        !author ||
-        author === title ||
-        author.length > 150
-      ) {
-        const byMatch = containerText.match(
-          /\bby\s+([^“"\n|]{2,100})/i,
-        )
-
-        if (byMatch?.[1]) {
-          author = cleanText(byMatch[1])
-        }
-      }
-
-      /**
-       * Try to locate the selection date.
-       */
-      const dateMatch = containerText.match(
-        /\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4}\b/i,
-      )
-
-      seenOnPage.add(absoluteUrl)
+      const author = cleanText(card.find('.book-meta-author-row .value').first().text())
+      const selectionDate = cleanText(card.find('.wp-block-post-date time').first().text())
 
       discovered.push({
         title,
-        authors: author ? [author] : [],
-        selectionDate: dateMatch?.[0],
-        sourceUrl: absoluteUrl,
+        authors: author ? splitAuthors(author) : [],
+        selectionDate: selectionDate || undefined,
+        sourceUrl: new URL(href, REESE_SOURCE_URL).toString(),
       })
     })
 
-    // -----------------------------------------------------
-    // Pagination
-    // -----------------------------------------------------
-
-    let nextUrl: string | null = null
-
-    $('a').each((_, element) => {
-      const anchor = $(element)
-
-      const text = cleanText(anchor.text()).toLowerCase()
-      const rel = anchor.attr('rel')
-
-      if (
-        text === 'next page' ||
-        text === 'next' ||
-        rel === 'next'
-      ) {
-        const href = anchor.attr('href')
-
-        if (href) {
-          nextUrl = new URL(
-            href,
-            pageUrl!,
-          ).toString()
-        }
-      }
-    })
-
-    pageUrl = nextUrl
+    const nextHref = $('a.wp-block-query-pagination-next').attr('href')
+    pageUrl = nextHref ? new URL(nextHref, pageUrl).toString() : null
 
     await sleep(250)
   }
@@ -445,12 +352,46 @@ async function scrapeReesePicks(): Promise<ReesePick[]> {
 // Google Books search
 // ---------------------------------------------------------
 
+// Verified editions for source titles that Google cannot reliably find by text.
+// Key by title AND author so an override cannot select a different author's book.
+const VERIFIED_LOOKUPS = [
+  {
+    sourceTitle: 'Fair Play: A Game Changing Solution When You Have Too Much To Do (And More Life to Live)',
+    author: 'Eve Rodsky',
+    title: 'Fair Play',
+    isbn13: '9780525541943',
+    source: 'https://www.penguinrandomhouse.com/books/605905/fair-play-reeses-book-club-by-eve-rodsky/',
+  },
+  {
+    sourceTitle: 'Furia',
+    author: 'Yamile Saied Méndez',
+    title: 'Furia',
+    isbn13: '9781643751207',
+    source: 'https://www.hachettebookgroup.com/titles/yamile-saied-mendez/furia/9781643751207/',
+  },
+  {
+    sourceTitle: 'City of Nightbirds',
+    author: 'Juhea Kim',
+    title: 'City of Night Birds',
+    isbn13: '9780063394759',
+    source: 'https://library.ltikorea.or.kr/originalworks/413720',
+  },
+]
+
+function verifiedLookup(pick: ReesePick) {
+  return VERIFIED_LOOKUPS.find((lookup) =>
+    normalize(pick.title) === normalize(lookup.sourceTitle) &&
+    pick.authors.some((author) => normalize(author) === normalize(lookup.author)),
+  )
+}
+
 async function searchGoogleBooks(
   pick: ReesePick,
 ): Promise<GoogleBook[]> {
   const author = pick.authors[0] ?? ''
+  const lookup = verifiedLookup(pick)
 
-  const query = [
+  const query = lookup ? `isbn:${lookup.isbn13}` : [
     `intitle:"${pick.title}"`,
     author ? `inauthor:"${author}"` : '',
   ]
@@ -473,11 +414,23 @@ async function searchGoogleBooks(
     `https://www.googleapis.com/books/v1/volumes?` +
     params.toString()
 
-  const response = await fetch(url)
+  let response: Response | undefined
 
-  if (!response.ok) {
+  for (let attempt = 0; attempt < 6; attempt++) {
+    response = await fetch(url)
+
+    if (response.status !== 429) {
+      break
+    }
+
+    const wait = Math.min(70_000, 8_000 * 2 ** attempt)
+    console.log(`  Google Books 429, waiting ${Math.round(wait / 1000)}s`)
+    await sleep(wait)
+  }
+
+  if (!response?.ok) {
     throw new Error(
-      `Google Books failed ${response.status}: ${await response.text()}`,
+      `Google Books failed ${response?.status}: ${response ? await response.text() : 'no response'}`,
     )
   }
 
@@ -506,7 +459,7 @@ function scoreBook(
   pick: ReesePick,
   book: GoogleBook,
 ): number {
-  const requestedTitle = normalizeTitle(pick.title)
+  const requestedTitle = normalizeTitle(verifiedLookup(pick)?.title ?? pick.title)
   const actualTitle = normalizeTitle(
     book.volumeInfo?.title,
   )
@@ -1028,7 +981,7 @@ async function main() {
 
     results.push(result)
 
-    await sleep(150)
+    await sleep(700)
   }
 
   const successful = results.filter(
@@ -1091,8 +1044,8 @@ async function main() {
 
         ...(sourcePick?.selectionDate
           ? {
-              selectionDate:
-                sourcePick.selectionDate,
+              selectionDate: sourcePick.selectionDate,
+              ...monthYearFromSelectionDate(sourcePick.selectionDate),
             }
           : {}),
 

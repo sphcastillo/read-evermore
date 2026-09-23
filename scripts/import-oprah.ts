@@ -18,6 +18,7 @@ import {config} from 'dotenv'
 import {createClient} from '@sanity/client'
 import {createHash} from 'node:crypto'
 import {writeFile} from 'node:fs/promises'
+import {monthName, OPRAH_SELECTION_DATES} from '../src/lib/club-selection-dates'
 
 // ---------------------------------------------------------
 // Configuration
@@ -829,17 +830,26 @@ async function main() {
   const collectionEntries = results
     .filter((result) => result.bookId)
     .sort((a, b) => a.selectionNumber - b.selectionNumber)
-    .map((result) => ({
-      _key: `oprah-${String(result.selectionNumber).padStart(3, '0')}`,
-      _type: 'curatedCollectionEntry',
+    .map((result) => {
+      const selected = OPRAH_SELECTION_DATES[result.selectionNumber]
+      return {
+        _key: `oprah-${String(result.selectionNumber).padStart(3, '0')}`,
+        _type: 'curatedCollectionEntry',
 
-      selectionNumber: result.selectionNumber,
+        selectionNumber: result.selectionNumber,
+        ...(selected
+          ? {
+              month: monthName(selected.month),
+              year: selected.year,
+            }
+          : {}),
 
-      book: {
-        _type: 'reference',
-        _ref: result.bookId!,
-      },
-    }))
+        book: {
+          _type: 'reference',
+          _ref: result.bookId!,
+        },
+      }
+    })
 
   const collection = {
     _id: COLLECTION_ID,

@@ -62,6 +62,9 @@ export const CURATED_COLLECTIONS_QUERY = defineQuery(`
     totalSelections,
     "books": books | order(selectionNumber desc)[0...24]{
       selectionNumber,
+      month,
+      year,
+      selectionDate,
       "book": book->{ ${curatedBookFields} }
     }
   }
@@ -79,6 +82,9 @@ export const CURATED_COLLECTION_BY_SLUG_QUERY = defineQuery(`
     totalSelections,
     "books": books | order(selectionNumber desc){
       selectionNumber,
+      month,
+      year,
+      selectionDate,
       "book": book->{ ${curatedBookFields} }
     }
   }

@@ -31,7 +31,7 @@ export const readingProgress = defineType({
         list: [
           {title: 'Want to Read', value: 'wantToRead'},
           {title: 'Currently Reading', value: 'currentlyReading'},
-          {title: 'Finished', value: 'finished'},
+          {title: 'Read', value: 'finished'},
         ],
       },
       validation: (rule) => rule.required(),

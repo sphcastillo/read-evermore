@@ -55,15 +55,21 @@ export async function ensureSystemShelves(client: SanityClient, readerId: string
   const shelves = [
     {kind: 'wantToRead', name: 'Want to Read'},
     {kind: 'currentlyReading', name: 'Currently Reading'},
-    {kind: 'finished', name: 'Finished'},
+    {kind: 'finished', name: 'Read'},
   ] as const
-  await Promise.all(shelves.map((shelf) => client.createIfNotExists({
-    _id: stableId(['shelf', readerId, shelf.kind]),
-    _type: 'shelf',
-    owner: {_type: 'reference', _ref: readerId},
-    name: shelf.name,
-    slug: {_type: 'slug', current: slugify(shelf.name)},
-    kind: shelf.kind,
-    visibility: 'private',
-  })))
+  await Promise.all(
+    shelves.map(async (shelf) => {
+      const id = stableId(['shelf', readerId, shelf.kind])
+      await client.createIfNotExists({
+        _id: id,
+        _type: 'shelf',
+        owner: {_type: 'reference', _ref: readerId},
+        name: shelf.name,
+        slug: {_type: 'slug', current: slugify(shelf.name)},
+        kind: shelf.kind,
+        visibility: 'private',
+      })
+      await client.patch(id).set({name: shelf.name, slug: {_type: 'slug', current: slugify(shelf.name)}}).commit()
+    }),
+  )
 }

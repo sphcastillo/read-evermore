@@ -730,6 +730,8 @@ async function main() {
       _type: 'curatedCollectionEntry',
 
       selectionNumber: result.selectionNumber,
+      month: result.month,
+      year: result.year,
 
       book: {
         _type: 'reference',
