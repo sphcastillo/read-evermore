@@ -115,15 +115,15 @@ textarea {
   position: relative;
   isolation: isolate;
   min-height: 100vh;
-  padding: 8px 16px 28px;
+  padding: 8px 0 28px;
   background: transparent;
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .app-frame {
     padding: 10px 22px 36px;
   }
-}
+} */
 
 .color-wash {
   pointer-events: none;
@@ -155,8 +155,9 @@ textarea {
   position: relative;
   z-index: 1;
   min-height: calc(100vh - 132px);
+  overflow-x: hidden;
   background: var(--paper);
-  border-radius: var(--radius-lg);
+  /* border-radius: var(--radius-lg); */
   box-shadow: var(--shadow);
 }
 

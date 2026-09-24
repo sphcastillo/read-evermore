@@ -99,14 +99,14 @@ export function AppShell({
             {auth}
           </div>
         </div>
-        {signedIn ? (
+        {/* {signedIn ? (
           <div className="mt-3">
             <GlobalBookSearch />
           </div>
-        ) : null}
+        ) : null} */}
       </header>
       <div className="main-panel">
-        <main className="mx-auto w-full max-w-7xl px-4 py-6 lg:py-10">{children}</main>
+        <main className="mx-auto w-full max-w-7xl py-6 lg:py-10">{children}</main>
       </div>
     </div>
   )
