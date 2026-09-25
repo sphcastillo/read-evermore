@@ -8,7 +8,7 @@ import {isbn13For, type EditionInput, type EditionMetadata} from './edition-meta
 const reference = (_ref: string) => ({_type: 'reference', _ref})
 const isConflict = (error: unknown) => Boolean(error && typeof error === 'object' && 'statusCode' in error && error.statusCode === 409)
 
-export type ImportResult = {row: number; title: string; status: 'imported' | 'skipped' | 'failed'; message?: string}
+export type ImportResult = {row: number; title: string; status: 'imported' | 'updated' | 'skipped' | 'failed'; message?: string}
 
 async function resolveWork(client: SanityClient, book: GoodreadsBook) {
   const importKey = createHash('sha256').update(`${book.title.toLowerCase()}\n${book.author.toLowerCase()}`).digest('hex')
@@ -54,6 +54,31 @@ async function resolveWork(client: SanityClient, book: GoodreadsBook) {
   return workId
 }
 
+async function importMissingRating(client: SanityClient, readerId: string, workId: string, value?: number) {
+  if (value === undefined) return false
+  const existing = await client.fetch<boolean>(
+    `count(*[_type == "rating" && reader._ref == $readerId && work._ref == $workId]) > 0`,
+    {readerId, workId}, {cache: 'no-store'},
+  )
+  if (!existing) {
+    await client.createIfNotExists({
+      _id: stableId(['rating', readerId, workId]), _type: 'rating',
+      reader: reference(readerId), work: reference(workId), value,
+    }, {visibility: 'sync'})
+  }
+  // Also repair stale aggregates on a retry after the rating was already saved.
+  const ratings = await client.fetch<number[]>(
+    `*[_type == "rating" && work._ref == $workId].value`, {workId}, {cache: 'no-store'},
+  )
+  const valid = ratings.filter((rating) => typeof rating === 'number' && rating > 0 && rating <= 5)
+  await client.patch(workId).set({ratingStats: {
+    _type: 'ratingStats', count: valid.length,
+    average: valid.length ? Math.round(valid.reduce((sum, rating) => sum + rating, 0) / valid.length * 100) / 100 : 0,
+    updatedAt: new Date().toISOString(),
+  }}).commit()
+  return !existing
+}
+
 export async function importGoodreadsBook(client: SanityClient, readerId: string, book: GoodreadsBook, resolveMetadata?: (input: EditionInput) => Promise<EditionMetadata>): Promise<ImportResult> {
   const workId = await resolveWork(client, book)
   const editionId = resolveMetadata ? await ensureImportEdition(client, workId, book, resolveMetadata) : undefined
@@ -70,12 +95,13 @@ export async function importGoodreadsBook(client: SanityClient, readerId: string
       )
       for (const entry of entries) await client.patch(entry._id).setIfMissing({edition: reference(editionId)}).commit()
     }
-    return {row: book.row, title: book.title, status: 'skipped', message: 'Already in your library; kept your existing shelf and dates.'}
+    const ratingAdded = await importMissingRating(client, readerId, workId, book.rating)
+    return {row: book.row, title: book.title, status: ratingAdded ? 'updated' : 'skipped', message: ratingAdded ? 'Added your missing rating; kept your existing shelf and dates.' : 'Already in your library; kept your existing shelf, dates, and rating.'}
   }
   const shelfId = stableId(['shelf', readerId, book.status])
   try {
     // Keep progress and shelf membership atomic, using the app's existing IDs.
-    await client.transaction()
+    const tx = client.transaction()
       .create({
         _id: progressId, _type: 'readingProgress', reader: reference(readerId), work: reference(workId),
         status: book.status, importSource: 'goodreads',
@@ -89,10 +115,12 @@ export async function importGoodreadsBook(client: SanityClient, readerId: string
         ...(editionId ? {edition: reference(editionId)} : {}),
         addedAt: book.addedAt ? `${book.addedAt}T00:00:00.000Z` : new Date().toISOString(),
       })
-      .commit({visibility: 'sync'})
+    await tx.commit({visibility: 'sync'})
   } catch (error) {
     if (!isConflict(error)) throw error
-    return {row: book.row, title: book.title, status: 'skipped', message: 'Already imported; kept your existing library entry.'}
+    const ratingAdded = await importMissingRating(client, readerId, workId, book.rating)
+    return {row: book.row, title: book.title, status: ratingAdded ? 'updated' : 'skipped', message: 'Kept your existing library entry and filled any missing rating.'}
   }
+  await importMissingRating(client, readerId, workId, book.rating)
   return {row: book.row, title: book.title, status: 'imported'}
 }

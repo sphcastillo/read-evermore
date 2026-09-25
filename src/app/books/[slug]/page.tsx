@@ -4,8 +4,16 @@ import {WORK_BY_SLUG_QUERY} from '@/sanity/queries'
 import {BookCover} from '@/components/BookCover'
 import {StarRating} from '@/components/StarRating'
 import {ShelfButtons} from '@/components/ShelfButtons'
+import {LibraryCsvLog} from '@/components/LibraryCsvLog'
 import {getOptionalReader} from '@/lib/reader'
 import {getReaderBookState} from '@/lib/actions'
+
+function formatLibraryDate(value?: string | null) {
+  if (!value) return '—'
+  const date = new Date(value.includes('T') ? value : `${value}T00:00:00Z`)
+  if (Number.isNaN(date.getTime())) return value
+  return date.toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC'})
+}
 
 export default async function BookPage({params}: {params: Promise<{slug: string}>}) {
   const {slug} = await params
@@ -37,20 +45,21 @@ export default async function BookPage({params}: {params: Promise<{slug: string}
 
   const reader = await getOptionalReader().catch(() => null)
   const state = await getReaderBookState(work._id)
+  console.log('[Goodreads CSV]', state.csv)
 
   return (
     <article className="grid gap-10 lg:grid-cols-[240px_1fr]">
-      <div className="group max-w-[240px]">
-        <BookCover cover={work.cover} title={work.title} priority className="aspect-[2/3] w-full" />
+      <div className="group max-w-60">
+        <BookCover cover={work.cover} title={work.title} priority className="aspect-2/3 w-full" />
       </div>
       <div>
-        <p className="text-sm text-[var(--muted)]">
+        <p className="text-sm text-muted">
           {work.authors?.map((author) => author.name).filter(Boolean).join(', ') || 'Author unknown'}
         </p>
-        <h1 className="mt-1 font-[family-name:var(--font-display)] text-[2.7rem] leading-[1.05] tracking-[-0.03em] sm:text-5xl">
+        <h1 className="mt-1 font-(family-name:--font-display) text-[2.7rem] leading-[1.05] tracking-[-0.03em] sm:text-5xl">
           {work.title}
         </h1>
-        <p className="mt-3 text-[var(--muted)]">
+        <p className="mt-3 text-muted">
           First published {work.firstPublicationYear || 'year unknown'}
           {work.firstPublicationDate ? ` · dated ${work.firstPublicationDate}` : ''}
         </p>
@@ -70,10 +79,25 @@ export default async function BookPage({params}: {params: Promise<{slug: string}
         <div className="mt-6 max-w-md">
           <StarRating workId={work._id} value={state.rating} signedIn={Boolean(reader)} />
         </div>
+        <LibraryCsvLog data={state.csv} />
+        <dl className="mt-6 grid max-w-md grid-cols-1 gap-3 text-sm sm:grid-cols-3">
+          <div>
+            <dt className="text-muted">Rating</dt>
+            <dd className="mt-1 font-medium">{state.rating == null ? '—' : `${state.rating} stars`}</dd>
+          </div>
+          <div>
+            <dt className="text-muted">Date read</dt>
+            <dd className="mt-1 font-medium">{formatLibraryDate(state.dateRead)}</dd>
+          </div>
+          <div>
+            <dt className="text-muted">Date added</dt>
+            <dd className="mt-1 font-medium">{formatLibraryDate(state.dateAdded)}</dd>
+          </div>
+        </dl>
         {!reader ? (
-          <p className="mt-3 text-sm text-[var(--muted)]">Sign in to keep ratings and shelves across sessions.</p>
+          <p className="mt-3 text-sm text-muted">Sign in to keep ratings and shelves across sessions.</p>
         ) : (
-          <p className="mt-3 text-sm text-[var(--sage)]">Saved to your Read Evermore shelves.</p>
+          <p className="mt-3 text-sm text-sage">Saved to your Read Evermore shelves.</p>
         )}
         {work.ratingStats?.count ? (
           <p className="mt-4 text-sm">
@@ -81,10 +105,10 @@ export default async function BookPage({params}: {params: Promise<{slug: string}
             Goodreads score.
           </p>
         ) : (
-          <p className="mt-4 text-sm text-[var(--muted)]">No Read Evermore ratings yet.</p>
+          <p className="mt-4 text-sm text-muted">No Read Evermore ratings yet.</p>
         )}
         <section className="mt-10">
-          <h2 className="font-[family-name:var(--font-display)] text-2xl">Editions in this catalog</h2>
+          <h2 className="font-(family-name:--font-display) text-2xl">Editions in this catalog</h2>
           <ul className="mt-4 space-y-3">
             {(work.editions || []).map((edition) => (
               <li key={edition._id} className="surface px-4 py-3 text-sm">
@@ -93,7 +117,7 @@ export default async function BookPage({params}: {params: Promise<{slug: string}
                   {edition.firstPublicationOfWork ? ' · First publication' : ''}
                   {edition.isReprint ? ' · Reprint' : ''}
                 </p>
-                <p className="text-[var(--muted)]">
+                <p className="text-muted">
                   {[edition.format, edition.market, edition.publisher, edition.onSaleDate, edition.isbn13]
                     .filter(Boolean)
                     .join(' · ') || 'Edition details incomplete'}
@@ -103,7 +127,7 @@ export default async function BookPage({params}: {params: Promise<{slug: string}
           </ul>
         </section>
         {work.openLibraryWorkKey ? (
-          <p className="mt-6 text-sm text-[var(--muted)]">
+          <p className="mt-6 text-sm text-muted">
             Open Library:{' '}
             <a className="underline" href={`https://openlibrary.org/works/${work.openLibraryWorkKey}`}>
               {work.openLibraryWorkKey}

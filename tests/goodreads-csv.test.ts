@@ -4,6 +4,19 @@ import {csvCell, goodreadsBookSchema, parseCsv, parseGoodreadsCsv} from '../src/
 
 const header = 'Book Id,Title,Author,ISBN13,Exclusive Shelf,Date Added,Date Read,Read Count'
 
+test('imports decimal Goodreads ratings while treating zero and blanks as unrated', () => {
+  const preview = parseGoodreadsCsv('Title,Author,Exclusive Shelf,My Rating\nA,Author,read,4.0\nB,Author,read,5.0\nC,Author,to-read,0\nD,Author,read,')
+  assert.equal(preview.issues.length, 0)
+  assert.deepEqual(preview.books.map((book) => book.rating), [4, 5, undefined, undefined])
+})
+
+test('reports invalid nonzero ratings instead of silently dropping them', () => {
+  const preview = parseGoodreadsCsv('Title,Author,Exclusive Shelf,My Rating\nA,Author,read,unknown\nB,Author,read,6')
+  assert.equal(preview.books.length, 0)
+  assert.equal(preview.issues.length, 2)
+  assert.match(preview.issues[0].message, /My Rating/)
+})
+
 test('parses BOM, CRLF, quoted commas/newlines, escaped quotes and Goodreads ISBNs', () => {
   const data = parseGoodreadsCsv('\uFEFF' + header + '\r\n' +
     '123,"A book, with ""quotes""\nand lines",A Writer,"=""9781234567890""",read,2020/1/2,2021/02/28,2\r\n')
@@ -13,6 +26,16 @@ test('parses BOM, CRLF, quoted commas/newlines, escaped quotes and Goodreads ISB
     isbn13: '9781234567890', isbn10: undefined, status: 'finished',
     addedAt: '2020-01-02', finishedAt: '2021-02-28', readCount: 2, publicationYear: undefined,
   })
+})
+
+test('parses my rating and date read from Goodreads columns', () => {
+  const preview = parseGoodreadsCsv(
+    'Title,Author,Exclusive Shelf,My Rating,Date Added,Date Read\nOne,Author,read,4,2020/01/02,2021/03/04',
+  )
+  assert.equal(preview.issues.length, 0)
+  assert.equal(preview.books[0].rating, 4)
+  assert.equal(preview.books[0].addedAt, '2020-01-02')
+  assert.equal(preview.books[0].finishedAt, '2021-03-04')
 })
 
 test('maps all three shelves without inventing reading dates', () => {

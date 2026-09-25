@@ -66,17 +66,17 @@ export function CollectionCarousel({collection}: {collection: CarouselCollection
             </p>
             <h2
               id={`${collection._id}-title`}
-              className="mt-4 font-[family-name:var(--font-display)] text-[2.15rem] leading-[1.05] tracking-[-0.03em] sm:text-4xl"
+              className="mt-4 font-display text-[2.15rem] leading-[1.05] tracking-[-0.03em] sm:text-4xl"
             >
               {collection.title}
             </h2>
-            <p className="mt-3 text-sm text-[var(--muted)]">
+            <p className="mt-3 text-sm text-muted">
               {[collection.curator?.name ? `Curated by ${collection.curator.name}` : null, count ? `${count} selections` : null]
                 .filter(Boolean)
                 .join(' · ')}
             </p>
             {collection.description ? (
-              <p className="mt-4 max-w-sm text-[0.98rem] leading-7 text-[var(--muted)]">{collection.description}</p>
+              <p className="mt-4 max-w-sm text-[0.98rem] leading-7 text-muted">{collection.description}</p>
             ) : null}
           </div>
           <div className="flex flex-wrap items-center gap-2">
@@ -127,25 +127,25 @@ export function CollectionCarousel({collection}: {collection: CarouselCollection
                   <Link
                     key={`${collection._id}-${entry.selectionNumber}-${book._id}`}
                     href={bookHref(book)}
-                    className="group w-[104px] shrink-0 sm:w-[112px]"
+                    className="group w-28 shrink-0 sm:w-36"
                   >
                     <div className="relative">
                       {selected ? (
-                        <span className="absolute left-1.5 top-1.5 z-10 whitespace-nowrap rounded-full bg-[var(--ink)] px-1.5 py-0.5 text-[10px] font-medium text-[var(--paper)]">
+                        <span className="absolute left-1.5 top-1.5 z-10 whitespace-nowrap bg-ink px-1.5 py-0.5 text-[10px] font-medium text-paper">
                           {selected}
                         </span>
                       ) : null}
                       <BookCover
                         cover={book.edition || {...book, coverUrl: book.cover?.url}}
                         title={book.title}
-                        className="aspect-[2/3] w-full"
+                        className="aspect-2/3 w-full rounded-none"
                       />
                     </div>
-                    <p className="mt-2 line-clamp-2 text-sm font-medium leading-snug tracking-[-0.01em]">{book.title}</p>
-                    <p className="mt-0.5 truncate text-xs text-[var(--muted)]">
+                    <p className="mt-2 line-clamp-2 text-md font-medium leading-snug tracking-[-0.01em]">{book.title}</p>
+                    <p className="mt-0.5 truncate text-sm text-muted">
                       {book.authors?.filter(Boolean).join(', ') || 'Author unknown'}
                     </p>
-                    {year ? <p className="mt-0.5 text-xs text-[var(--muted)]">{year}</p> : null}
+                    {/* {year ? <p className="mt-0.5 text-xs text-muted">{year}</p> : null} */}
                   </Link>
                 )
               })}

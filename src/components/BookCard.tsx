@@ -9,6 +9,7 @@ export type WorkCardData = {
   firstPublicationYear?: number | null
   authors?: {name?: string | null}[] | null
   cover?: CoverSource | null
+  myRating?: number | null
   ratingStats?: {average?: number | null; count?: number | null} | null
 }
 
@@ -43,6 +44,7 @@ export function BookCard({
       {compact && work.firstPublicationYear ? (
         <p className="mt-0.5 text-xs text-[var(--muted)]">{work.firstPublicationYear}</p>
       ) : null}
+      {typeof work.myRating === 'number' ? <p className="mt-1 text-xs text-[var(--sage)]" aria-label={`Your rating: ${work.myRating} out of 5 stars`}>Your rating: {work.myRating} ★</p> : null}
       {typeof work.ratingStats?.count === 'number' && work.ratingStats.count > 0 ? (
         <p className="mt-1 text-xs text-[var(--sage)]">
           {work.ratingStats.average} · {work.ratingStats.count} Read Evermore{' '}

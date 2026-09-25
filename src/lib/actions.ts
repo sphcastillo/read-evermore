@@ -107,23 +107,109 @@ export async function setReadingStatus(workId: string, status: string | null) {
   revalidatePath('/books')
 }
 
-export async function getReaderBookState(workId: string) {
+export type ReaderBookState = {
+  rating: number | null
+  status: string | null
+  dateRead: string | null
+  dateAdded: string | null
+  readCount: number | null
+  importSource: string | null
+  csv: {
+    goodreadsId: string | null
+    title: string | null
+    authors: string[]
+    isbn10: string | null
+    isbn13: string | null
+    status: string | null
+    rating: number | null
+    dateAdded: string | null
+    dateRead: string | null
+    readCount: number | null
+    publicationYear: number | null
+    importSource: string | null
+  } | null
+}
+
+const emptyReaderBookState: ReaderBookState = {
+  rating: null,
+  status: null,
+  dateRead: null,
+  dateAdded: null,
+  readCount: null,
+  importSource: null,
+  csv: null,
+}
+
+export async function getReaderBookState(workId: string): Promise<ReaderBookState> {
   const reader = await getOptionalReader()
-  if (!reader) return {rating: null as number | null, status: null as string | null}
+  if (!reader) return emptyReaderBookState
 
   const data = await privateClient.fetch<{
-    rating?: number
-    status?: string
+    rating?: number | null
+    progress?: {
+      status?: string | null
+      finishedAt?: string | null
+      readCount?: number | null
+      importSource?: string | null
+    } | null
+    addedAt?: string | null
+    work?: {
+      title?: string | null
+      goodreadsBookId?: string | null
+      firstPublicationYear?: number | null
+      authors?: {name?: string | null}[] | null
+      isbn10?: string | null
+      isbn13?: string | null
+    } | null
   } | null>(
     `{
       "rating": *[_type == "rating" && reader._ref == $readerId && work._ref == $workId][0].value,
-      "status": *[_type == "readingProgress" && reader._ref == $readerId && work._ref == $workId][0].status
+      "progress": *[_type == "readingProgress" && reader._ref == $readerId && work._ref == $workId][0]{
+        status, finishedAt, readCount, importSource
+      },
+      "addedAt": *[_type == "shelfEntry" && work._ref == $workId && shelf->owner._ref == $readerId] | order(addedAt desc)[0].addedAt,
+      "work": *[_id == $workId][0]{
+        title,
+        goodreadsBookId,
+        firstPublicationYear,
+        "authors": authors[]->{name},
+        "isbn10": coalesce(*[_type == "edition" && work._ref == ^._id && defined(isbn10)][0].isbn10),
+        "isbn13": coalesce(*[_type == "edition" && work._ref == ^._id && defined(isbn13)][0].isbn13)
+      }
     }`,
     {readerId: reader.readerId, workId},
     {cache: 'no-store'},
   )
 
-  return {rating: data?.rating ?? null, status: data?.status ?? null}
+  const rating = data?.rating ?? null
+  const status = data?.progress?.status ?? null
+  const dateRead = data?.progress?.finishedAt ?? null
+  const dateAdded = data?.addedAt ?? null
+  const readCount = data?.progress?.readCount ?? null
+  const importSource = data?.progress?.importSource ?? null
+
+  return {
+    rating,
+    status,
+    dateRead,
+    dateAdded,
+    readCount,
+    importSource,
+    csv: {
+      goodreadsId: data?.work?.goodreadsBookId ?? null,
+      title: data?.work?.title ?? null,
+      authors: data?.work?.authors?.map((author) => author.name).filter((name): name is string => Boolean(name)) ?? [],
+      isbn10: data?.work?.isbn10 ?? null,
+      isbn13: data?.work?.isbn13 ?? null,
+      status,
+      rating,
+      dateAdded,
+      dateRead,
+      readCount,
+      publicationYear: data?.work?.firstPublicationYear ?? null,
+      importSource,
+    },
+  }
 }
 
 export async function getMyBooks() {
@@ -142,6 +228,7 @@ export async function getMyBooks() {
             title,
             "slug": slug.current,
             firstPublicationYear,
+            "myRating": *[_type == "rating" && reader._ref == $readerId && work._ref == ^._id][0].value,
             "authors": authors[]->{name},
             "cover": coalesce(
               ^.edition->{${editionCoverFields}},

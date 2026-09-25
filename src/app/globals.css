@@ -535,6 +535,10 @@ a.surface:hover {
   scroll-padding-inline: 8px;
 }
 
+.collection-rail .cover-frame {
+  border-radius: 0;
+}
+
 .collection-rail::-webkit-scrollbar {
   display: none;
 }

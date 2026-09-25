@@ -22,5 +22,6 @@ export async function importGoodreadsBatch(input: unknown): Promise<ImportResult
     }
   }
   revalidatePath('/my-books')
+  revalidatePath('/books/[slug]', 'page')
   return results
 }

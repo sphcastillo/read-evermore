@@ -1,4 +1,5 @@
 import {z} from 'zod'
+import {ratingValueSchema} from './validation'
 
 export const MAX_CSV_BYTES = 10 * 1024 * 1024
 export const MAX_IMPORT_ROWS = 10000
@@ -21,6 +22,7 @@ export const goodreadsBookSchema = z.object({
   isbn10: z.string().regex(/^\d{9}[\dX]$/).optional(),
   isbn13: z.string().regex(/^\d{13}$/).optional(),
   status: z.enum(['finished', 'wantToRead', 'currentlyReading']),
+  rating: ratingValueSchema.optional(),
   addedAt: dateSchema.optional(),
   finishedAt: dateSchema.optional(),
   readCount: z.number().int().min(0).max(100000).optional(),
@@ -99,13 +101,18 @@ export function parseGoodreadsCsv(text: string): GoodreadsPreview {
       if (!status) throw new Error(`Unsupported shelf: ${get('exclusive shelf') || '(empty)'}.`)
       const isbn10 = cleanIsbn(get('isbn')), isbn13 = cleanIsbn(get('isbn13'))
       const year = Number(get('original publication year') || get('year published'))
+      const rating = ratingValueSchema.safeParse(Number(get('my rating')))
+      if (get('my rating') && Number(get('my rating')) !== 0 && !rating.success) {
+        throw new Error('Invalid My Rating value. Use 0 for unrated or 0.5–5 in half-star increments.')
+      }
       const book = goodreadsBookSchema.parse({
         row, title, author: get('author'), status,
         goodreadsId: get('book id') || undefined,
         isbn10: /^\d{9}[\dX]$/.test(isbn10) ? isbn10 : undefined,
         isbn13: /^\d{13}$/.test(isbn13) ? isbn13 : undefined,
+        ...(rating.success ? {rating: rating.data} : {}),
         addedAt: parseDate(get('date added')),
-        finishedAt: status === 'finished' ? parseDate(get('date read')) : undefined,
+        finishedAt: parseDate(get('date read')),
         readCount: get('read count') ? Number(get('read count')) : undefined,
         publicationYear: Number.isInteger(year) && year >= 1000 && year <= 2100 ? year : undefined,
       })
